@@ -1,54 +1,46 @@
 <p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
+  <img alt="Gatsby" src="src/images/icon.png" width="60" />
+  <span style="font-size:2em; align:center; padding:.5em;">x</span>
+  <img alt="Liwen Duan's Logo" src="src/images/lwd-stamp.png" width="60" />
 </p>
 <h1 align="center">
-  Gatsby minimal starter
+  lwdSite <span style="font-size:medium; font-weight:light;"></br>based on <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">Gatsby minimal starter</a></span>
 </h1>
 
-## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
+## 🚀 start
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+1.  **Initial environment**
+
+    I use yarn to configure the environment. 
+    ```bash
+    yarn
+    ```
+
+1.  **Start the Gatsby site.**
+
+    Navigate to site’s directory and start it up.
 
     ```shell
     # create a new Gatsby site using the minimal starter
-    npm init gatsby
+    gatsby build && gatsby start
     ```
 
-2.  **Start developing.**
+## ℹ️ Info
 
-    Navigate into your new site’s directory and start it up.
+   This is a gatsby front-end that connect to my Sanity headless CMS. In order to make the site work, you need to configure a Sanity Studio with my schema (Havn't finalized).
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+## 📜 Feature
 
-3.  **Open the code and start customizing!**
+    ✅ Connects to Sanity, a headless CMS via Graphql. 
+    ✅ Tailwind CSS for page styling.
+    ✅ A basic responsive layout.
 
-    Your site is now running at http://localhost:8000!
+## 📝 To-Do
 
-    Edit `src/pages/index.js` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+    🔜 Make sure everything is working.
+    🔜 Add i18n support: query, language switcher, content.
+    🔜 Add dark mode support.
+    🔜 Maybe a video for index's hero.
+    🔜 SEO
+    🔜 External Link Icon
