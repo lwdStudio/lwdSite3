@@ -28,11 +28,11 @@
 
 ## ℹ️ Info
 
-   This is a gatsby front-end that connect to my Sanity headless CMS. In order to make the site work, you need to configure a Sanity Studio with my schema (Havn't finalized).
+   This is a gatsby front-end that connect to my Strapi headless CMS. In order to make the site work, you need to configure a corresponding Strapi application.
 
 ## 📜 Feature
 
-    ✅ Connects to Sanity, a headless CMS via Graphql. 
+    ✅ Connects to Strapi, a headless CMS via Graphql. 
     ✅ Tailwind CSS for page styling.
     ✅ A basic responsive layout.
 
