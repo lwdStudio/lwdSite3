@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/lwd-service",
+      "handler": "lwd-service.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/lwd-service",
+      "handler": "lwd-service.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/lwd-service",
+      "handler": "lwd-service.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_global_hero_links",
+  "info": {
+    "name": "heroLink",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "heroLinkTitle": {
+      "type": "string",
+      "required": false
+    },
+    "heroLinkUrl": {
+      "type": "string"
+    }
+  }
+}

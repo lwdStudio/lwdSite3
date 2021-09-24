@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_global_services_cards",
+  "info": {
+    "name": "servicesCard",
+    "icon": "file-invoice"
+  },
+  "options": {},
+  "attributes": {
+    "serviceName": {
+      "type": "string",
+      "required": true
+    },
+    "serviceLink": {
+      "type": "string",
+      "required": true
+    },
+    "serviceIcon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "serviceDescription": {
+      "type": "string",
+      "required": true
+    },
+    "serviceIsPoweredBy": {
+      "type": "string",
+      "required": true
+    },
+    "serviceIsPoweredByUrl": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

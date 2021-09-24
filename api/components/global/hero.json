@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_global_heroes",
+  "info": {
+    "name": "Hero",
+    "icon": "laptop",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heroImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "heroH1": {
+      "type": "string",
+      "required": true
+    },
+    "heroLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "global.hero-link"
+    }
+  }
+}

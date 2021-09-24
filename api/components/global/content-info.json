@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_global_content_infos",
+  "info": {
+    "name": "ContentInfo",
+    "icon": "info-circle",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "PublishDate": {
+      "type": "date"
+    },
+    "CoverImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

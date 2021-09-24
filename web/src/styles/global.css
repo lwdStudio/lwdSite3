@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    h1 {
+        @apply text-2xl py-1 font-bold;
+    }
+    h2 {
+        @apply text-xl py-1 font-bold;
+    }
+    h3 {
+        @apply text-lg py-1 font-bold;
+    }
+    a {
+        @apply  hover:text-black focus:text-black hover:bg-gray-200 focus:bg-yellow-300 rounded-md py-0.5
+    }
+    p {
+        @apply py-2 leading-relaxed tracking-normal antialiased sm:subpixel-antialiased md:antialiased;
+    }
+    ul {
+        @apply list-disc py-2 list-inside;
+    }
+}
