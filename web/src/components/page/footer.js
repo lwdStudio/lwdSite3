@@ -13,7 +13,7 @@ export const FooterText = ({children}) => {
 }
 export const FooterLink = ({LinkTo, children},props) => {
     return (
-        <FooterText><LwdLink LinkTo={LinkTo} className="px-1.5 rounded-md" >{children}</LwdLink></FooterText>
+        <FooterText><LwdLink LinkTo={LinkTo} className="px-1.5 rounded-md text-gray-500" >{children}</LwdLink></FooterText>
     )
 }
 

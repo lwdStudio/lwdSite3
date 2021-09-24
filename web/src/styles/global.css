@@ -13,7 +13,7 @@
         @apply text-lg py-1 font-bold;
     }
     a {
-        @apply  hover:text-black focus:text-black hover:bg-gray-200 focus:bg-yellow-300 rounded-md py-0.5 bg-opacity-50
+        @apply  hover:text-black focus:text-black hover:bg-gray-200 focus:bg-yellow-300 rounded-md py-0.5 text-blue-500
     }
     p {
         @apply py-2 leading-relaxed tracking-normal antialiased sm:subpixel-antialiased md:antialiased;

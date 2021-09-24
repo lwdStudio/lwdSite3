@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env`,
+});
+
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.liwenduan.com",
@@ -55,7 +59,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `http://localhost:3000`,
+        apiURL: process.env.API_URL || "http://localhost:1337",
         queryLimit: 1000, // Defaults to 100
         collectionTypes: [
           {

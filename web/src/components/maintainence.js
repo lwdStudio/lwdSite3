@@ -21,7 +21,7 @@ const Maintainence = () => {
                 </div>
                 <h1 className="p-5 text-3xl ">Coming back soon</h1>
                 <p className="">We are refreshing our site to bring you new experience. Stay tuned.</p>
-                <a href="https://github.com/lwdStudio/lwdSite3" className="w-auto justify-center">
+                <a href="https://github.com/lwdStudio/lwdSite3" className="w-auto justify-center text-white">
                     GitHub
                 </a>
                 <StaticQuery 
@@ -39,10 +39,10 @@ const Maintainence = () => {
                     `}
                     render={data => 
                         <footer>                  
-                            <div className="flex flex-col md:flex-row w-full justify-center text-center">
+                            <div className="flex flex-col md:flex-row w-full justify-center text-center text-white">
                                 <p className="m-3 p-1">Copyright © {new Date().getFullYear()} Liwen Duan</p>
-                                <a href="http://beian.miit.gov.cn/" className="m-3 p-1">{data.site.siteMetadata.ICPlicense}</a>
-                                <a href={data.site.siteMetadata.PSBeianURL} className="m-3 p-1">{data.site.siteMetadata.PSBeian}</a>
+                                <a href="http://beian.miit.gov.cn/" className="m-3 p-1 text-white">{data.site.siteMetadata.ICPlicense}</a>
+                                <a href={data.site.siteMetadata.PSBeianURL} className="m-3 p-1 text-white">{data.site.siteMetadata.PSBeian}</a>
                             </div>
                         </footer>
                     }

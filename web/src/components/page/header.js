@@ -12,7 +12,7 @@ const NavButton = ({LinkTo, children}) => {
 
 const LwdLogo = ({pageName}) => {
     return (
-        <Link to="/" className="flex h-auto p-2 focus:ring-2 focus:ring-yellow-300 rounded-lg focus:text-black focus:bg-yellow-300">
+        <Link to="/" className="flex h-auto p-2 focus:ring-2 focus:ring-yellow-300 rounded-lg focus:text-black focus:bg-yellow-300 text-gray-800">
             <StaticImage
                 src="../../images/lwd-stamp.png"
                 alt="Liwen Duan's Logo"
