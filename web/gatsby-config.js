@@ -86,15 +86,15 @@ module.exports = {
           },
         ],
         singleTypes: [
-          // {
-          //   name:'front-page',
-          //   api:{
-          //     qs:{
-          //       _locale:`en`,
-          //       _publicationState: 'preview',
-          //     }
-          //   }
-          // },
+          {
+            name:'front-page',
+            api:{
+              qs:{
+                _locale:`en`,
+                _publicationState: 'preview',
+              }
+            }
+          },
           // {
           //   name:'about-me',
           //   api:{

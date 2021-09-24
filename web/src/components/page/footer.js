@@ -3,7 +3,7 @@ import { LwdLink } from './link'
 import { StaticImage } from 'gatsby-plugin-image'
 import { StaticQuery,graphql } from 'gatsby'
 
-const FooterText = ({children}) => {
+export const FooterText = ({children}) => {
     return (
         <div className="px-5 py-1 md:py-0">
             <p className="flex text-gray-500 justify-center lg:justify-start">{children}</p>
@@ -11,7 +11,7 @@ const FooterText = ({children}) => {
         
     )
 }
-const FooterLink = ({LinkTo, children},props) => {
+export const FooterLink = ({LinkTo, children},props) => {
     return (
         <FooterText><LwdLink LinkTo={LinkTo} className="px-1.5 rounded-md" >{children}</LwdLink></FooterText>
     )
@@ -21,7 +21,7 @@ const Footer = () => {
     return (
         <StaticQuery 
             query={graphql`
-                query MyQuery {
+                query getSiteInfo {
                     site {
                         siteMetadata {
                             title
