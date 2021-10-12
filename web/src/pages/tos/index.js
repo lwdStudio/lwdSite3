@@ -26,7 +26,7 @@ export default tosIndexPage
 
 
 export const query = graphql `
-query getFaWuPages {
+query getLegalPages {
     allStrapiPages(filter: {content_type: {typeSlug: {eq: "legal"}}}) {
       edges {
         node {
