@@ -47,7 +47,7 @@ const Header = ({pageName='lwdSite'}) => {
                 <NavButton LinkTo="/showcase">showcase</NavButton>
                 <NavButton LinkTo="/service">lwdService</NavButton>
                 <NavButton LinkTo="/about">about me</NavButton>
-                <LanguageSwitcher />
+                {/* <LanguageSwitcher /> */}
             </nav>
         </header>
     )

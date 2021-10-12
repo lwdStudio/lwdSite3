@@ -15,7 +15,7 @@ const TosPage = ({data, location}) => {
                 <Reactmarkdown 
                     children={Content} 
                     transformImageUri={uri => 
-                        uri.startsWith("http") ? uri : `${process.env.GATSBY_IMAGE_API_URL}${uri}`}
+                        uri.startsWith("http") ? uri : `${process.env.GATSBY_STRAPI_API_URL}${uri}`}
                 />
             </div>
         </Layout>
