@@ -15,6 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@heroicons/react": "^1.0.4",
     "assert": "^2.0.0",
     "autoprefixer": "^10.3.5",
     "gatsby": "^3.14.0",
@@ -27,6 +28,7 @@
     "gatsby-source-filesystem": "^3.14.0",
     "gatsby-source-strapi": "^1.0.2",
     "gatsby-transformer-sharp": "^3.14.0",
+    "install": "^0.13.0",
     "moment": "^2.29.1",
     "postcss": "^8.3.7",
     "react": "^17.0.1",

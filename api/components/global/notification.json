@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_global_notifications",
+  "info": {
+    "name": "Notification",
+    "icon": "exclamation-circle"
+  },
+  "options": {},
+  "attributes": {
+    "NotificationContent": {
+      "type": "richtext"
+    },
+    "WarningClass": {
+      "type": "enumeration",
+      "enum": [
+        "Info",
+        "Warning",
+        "Clear"
+      ],
+      "default": "Info"
+    }
+  }
+}
