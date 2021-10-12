@@ -36,6 +36,8 @@
     "react-helmet": "^6.1.0",
     "react-markdown": "^7.0.1",
     "react-moment": "^1.1.1",
+    "rehype-slug": "^5.0.0",
+    "remark-gfm": "^3.0.0",
     "tailwindcss": "^2.2.15"
   }
 }

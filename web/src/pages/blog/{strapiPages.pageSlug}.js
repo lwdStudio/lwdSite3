@@ -2,6 +2,8 @@ import React from 'react'
 import Layout from '../../components/page/layout'
 import { graphql } from 'gatsby'
 import Reactmarkdown from "react-markdown"
+import remarkGfm from 'remark-gfm'
+import slug from 'rehype-slug'
 
 const TosPage = ({data, location}) => {
     const {pageTitle,updated_at,Content} = data.strapiPages
@@ -16,6 +18,8 @@ const TosPage = ({data, location}) => {
                     children={Content} 
                     transformImageUri={uri => 
                         uri.startsWith("http") ? uri : `${process.env.GATSBY_STRAPI_API_URL}${uri}`}
+                    remarkPlugins={[remarkGfm]}
+                    rehypePlugins={[slug]}
                 />
             </div>
         </Layout>
