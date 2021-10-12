@@ -23,22 +23,25 @@ export default BlogIndexPage
 
 export const query = graphql`
 query getBlogPages {
-    allStrapiPages(filter: {content_type: {typeSlug: {eq: "blog"}}}) {
-      nodes {
-        pageSlug
-        pageTitle
-        Excerpt
-        tags {
-          tagName
-        }
-        CoverImage {
-          localFile {
-            childrenImageSharp {
-              gatsbyImageData
-            }
+  allStrapiPages(
+    filter: {content_type: {locale: {eq: "en"}, typeSlug: {eq: "blog"}}}
+    sort: {fields: created_at, order: DESC}
+  ) {
+    nodes {
+      pageSlug
+      pageTitle
+      Excerpt
+      tags {
+        tagName
+      }
+      CoverImage {
+        localFile {
+          childrenImageSharp {
+            gatsbyImageData
           }
         }
       }
     }
-  }  
+  }
+}
 `

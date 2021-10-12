@@ -73,6 +73,16 @@
       "collection": "tags",
       "via": "pages",
       "dominant": true
+    },
+    "ExampleIframeCode": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "richtext",
+      "default": "<div class=\"aspect-w-16 aspect-h-9 justify-center\"> <iframe width=\"560\" height=\"315\" src=\"https://www.youtube-nocookie.com/embed/o97fVGTjE4w\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe> </div>",
+      "private": true
     }
   }
 }
