@@ -1,11 +1,11 @@
 import React from 'react'
 import Layout from '../components/page/layout'
-import {InfoCard, ContactCard} from '../components/card'
+import {InfoCard, ContactCard, CertificateCard} from '../components/card'
 import {graphql} from 'gatsby'
 import {GatsbyImage} from 'gatsby-plugin-image'
 
 const AboutPage = ({location, data}) => {
-  const {h1, Description, Job, Education, ContactInfo, avatar} = data.strapiAboutMe
+  const {h1, Description, Job, Education, ContactInfo, avatar, Certificate} = data.strapiAboutMe
   return (
     <Layout pageType="About me" location={location}>
       <div className="md:container md:mx-auto p-4 ">
@@ -18,6 +18,7 @@ const AboutPage = ({location, data}) => {
             />
           <p>{Description}</p>
         </section>
+        
         <section className="p-5">
           <h2 className="text-center font-serif py-8">My Experience</h2>
           {
@@ -28,6 +29,7 @@ const AboutPage = ({location, data}) => {
             })
           }
         </section>
+
         <section className="p-5">
           <h2 className="text-center font-serif py-8">My Education</h2>
           {
@@ -38,6 +40,18 @@ const AboutPage = ({location, data}) => {
             })
           }
         </section>
+
+        <section className="p-5">
+          <h2 className="text-center font-serif py-8">My Certificates</h2>
+          {
+            Certificate.map((certificateInfo) => {
+              return (
+                <CertificateCard certificateInfo={certificateInfo} />
+              )
+            })
+          }
+        </section>
+
         <section className="p-5">
           <h2 className="text-center font-serif py-8">Get in touch</h2>
           <div className="md:flex-row flex-col flex">
@@ -49,8 +63,8 @@ const AboutPage = ({location, data}) => {
               })
             }
           </div>
-
         </section>
+
       </div>
     </Layout>
   )
@@ -92,6 +106,12 @@ query getAboutMe {
           gatsbyImageData(layout: CONSTRAINED, transformOptions: {fit: COVER})
         }
       }
+    }
+    Certificate {
+      CertificateName
+      CertificateLink
+      IssueAgency
+      IssueDate(formatString: "MMM yyyy")
     }
   }
 }

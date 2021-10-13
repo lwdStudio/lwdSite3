@@ -77,6 +77,16 @@
         }
       },
       "component": "global.contact-info"
+    },
+    "Certificate": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "global.certificate"
     }
   }
 }

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_global_certificates",
+  "info": {
+    "name": "Certificate",
+    "icon": "school"
+  },
+  "options": {},
+  "attributes": {
+    "CertificateName": {
+      "type": "string"
+    },
+    "IssueAgency": {
+      "type": "string"
+    },
+    "CertificateLink": {
+      "type": "string"
+    },
+    "IssueDate": {
+      "type": "date"
+    }
+  }
+}

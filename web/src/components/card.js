@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'gatsby'
+import { Link } from 'gatsby'
 import { LwdLink } from './page/link'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
@@ -97,6 +97,23 @@ export const ContactCard = ({contactInfo}) => {
                 image={contactInfo.ContactIcon.localFile.childrenImageSharp[0] && contactInfo.ContactIcon.localFile.childrenImageSharp[0].gatsbyImageData}
             /> */}
             <LwdLink LinkTo={contactInfo.Contact} className="px-1">{contactInfo.ContactMethod}</LwdLink>
+        </div>
+    )
+}
+
+export const CertificateCard = ({certificateInfo}) => {
+    return (
+        <div className="p-8 mb-2 shadow-md rounded-md bg-white">
+            <div className="md:flex mb-4">
+                <h3>{certificateInfo.CertificateName}</h3>
+                <div className="md:flex-grow"></div>
+                <span className="md:float-right">{certificateInfo.IssueDate}</span>
+            </div>
+            <div className="md:flex mb-4">
+                <h4>{certificateInfo.IssueAgency}</h4>
+                <div className="md:flex-grow"></div>
+                <LwdLink LinkTo={certificateInfo.CertificateLink} className="md:float-right">See Certificate</LwdLink>
+            </div>
         </div>
     )
 }
