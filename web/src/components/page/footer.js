@@ -34,7 +34,7 @@ const Footer = () => {
             `}
             render={data => 
                 <footer className="p-1 bg-gray-100 shadow-sm rounded-lg z-50" >
-                    <FooterLink LinkTo="https://github.com/lwdStudio/lwd-site/tree/gatsby">
+                    <FooterLink LinkTo="/">
                         <div className="flex space-x-2 h-auto px-8 py-2 justify-center lg:justify-start">
                             <StaticImage 
                             src="../../images/lwd-stamp.png"

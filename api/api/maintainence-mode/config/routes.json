@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/maintainence-mode",
+      "handler": "maintainence-mode.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/maintainence-mode",
+      "handler": "maintainence-mode.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/maintainence-mode",
+      "handler": "maintainence-mode.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

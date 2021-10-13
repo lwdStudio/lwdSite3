@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'gatsby'
+import { LwdLink } from './page/link'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
 
@@ -66,10 +67,10 @@ export const LwdServiceCard = ({Service}) => {
             </div>
             <div className="flex-col p-5 content-center rounded-b-lg">
                 <span className="text-sm font-bold text-green-500">{Service.serviceDescription}</span>
-                <h2 className={`text-2xl font-bold py-1`}>
-                    <a href={Service.serviceLink} className="hover:text-black focus:text-black hover:bg-gray-200 focus:bg-yellow-300 rounded-md p-0.5" target="_blank" rel="noreferrer">{Service.serviceName}</a>                 
+                <h2 className={`text-xl font-bold py-1`}>
+                    <LwdLink LinkTo={Service.serviceLink}>{Service.serviceName}</LwdLink>           
                 </h2>
-                <p className="py-1">Powered by <a href={Service.serviceIsPoweredByUrl} target="_blank" rel="noreferrer" className="hover:text-black focus:text-black hover:bg-gray-200 focus:bg-yellow-300 rounded-md">{Service.serviceIsPoweredBy}</a></p>
+                <p className="py-1">Powered by <LwdLink LinkTo={Service.serviceIsPoweredByUrl}>{Service.serviceIsPoweredBy}</LwdLink></p>
             </div>
         </div>
     )

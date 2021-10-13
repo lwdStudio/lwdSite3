@@ -1,0 +1,48 @@
+{
+  "kind": "singleType",
+  "collectionName": "maintainence_modes",
+  "info": {
+    "name": "maintainenceMode",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "maintainenceModeSwitch": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "maintainenceModeTitle": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "default": "Coming back soon"
+    },
+    "maintainenceModeMessage": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text",
+      "default": "We are refreshing our site to bring you new experience. Stay tuned."
+    }
+  }
+}

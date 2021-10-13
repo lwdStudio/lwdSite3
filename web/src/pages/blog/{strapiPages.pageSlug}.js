@@ -11,7 +11,7 @@ const TosPage = ({data, location}) => {
     return (
         <Layout pageTitle={pageTitle} pageType="Blog" location={location}>
             <div className="pt-5 text-center">
-                <h1 className="text-5xl font-extrabold py-2">{pageTitle}</h1>
+                <h1 className="text-3xl md:text-5xl font-extrabold py-2">{pageTitle}</h1>
                 <p>Updated {updated_at}</p>
             </div>
             <div className="md:container md:mx-auto px-10">
