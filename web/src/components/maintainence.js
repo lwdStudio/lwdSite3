@@ -10,7 +10,7 @@ const Maintainence = () => {
     const [maintainenceModeMessage, setmaintainenceModeMessage] = useState()
 
     useEffect(() => {
-        fetch(`${process.env.GATSBY_STRAPI_API_URL}/maintainence-mode?_limit=1000&_locale=en&_publicationState=preview`).then(response => response.json()).then(resultData => {
+        fetch(`${process.env.GATSBY_STRAPI_API_URL}/maintainence-mode?_limit=1000&_locale=en`).then(response => response.json()).then(resultData => {
             setmaintainenceModeTitle(resultData.maintainenceModeTitle)
             setmaintainenceModeMessage(resultData.maintainenceModeMessage)
     })
