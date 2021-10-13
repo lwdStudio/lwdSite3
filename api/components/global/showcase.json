@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_global_showcases",
+  "info": {
+    "name": "Showcase",
+    "icon": "award"
+  },
+  "options": {},
+  "attributes": {
+    "pages": {
+      "collection": "pages"
+    }
+  }
+}

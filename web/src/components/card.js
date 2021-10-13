@@ -39,13 +39,13 @@ export const PortfolioCard = ({posts}) => {
             <div className="rounded-lg shadow-md">
                 <GatsbyImage 
                     className="w-full md:w-52 md:h-32 rounded-lg object-cover"
-                    alt={posts.node.mainImage&&posts.node.mainImage.caption}
-                    image={posts.node.mainImage&&posts.node.mainImage.asset.gatsbyImageData}
+                    image={posts.CoverImage&&posts.CoverImage.localFile.childrenImageSharp[0].gatsbyImageData}
                 />
             </div>
             <div className="flex-col p-5 content-center rounded-b-lg">
-                <h2 className="text-2xl font-bold text-blue-700 py-1"><Link to={`/showcase/${posts.node.slug.current}`} className="hover:text-black focus:text-black hover:bg-gray-200 focus:bg-yellow-300 rounded-md p-0.5">{posts.node.title}</Link></h2>
-                <div className="text-md font-regular text-gray-500">{posts.node.excerpt}</div>
+                <span className="text-sm font-bold text-green-500">#{posts.tags&&posts.tags[0].tagName}</span>
+                <h2 className="text-2xl font-bold text-blue-700 py-1"><Link to={`/showcase/${posts.pageSlug}`} className="hover:text-black focus:text-black hover:bg-gray-200 focus:bg-yellow-300 rounded-md p-0.5">{posts.pageTitle}</Link></h2>
+                <div className="text-md font-regular text-gray-500">{posts.Excerpt}</div>
             </div>
         </div>
     )

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_global_experiences",
+  "info": {
+    "name": "Experience",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Location": {
+      "type": "string"
+    },
+    "FromDate": {
+      "type": "date"
+    },
+    "ToDate": {
+      "type": "date"
+    }
+  }
+}

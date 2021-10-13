@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_global_contact_infos",
+  "info": {
+    "name": "ContactInfo",
+    "icon": "address-book"
+  },
+  "options": {},
+  "attributes": {
+    "ContactMethod": {
+      "type": "string"
+    },
+    "Contact": {
+      "type": "string"
+    },
+    "ContactIcon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

@@ -35,6 +35,16 @@
         }
       },
       "component": "global.notification"
+    },
+    "Showcase": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "global.showcase"
     }
   }
 }

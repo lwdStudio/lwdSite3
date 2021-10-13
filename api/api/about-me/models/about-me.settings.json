@@ -2,7 +2,8 @@
   "kind": "singleType",
   "collectionName": "about_mes",
   "info": {
-    "name": "aboutMe"
+    "name": "aboutMe",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -46,6 +47,36 @@
         }
       },
       "type": "text"
+    },
+    "Job": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "global.experience"
+    },
+    "Education": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "global.experience"
+    },
+    "ContactInfo": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "global.contact-info"
     }
   }
 }
