@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+    .gridArea-full {
+        grid-area: "1/1";
+    }
+}
+
 @layer base {
     h1 {
         @apply text-2xl py-1 font-bold;
@@ -22,3 +28,4 @@
         @apply list-disc py-2 list-inside;
     }
 }
+

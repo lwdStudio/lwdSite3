@@ -7,7 +7,11 @@ module.exports = {
       'serif':['noto-serif-sc','ui-serif', 'Georgia','serif'],
       'mono':['ui-monospace'],
     },
-    extend: {},
+    extend: {
+      zIndex: {
+        '-10': '-10',
+       },
+    },
   },
   variants: {
     extend: {},

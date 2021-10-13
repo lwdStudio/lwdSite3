@@ -4,7 +4,6 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 
 
 export const BlogCard = ({posts}) => {
-    console.log(posts)
     return (
         <div className="flex flex-col md:flex-row rounded-lg shadow-md mb-5">
             <div className="rounded-lg shadow-md">
