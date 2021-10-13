@@ -75,3 +75,28 @@ export const LwdServiceCard = ({Service}) => {
         </div>
     )
 }
+
+export const InfoCard = ({info}) => {
+    return (
+        <div className="p-8 mb-2 shadow-md rounded-md bg-white">
+            <div className="md:flex mb-4">
+                <h3>{info.Title}</h3>
+                <div className="md:flex-grow"></div>
+                <span className="md:float-right">{info.FromDate} - {info.ToDate}</span>
+            </div>
+            <h4>{info.Location}</h4>
+        </div>  
+    )
+}
+
+export const ContactCard = ({contactInfo}) => {
+    return (
+        <div className="flex p-8 m-2 shadow-md rounded-md bg-white">
+            {/* <GatsbyImage 
+                className="object-cover h-6 w-6"
+                image={contactInfo.ContactIcon.localFile.childrenImageSharp[0] && contactInfo.ContactIcon.localFile.childrenImageSharp[0].gatsbyImageData}
+            /> */}
+            <LwdLink LinkTo={contactInfo.Contact} className="px-1">{contactInfo.ContactMethod}</LwdLink>
+        </div>
+    )
+}

@@ -59,7 +59,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: process.env.API_URL || "http://localhost:1337",
+        apiURL: process.env.GATSBY_STRAPI_API_URL || "http://localhost:1337",
         queryLimit: 1000, // Defaults to 100
         collectionTypes: [
           {
@@ -99,15 +99,15 @@ module.exports = {
               }
             }
           },
-          // {
-          //   name:'about-me',
-          //   api:{
-          //     qs:{
-          //       _locale:`en`,
-          //       _publicationState: 'preview',
-          //     }
-          //   }
-          // },          
+          {
+            name:'about-me',
+            api:{
+              qs:{
+                _locale:`en`,
+                _publicationState: 'preview',
+              }
+            }
+          },          
           {
             name:'lwd-service',
             api:{
