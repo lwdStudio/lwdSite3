@@ -43,6 +43,7 @@
     "rehype-slug": "^5.0.0",
     "remark-gfm": "^3.0.0",
     "tailwindcss": "^2.2.15",
+    "typewriter-effect": "^2.18.2",
     "yarn": "^1.22.15"
   }
 }

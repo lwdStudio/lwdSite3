@@ -6,6 +6,7 @@ import Hero from '../components/hero'
 import {ShowcaseCard} from '../components/card'
 import {SiteNotification} from '../components/notification'
 import {graphql} from 'gatsby'
+import Typewriter from 'typewriter-effect'
   
 const IndexPage = ({location, data}) => {
   const {heroLink,heroH1,heroImage} = data.strapiFrontPage.Hero
@@ -35,9 +36,31 @@ const IndexPage = ({location, data}) => {
   return (
     <Layout pageTitle="Hi! My name is Liwen Duan." location={location}>
       {notification && <SiteNotification NotificationType={notification.WarningClass} Content={notification.NotificationContent} /> }
-
       <Hero imageData={heroImage}>
-        <h1 className="text-white font-extrabold text-4xl md:text-6xl text-middle p-5 md:p-24 overflow-auto">{heroH1}</h1>
+      <h1 className="text-white font-extrabold text-4xl md:text-6xl text-middle p-5 md:p-24 overflow-auto">
+      {/* <Typewriter
+        onInit={(typewriter) => {
+          typewriter.typeString(heroH1)
+          .callFunction(() => {
+            console.log('String typed out!');
+          })
+          .pauseFor(2500)
+          .deleteAll()
+          .callFunction(() => {
+            console.log('All strings were deleted');
+          })
+          .start();
+        }}
+      />*/}
+      <Typewriter
+        options={{
+          strings: heroH1,
+          autoStart: true,
+          loop: true,
+          pauseFor: 3000,
+        }}
+      />
+      </h1> 
         <Button to={heroLink.heroLinkUrl}>{heroLink.heroLinkTitle}</Button>
       </Hero>
 
@@ -55,7 +78,6 @@ const IndexPage = ({location, data}) => {
         </div>
       </section>
 
-      <p className="h-screen bg-yellow-50">I'm making this by following the Gatsby Tutorial.</p>
     </Layout>
   )
 }
