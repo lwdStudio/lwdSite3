@@ -1,5 +1,6 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { Button } from "../components/button"
+import {HomeIcon} from "@heroicons/react/outline"
 import Layout from '../components/page/layout'
 
 // styles
@@ -28,7 +29,7 @@ const codeStyles = {
 // markup
 const NotFoundPage = ({location}) => {
   return (
-    <Layout pageType="Not found" location={location}>
+    <Layout pageType="Not found (；′⌒`) " location={location}>
       <main style={pageStyles}>
         <h1 style={headingStyles}>Page not found</h1>
         <p style={paragraphStyles}>
@@ -46,7 +47,7 @@ const NotFoundPage = ({location}) => {
             </>
           ) : null}
           <br />
-          <Link to="/">Go home</Link>.
+          <Button to="/">Go home<HomeIcon className="h-4 inline px-1 align-middle"/></Button>
         </p>
       </main>
 
