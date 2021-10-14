@@ -4,7 +4,7 @@ import { LwdLink } from './page/link'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
 
-export const BlogCard = ({posts}) => {
+export const ArticleCard = ({posts}) => {
     return (
         <div className="flex flex-col md:flex-row rounded-lg shadow-md mb-5">
             <div className="rounded-lg shadow-md">
@@ -15,8 +15,8 @@ export const BlogCard = ({posts}) => {
             </div>
             
             <div className="flex-col p-5 content-center rounded-b-lg">
-                <span className="text-sm font-bold text-green-500">#{posts.tags&&posts.tags[0].tagName}</span>
-                <h2 className="text-2xl font-bold text-blue-700 py-1"><Link to={`/blog/${posts.pageSlug}`} className="hover:text-black focus:text-black hover:bg-gray-200 focus:bg-yellow-300 rounded-md p-0.5">{posts.pageTitle}</Link></h2>
+                <span className="text-sm font-bold text-green-500">{posts.tags&&"#"+posts.tags[0].tagName}</span>
+                <h2 className="text-2xl font-bold text-blue-700 py-1"><Link to={`/${posts.pageSlug}`} className="hover:text-black focus:text-black hover:bg-gray-200 focus:bg-yellow-300 rounded-md p-0.5">{posts.pageTitle}</Link></h2>
                 <div className="text-md font-regular text-gray-500">{posts.Excerpt}</div>
             </div>
         </div>
@@ -28,24 +28,6 @@ export const PageCard = ({pages}) => {
         <div className="flex flex-col md:flex-row rounded-lg shadow-md mb-5">
             <div className="flex-col p-5 content-center">
               <h2 className="text-2xl font-bold text-blue-700 py-1"><Link to={`/tos/${pages.node.pageSlug}`} className="hover:text-black focus:text-black hover:bg-gray-200 focus:bg-yellow-300 rounded-md p-0.5">{pages.node.pageTitle}</Link></h2>
-            </div>
-        </div>
-    )
-}
-
-export const PortfolioCard = ({posts}) => {
-    return (
-        <div className="flex flex-col md:flex-row rounded-lg shadow-md mb-5">
-            <div className="rounded-lg shadow-md">
-                <GatsbyImage 
-                    className="md:max-w-7xl w-52 md:h-auto h-48 rounded-lg object-cover align-middle"
-                    image={posts.CoverImage&&posts.CoverImage.localFile.childrenImageSharp[0].gatsbyImageData}
-                />
-            </div>
-            <div className="flex-col p-5 content-center rounded-b-lg">
-                <span className="text-sm font-bold text-green-500">#{posts.tags&&posts.tags[0].tagName}</span>
-                <h2 className="text-2xl font-bold text-blue-700 py-1"><Link to={`/showcase/${posts.pageSlug}`} className="hover:text-black focus:text-black hover:bg-gray-200 focus:bg-yellow-300 rounded-md p-0.5">{posts.pageTitle}</Link></h2>
-                <div className="text-md font-regular text-gray-500">{posts.Excerpt}</div>
             </div>
         </div>
     )
@@ -118,7 +100,7 @@ export const CertificateCard = ({certificateInfo}) => {
     )
 }
 
-export const FrontPageShowcaseCard = ({showcaseArticle}) => {
+export const ShowcaseCard = ({showcaseArticle}) => {
     return (
         <div className="flex flex-col w-72 rounded-lg shadow-md m-5 min-h-1/2 bg-white">
             <div className="rounded-lg shadow-md">
@@ -129,7 +111,8 @@ export const FrontPageShowcaseCard = ({showcaseArticle}) => {
             </div>
 
             <div className="flex-col p-5 content-center rounded-b-lg">
-                <h2 className="text-2xl font-bold text-blue-700 py-1"><Link to={`/showcase/${showcaseArticle.pageSlug}`} className="hover:text-black focus:text-black hover:bg-gray-200 focus:bg-yellow-300 rounded-md p-0.5">{showcaseArticle.pageTitle}</Link></h2>
+                <span className="text-sm font-bold text-green-500">{showcaseArticle.tags&&"#"+showcaseArticle.tags[0].tagName}</span>
+                <h2 className="text-2xl font-bold text-blue-700 py-1"><Link to={`/${showcaseArticle.pageSlug}`} className="hover:text-black focus:text-black hover:bg-gray-200 focus:bg-yellow-300 rounded-md p-0.5">{showcaseArticle.pageTitle}</Link></h2>
                 <div className="text-md font-regular text-gray-500">{showcaseArticle.Excerpt}</div>
             </div>
         </div>

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Layout from '../../components/page/layout'
-import { BlogCard } from '../../components/card'
+import { ArticleCard } from '../../components/card'
 import { graphql } from 'gatsby'
 
 const BlogIndexPage = ({location, data}) => {
@@ -11,7 +11,7 @@ const BlogIndexPage = ({location, data}) => {
         <p className="pb-4">Here are some articles I wrote for many things. Some for coursework, some might be personal.</p>
         {
           data.allStrapiPages.nodes.map((Posts) => {
-            return (<BlogCard posts={Posts}/>)
+            return (<ArticleCard posts={Posts}/>)
           })
         }
       </div>

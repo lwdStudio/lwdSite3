@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from '../../components/page/layout'
+import Layout from '../components/page/layout'
 import { graphql } from 'gatsby'
 import Reactmarkdown from "react-markdown"
 import remarkGfm from 'remark-gfm'
@@ -9,7 +9,7 @@ import slug from 'rehype-slug'
 const TosPage = ({data, location}) => {
     const {pageTitle,Content} = data.strapiPages
     return (
-        <Layout pageTitle={pageTitle} pageType="Showcase" location={location}>
+        <Layout pageTitle={pageTitle} pageType="Article" location={location}>
             <div className="pt-5 text-center">
                 <h1 className="text-3xl md:text-5xl font-extrabold py-2">{pageTitle}</h1>
             </div>
@@ -29,8 +29,8 @@ const TosPage = ({data, location}) => {
 export default TosPage
 
 export const query = graphql`
-query getPortfolioPageContent($id: String!) {
-    strapiPages(id: {eq: $id}, content_type: {typeSlug: {eq: "portfolio"}}) {
+query getGeneraticPageContent($id: String!) {
+    strapiPages(id: {eq: $id}) {
       pageTitle
       id
       Content

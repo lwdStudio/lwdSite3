@@ -3,7 +3,7 @@ import Layout from '../components/page/layout'
 import Button from '../components/button'
 import Maintainence from '../components/maintainence'
 import Hero from '../components/hero'
-import {FrontPageShowcaseCard} from '../components/card'
+import {ShowcaseCard} from '../components/card'
 import {SiteNotification} from '../components/notification'
 import {graphql} from 'gatsby'
   
@@ -48,7 +48,7 @@ const IndexPage = ({location, data}) => {
         {
           data.strapiFrontPage.Showcase[0].pages.map((showcaseArticle) => {
             return (
-              <FrontPageShowcaseCard showcaseArticle={showcaseArticle} />
+              <ShowcaseCard showcaseArticle={showcaseArticle} />
             )
           })
         }
