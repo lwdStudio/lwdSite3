@@ -2,12 +2,14 @@
   "collectionName": "components_global_notifications",
   "info": {
     "name": "Notification",
-    "icon": "exclamation-circle"
+    "icon": "exclamation-circle",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "NotificationContent": {
-      "type": "richtext"
+      "type": "richtext",
+      "default": "Service Interruption: [name](link) is having {issueName} issue, site administrator are investigating the issue. "
     },
     "WarningClass": {
       "type": "enumeration",

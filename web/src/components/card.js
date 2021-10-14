@@ -9,7 +9,7 @@ export const BlogCard = ({posts}) => {
         <div className="flex flex-col md:flex-row rounded-lg shadow-md mb-5">
             <div className="rounded-lg shadow-md">
                 <GatsbyImage 
-                    className="w-full md:w-52 md:h-32 rounded-lg object-cover"
+                    className="md:max-w-7xl w-52 md:h-auto h-48 rounded-lg object-cover align-middle"
                     image={posts.CoverImage&&posts.CoverImage.localFile.childrenImageSharp[0].gatsbyImageData}
                 />
             </div>
@@ -38,7 +38,7 @@ export const PortfolioCard = ({posts}) => {
         <div className="flex flex-col md:flex-row rounded-lg shadow-md mb-5">
             <div className="rounded-lg shadow-md">
                 <GatsbyImage 
-                    className="w-full md:w-52 md:h-32 rounded-lg object-cover"
+                    className="md:max-w-7xl w-52 md:h-auto h-48 rounded-lg object-cover align-middle"
                     image={posts.CoverImage&&posts.CoverImage.localFile.childrenImageSharp[0].gatsbyImageData}
                 />
             </div>
@@ -113,6 +113,24 @@ export const CertificateCard = ({certificateInfo}) => {
                 <h4>{certificateInfo.IssueAgency}</h4>
                 <div className="md:flex-grow"></div>
                 <LwdLink LinkTo={certificateInfo.CertificateLink} className="md:float-right">See Certificate</LwdLink>
+            </div>
+        </div>
+    )
+}
+
+export const FrontPageShowcaseCard = ({showcaseArticle}) => {
+    return (
+        <div className="flex flex-col w-72 rounded-lg shadow-md m-5 min-h-1/2 bg-white">
+            <div className="rounded-lg shadow-md">
+                <GatsbyImage 
+                    className="md:max-w-7xl w-72 md:h-auto h-48 rounded-lg object-cover align-middle"
+                    image={showcaseArticle.CoverImage && showcaseArticle.CoverImage.localFile.childImageSharp.gatsbyImageData}
+                />
+            </div>
+
+            <div className="flex-col p-5 content-center rounded-b-lg">
+                <h2 className="text-2xl font-bold text-blue-700 py-1"><Link to={`/showcase/${showcaseArticle.pageSlug}`} className="hover:text-black focus:text-black hover:bg-gray-200 focus:bg-yellow-300 rounded-md p-0.5">{showcaseArticle.pageTitle}</Link></h2>
+                <div className="text-md font-regular text-gray-500">{showcaseArticle.Excerpt}</div>
             </div>
         </div>
     )
