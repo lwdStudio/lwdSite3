@@ -9,7 +9,7 @@ export const ArticleCard = ({posts}) => {
         <div className="flex flex-col md:flex-row rounded-lg shadow-md mb-5">
             <div className="self-center rounded-lg shadow-md">
                 <GatsbyImage 
-                    className="md:max-w-7xl w-72 md:h-auto h-48 rounded-lg object-cover"
+                    className="md:max-w-7xl w-72 md:h-auto h-48 rounded-lg object-cover align-middle"
                     image={posts.CoverImage&&posts.CoverImage.localFile.childrenImageSharp[0].gatsbyImageData}
                 />
             </div>
