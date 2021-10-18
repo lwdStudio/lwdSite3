@@ -39,7 +39,7 @@ const Header = ({pageName='lwdSite'}) => {
             <div className="flex-grow"></div>
             <div className="flex items-center md:hidden p-2 ">
                 <button onClick={() => setMenuOpen(!isMenuOpen)} className={`p-3 rounded-lg shadow-md`}>
-                    {isMenuOpen ? <XIcon className="h-8 w-full md:w-auto" /> : <MenuIcon className="h-8 w-full md:w-auto" />}
+                    {isMenuOpen ? <XIcon className="h-8 w-auto" /> : <MenuIcon className="h-8 w-auto" />}
                 </button>
             </div>
             <nav className={`transition w-full md:flex md:flex-row md:w-auto ${isMenuOpen ? "visible" : "invisible md:visible md:h-auto h-0"}`}>
