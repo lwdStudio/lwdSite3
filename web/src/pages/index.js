@@ -13,7 +13,7 @@ const IndexPage = ({location, data}) => {
   //Fetch Notification
   const [notification, setNotification] = useState()
   useEffect(() => {
-    fetch(`${process.env.GATSBY_STRAPI_API_URL}/front-page?_limit=1000&_locale=en&_publicationState=preview`).then(response => response.json()).then(resultData => {
+    fetch(`${process.env.GATSBY_STRAPI_API_URL}/front-page?_limit=1000&_locale=en`).then(response => response.json()).then(resultData => {
       setNotification(resultData.Notification)
     })
   },[])
