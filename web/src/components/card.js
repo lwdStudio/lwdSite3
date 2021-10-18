@@ -40,7 +40,7 @@ export const LwdServiceCard = ({Service}) => {
                 {
                     Service.serviceIcon && (
                         <img className="w-64 h-32 object-scale-down justify-items-center p-5"
-                        src={`http://localhost:3000`+ Service.serviceIcon.url}
+                        src={`${process.env.GATSBY_STRAPI_API_URL}`+ Service.serviceIcon.url}
                         alt={Service.serviceIcon.alternativeText}
                         />
                     )
