@@ -7,7 +7,7 @@ import rehypeRaw from 'rehype-raw'
 import slug from 'rehype-slug'
 
 const TosPage = ({data, location}) => {
-    const {pageTitle,updated_at,Content} = data.strapiPages
+    const {pageTitle,updated_at,Content} = data.strapiLegal
     return (
         <Layout pageTitle={pageTitle} pageType="Showcase" location={location}>
             <div className="pt-5 text-center">

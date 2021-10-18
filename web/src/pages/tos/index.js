@@ -10,7 +10,7 @@ const tosIndexPage = ({location, data}) => {
           <h1 className="text-5xl font-extrabold py-2">Terms of Use</h1>
           <p className="pb-4">When accessing this site, we assume that you have agreed to the following terms of use.</p>
           {
-            data.allStrapiPages.edges.map((pages) => {
+            data.allStrapiLegal.edges.map((pages) => {
               return (
                   <PageCard pages={pages}/>
               )
