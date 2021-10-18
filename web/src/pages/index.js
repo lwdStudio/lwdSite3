@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Layout from '../components/page/layout'
 import Button from '../components/button'
-import Maintainence from '../components/maintainence'
 import Hero from '../components/hero'
 import {ShowcaseCard} from '../components/card'
 import {SiteNotification} from '../components/notification'

@@ -39,14 +39,6 @@ module.exports = {
       },
     },
     "gatsby-plugin-sharp",
-    {
-      resolve: "gatsby-plugin-react-svg",
-      options: {
-        rule: {
-          include: /static/ // See below to configure properly
-        }
-      }
-    },
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
