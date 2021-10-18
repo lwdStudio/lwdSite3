@@ -7,9 +7,9 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 export const ArticleCard = ({posts}) => {
     return (
         <div className="flex flex-col md:flex-row rounded-lg shadow-md mb-5">
-            <div className="rounded-lg shadow-md">
+            <div className="self-center rounded-lg shadow-md">
                 <GatsbyImage 
-                    className="md:max-w-7xl w-52 md:h-auto h-48 rounded-lg object-cover align-middle"
+                    className="md:max-w-7xl w-72 md:h-auto h-48 rounded-lg object-cover"
                     image={posts.CoverImage&&posts.CoverImage.localFile.childrenImageSharp[0].gatsbyImageData}
                 />
             </div>
