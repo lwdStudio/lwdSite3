@@ -31,11 +31,10 @@ export default TosPage
 
 export const query = graphql`
 query getLegalPageContent($id: String!) {
-    strapiPages(id: {eq: $id}, content_type: {typeSlug: {eq: "legal"}}) {
-      pageTitle
+    strapiLegal(id: {eq: $id}) {
       updated_at(formatString: "YYYY-MM-DD")
-      id
-      Content
+      pageTitle
+      content
     }
-  }
+  }  
 `

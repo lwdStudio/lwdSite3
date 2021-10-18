@@ -71,8 +71,18 @@ module.exports = {
                 _publicationState: 'preview',
               }
             }
-          },          {
+          },
+          {
             name:`tags`,
+            api:{
+              qs:{
+                _locale:`all`,
+                _publicationState: 'preview',
+              }
+            }
+          },
+          {
+            name:`legal`,
             api:{
               qs:{
                 _locale:`all`,

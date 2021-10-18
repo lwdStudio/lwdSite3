@@ -27,13 +27,13 @@ export default tosIndexPage
 
 export const query = graphql `
 query getLegalPages {
-    allStrapiPages(filter: {content_type: {typeSlug: {eq: "legal"}}}) {
-      edges {
-        node {
-          pageTitle
-          pageSlug
-        }
+  allStrapiLegal(filter: {locale: {eq: "en"}}) {
+    edges {
+      node {
+        pageTitle
+        pageSlug
       }
     }
-  } 
+  }
+}
 `
