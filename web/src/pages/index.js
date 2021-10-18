@@ -19,20 +19,6 @@ const IndexPage = ({location, data}) => {
     })
   },[])
 
-  //Fetch MaintainenceStatus
-  const [maintainenceMode, setmaintainenceMode] = useState(false)
-  useEffect(() => {
-    fetch(`${process.env.GATSBY_STRAPI_API_URL}/maintainence-mode?_limit=1000&_locale=en&_publicationState=preview`).then(response => response.json()).then(resultData => {
-      setmaintainenceMode(resultData.maintainenceModeSwitch)
-    })
-  },[])
-
-  if (maintainenceMode) {
-    return (
-      <Maintainence />
-    )
-  }
-  
   return (
     <Layout pageTitle="Hi! My name is Liwen Duan." location={location}>
       {notification && <SiteNotification NotificationType={notification.WarningClass} Content={notification.NotificationContent} /> }
@@ -57,7 +43,7 @@ const IndexPage = ({location, data}) => {
           strings: heroH1,
           autoStart: true,
           loop: true,
-          pauseFor: 3000,
+          pauseFor: 10000,
         }}
       />
       </h1> 
