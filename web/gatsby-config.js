@@ -59,6 +59,7 @@ module.exports = {
             api:{
               qs:{
                 _locale:`all`,
+                // _publicationState: 'preview',
               }
             }
           },
@@ -67,6 +68,7 @@ module.exports = {
             api:{
               qs:{
                 _locale:`all`,
+                // _publicationState: 'preview',
               }
             }
           },
@@ -75,6 +77,7 @@ module.exports = {
             api:{
               qs:{
                 _locale:`all`,
+                // _publicationState: 'preview',
               }
             }
           },
@@ -83,6 +86,7 @@ module.exports = {
             api:{
               qs:{
                 _locale:`all`,
+                // _publicationState: 'preview',
               }
             }
           },
@@ -93,6 +97,7 @@ module.exports = {
             api:{
               qs:{
                 _locale:`en`,
+                // _publicationState: 'preview',
               }
             }
           },
@@ -101,6 +106,7 @@ module.exports = {
             api:{
               qs:{
                 _locale:`en`,
+                // _publicationState: 'preview',
               }
             }
           },          
@@ -109,6 +115,7 @@ module.exports = {
             api:{
               qs:{
                 _locale:`en`,
+                // _publicationState: 'preview',
               }
             }
           },
