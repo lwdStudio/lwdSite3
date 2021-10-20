@@ -23,6 +23,7 @@
     "assert": "^2.0.0",
     "autoprefixer": "^10.3.5",
     "gatsby": "^3.14.0",
+    "gatsby-plugin-catch-links": "^3.14.0",
     "gatsby-plugin-image": "^1.14.0",
     "gatsby-plugin-manifest": "^3.14.0",
     "gatsby-plugin-postcss": "^4.14.0",
