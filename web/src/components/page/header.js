@@ -6,7 +6,7 @@ import {GlobeAltIcon, MenuIcon, XIcon } from '@heroicons/react/solid'
 
 const NavButton = ({LinkTo, children}) => {
     return (
-        <Link to={LinkTo} className="flex w-full md:w-28 p-3 my-3 md:m-3 justify-center rounded-md md:shadow-md font-medium text-gray-700 hover:text-black focus:text-black hover:bg-gray-100 focus:bg-yellow-300">{children}</Link>
+        <Link to={LinkTo} className="flex w-full md:w-28 p-3 my-3 md:m-3 justify-center rounded-md md:shadow-md font-medium text-gray-700 hover:text-black focus:text-black hover:bg-gray-100 focus:bg-yellow-300 focus:shadow-none">{children}</Link>
     )
 }
 
