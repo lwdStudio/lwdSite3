@@ -21,15 +21,17 @@ const Layout = ({pageType, pageTitle=pageType, children}) => {
   }
 
   return (
-    <div>
-      <Helmet defer={false}>
-        <title>{pageTitle} | lwdSite</title>
-      </Helmet>
-      <Header pageName={pageType} />
-      <main>
-        {children}
-      </main>
-      <Footer />
+    <div className="">
+      <div className="dark:bg-gray-900">
+        <Helmet defer={false}>
+          <title>{pageTitle} | lwdSite</title>
+        </Helmet>
+        <Header pageName={pageType} />
+        <main className="dark:text-white dark:text-opacity-50">
+          {children}
+        </main>
+        <Footer />
+      </div>
     </div>
   )
 }

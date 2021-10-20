@@ -22,37 +22,23 @@ const IndexPage = ({location, data}) => {
     <Layout pageTitle={heroH1} location={location}>
       {notification && <SiteNotification NotificationType={notification.WarningClass} Content={notification.NotificationContent} /> }
       <Hero imageData={heroImage}>
-      <h1 className="text-white font-extrabold leading-relax font-serif text-4xl md:text-6xl text-middle p-5 md:p-24 overflow-auto">
-      {/* <Typewriter
-        onInit={(typewriter) => {
-          typewriter.typeString(heroH1)
-          .callFunction(() => {
-            console.log('String typed out!');
-          })
-          .pauseFor(2500)
-          .deleteAll()
-          .callFunction(() => {
-            console.log('All strings were deleted');
-          })
-          .start();
-        }}
-      />*/}
-      <Typewriter
-        options={{
-          strings: heroH1,
-          autoStart: true,
-          loop: true,
-          pauseFor: 10000,
-        }}
-      />
-      </h1> 
+        <h1 className="text-white font-extrabold leading-relax font-serif text-4xl md:text-6xl text-middle p-5 md:p-24 overflow-auto dark:text-gray-100">
+          <Typewriter
+            options={{
+              strings: heroH1,
+              autoStart: true,
+              loop: true,
+              pauseFor: 10000,
+            }}
+          />
+        </h1> 
         <Button to={heroLink.heroLinkUrl}>{heroLink.heroLinkTitle}</Button>
       </Hero>
 
       <section className="px-16 py-8">
         <h2 className="text-2xl ">Selected Work & Reading</h2>
-        <span className="text-gray-600">Explore my recent projects</span>
-        <div className="md:bg-gray-50 flex md:p-10 flex-col md:flex-row place-items-center md:overflow-x-auto md:shadow-inner rounded-md md:mt-10">
+        <span className="text-gray-600 dark:text-gray-500">Explore my recent projects</span>
+        <div className="md:bg-gray-50 flex md:p-10 flex-col md:flex-row place-items-center md:overflow-x-auto md:shadow-inner rounded-md md:dark:bg-gray-700 mt-5">
         {
           data.strapiFrontPage.Showcase[0].pages.map((showcaseArticle) => {
             return (

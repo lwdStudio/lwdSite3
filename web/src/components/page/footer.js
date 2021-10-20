@@ -11,9 +11,9 @@ export const FooterText = ({children}) => {
         
     )
 }
-export const FooterLink = ({LinkTo, children},props) => {
+export const FooterLink = ({LinkTo, children}) => {
     return (
-        <FooterText><LwdLink LinkTo={LinkTo} className="px-1.5 rounded-md text-gray-500" >{children}</LwdLink></FooterText>
+        <FooterText><LwdLink LinkTo={LinkTo} className="text-gray-500 dark:text-gray-500 px-1.5 rounded-md" >{children}</LwdLink></FooterText>
     )
 }
 
@@ -33,7 +33,7 @@ const Footer = () => {
                 }
             `}
             render={data => 
-                <footer className="p-1 bg-gray-100 shadow-sm rounded-lg z-50" >
+                <footer className="p-1 bg-gray-100 shadow-sm rounded-lg z-50 dark:bg-gray-800">
                     <FooterLink LinkTo="/">
                         <div className="flex space-x-2 h-auto px-8 py-2 justify-center lg:justify-start">
                             <StaticImage 
@@ -45,7 +45,7 @@ const Footer = () => {
                             height={35}
                             transformOptions={{fit: "cover"}}
                             />
-                            <span className="inline-flex py-1 text-lg font-serif text-black">{data.site.siteMetadata.title}</span>
+                            <span className="inline-flex py-1 text-lg font-serif text-black dark:text-gray-200 dark:text-opacity-50">{data.site.siteMetadata.title}</span>
                         </div>
                     </FooterLink>
                     

@@ -8,6 +8,22 @@
     }
 }
 
+@layer components {
+    .card-common {
+        @apply shadow-md rounded-lg bg-white dark:bg-gray-800
+    }
+    .about-card {
+        @apply p-8 m-2 
+    }
+    .link-common {
+        @apply hover:text-black focus:text-black hover:bg-gray-200 focus:bg-yellow-300 rounded-md 
+        dark:text-blue-500 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:text-black
+    }
+    .tag {
+        @apply text-sm font-bold text-green-500 dark:text-green-600
+    }
+}
+
 @layer base {
     h1 {
         @apply text-2xl py-1 font-bold;
@@ -20,6 +36,7 @@
     }
     a {
         @apply  hover:text-black focus:text-black hover:bg-gray-200 focus:bg-yellow-300 rounded-md py-0.5 text-blue-700
+        dark:text-blue-500 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:text-black
     }
     p {
         display: block;

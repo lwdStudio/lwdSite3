@@ -20,7 +20,7 @@ const AboutPage = ({location, data}) => {
           <p>
             {Description}
           </p>
-          <Button to={`${process.env.GATSBY_STRAPI_API_URL}${Resume.url}`} className="place-self-center w-48">Get my Resume</Button>
+          <Button to={`${process.env.GATSBY_STRAPI_API_URL}${Resume.url}`}>Get my Resume</Button>
         </section>
         
         <section className="p-5">
