@@ -32,16 +32,16 @@
 
 ## 📜 Feature
 
-    ✅ Connects to Strapi, a headless CMS via Graphql. 
-    ✅ Tailwind CSS for page styling.
-    ✅ Responsive layout.
-    ✅ Everything is working.
-    ✅ Dark mode support - via Tailwild CSS media
-    ✅ External Link Icon - There is a [debate](https://designnotes.blog.gov.uk/2016/11/28/removing-the-external-link-icon-from-gov-uk/) on this, and I will be looking into it.
+-  ✅ Connects to Strapi, a headless CMS via Graphql. 
+-  ✅ Tailwind CSS for page styling.
+-  ✅ Responsive layout.
+-  ✅ Everything is working.
+-  ✅ Dark mode support - via Tailwild CSS media
+-  ✅ External Link Icon - There is a [debate](https://designnotes.blog.gov.uk/2016/11/28/removing-the-external-link-icon-from-gov-uk/) on this, and I will be looking into it.
 
 
 ## 📝 To-Do
 
-    🔜 Add i18n support: query, language switcher, content.
-    🔜 Maybe a video for index's hero.
-    🔜 SEO
+-  🔜 Add i18n support: query, language switcher, content.
+-  🔜 Maybe a video for index's hero.
+-  🔜 SEO
