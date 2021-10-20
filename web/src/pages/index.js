@@ -19,7 +19,7 @@ const IndexPage = ({location, data}) => {
   },[])
 
   return (
-    <Layout pageTitle="Hi! My name is Liwen Duan." location={location}>
+    <Layout pageTitle={heroH1} location={location}>
       {notification && <SiteNotification NotificationType={notification.WarningClass} Content={notification.NotificationContent} /> }
       <Hero imageData={heroImage}>
       <h1 className="text-white font-extrabold leading-relax font-serif text-4xl md:text-6xl text-middle p-5 md:p-24 overflow-auto">
