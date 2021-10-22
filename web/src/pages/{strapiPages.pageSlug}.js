@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../components/page/layout'
+import SEO from "../components/seo"
 import { graphql } from 'gatsby'
 import Reactmarkdown from "react-markdown"
 import remarkGfm from 'remark-gfm'
@@ -7,9 +8,10 @@ import rehypeRaw from 'rehype-raw'
 import slug from 'rehype-slug'
 
 const TosPage = ({data, location}) => {
-    const {pageTitle,Content} = data.strapiPages
+    const {pageTitle, Content, CoverImage, Excerpt} = data.strapiPages
     return (
         <Layout pageTitle={pageTitle} pageType="Article" location={location}>
+            <SEO title={pageTitle} description={Excerpt} image={CoverImage && `${process.env.GATSBY_STRAPI_API_URL}${CoverImage.url}`} pathname={location.pathname} />
             <div className="pt-5 text-center">
                 <h1 className="text-3xl md:text-5xl font-extrabold py-2">{pageTitle}</h1>
             </div>
@@ -34,6 +36,10 @@ query getGeneraticPageContent($id: String!) {
       pageTitle
       id
       Content
+      CoverImage {
+        url
+      }
+      Excerpt
     }
-  }
+  }  
 `

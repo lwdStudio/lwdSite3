@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../components/page/layout'
+import SEO from "../components/seo"
 import {InfoCard, ContactCard, CertificateCard} from '../components/card'
 import {Button} from '../components/button'
 import {graphql} from 'gatsby'
@@ -8,7 +9,8 @@ import {GatsbyImage} from 'gatsby-plugin-image'
 const AboutPage = ({location, data}) => {
   const {h1, Description, Job, Education, ContactInfo, avatar, Certificate, Resume} = data.strapiAboutMe
   return (
-    <Layout pageType="About me" location={location}>
+    <Layout location={location} pageType="About me">
+      <SEO title="About me" description={Description} image={`${process.env.GATSBY_STRAPI_API_URL}${avatar.url}`} pathname={location.pathname}/>
       <div className="md:container md:mx-auto p-4 ">
         <h1 className="col-span-full text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-blue-800 pb-8">{h1}</h1>
         <section className="grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-4">
@@ -105,6 +107,7 @@ query getAboutMe {
     }
     avatar {
       alternativeText
+      url
       localFile {
         childImageSharp {
           gatsbyImageData(layout: CONSTRAINED, transformOptions: {fit: COVER})
