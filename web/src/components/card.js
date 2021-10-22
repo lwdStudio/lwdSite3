@@ -2,22 +2,23 @@ import React from 'react'
 import { LwdLink } from './page/link'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
-
 export const ArticleCard = ({posts}) => {
     return (
-        <div className="flex flex-col md:flex-row mb-5 card-common">
-            <div className="self-center rounded-lg shadow-md">
-                <GatsbyImage 
-                    className="md:max-w-7xl w-72 md:h-auto h-48 rounded-lg object-cover align-middle"
-                    image={posts.CoverImage&&posts.CoverImage.localFile.childrenImageSharp[0].gatsbyImageData}
-                    alt={posts.CoverImage&&posts.CoverImage.alternativeText}
-                />
-            </div>
+        <div className="flex flex-col md:flex-row card-common m-5">
+            {posts.CoverImage && 
+                <div className="flex-none w-full md:w-72 relative">
+                    <GatsbyImage 
+                        className="object-cover w-full h-full card-common"
+                        image={posts.CoverImage.localFile.childrenImageSharp[0].gatsbyImageData}
+                        alt={posts.CoverImage.alternativeText}
+                    />
+                </div>
+            }
             
-            <div className="flex-col p-5 content-center rounded-b-lg">
+            <div className="flex-auto p-6">
                 <span className="tag">{posts.tags&&"#"+posts.tags[0].tagName}</span>
                 <h2 className="text-2xl"><LwdLink LinkTo={`/${posts.pageSlug}`} className="p-0.5">{posts.pageTitle}</LwdLink></h2>
-                <excerpt className="text-md font-regular text-gray-500">{posts.Excerpt}</excerpt>
+                <p className="text-md font-regular text-gray-500">{posts.Excerpt}</p>
             </div>
         </div>
     )
