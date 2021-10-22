@@ -6,6 +6,8 @@ module.exports = {
   siteMetadata: {
     siteUrl: "https://www.liwenduan.com",
     title: "lwdSite3",
+    description:"This website help you learn more about me.",
+    image:"src/images/IMG_7079.jpeg",
     ICPlicense:"鄂ICP备18006410号-2",
     PSBeian:"京公网安备 11011202002643号",
     PSBeianURL: "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011202002643",
