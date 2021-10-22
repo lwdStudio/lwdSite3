@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.liwenduan.com",
+    siteUrl: "https://lwdsite.liwenduan.com",
     title: "lwdSite3",
     ICPlicense:"鄂ICP备18006410号-2",
     PSBeian:"京公网安备 11011202002643号",
