@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/page/layout'
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { graphql } from 'gatsby'
 import Reactmarkdown from "react-markdown"
@@ -12,7 +12,7 @@ const TosPage = ({data, location}) => {
     const {pageTitle, Content, CoverImage, Excerpt} = data.strapiPages
     return (
         <Layout pageTitle={pageTitle} pageType="Article" location={location}>
-            <SEO title={pageTitle} description={Excerpt} image={CoverImage && `${process.env.GATSBY_STRAPI_API_URL}${CoverImage.url}`} pathname={location.pathname} />
+            <Seo title={pageTitle} description={Excerpt} image={CoverImage && `${process.env.GATSBY_STRAPI_API_URL}${CoverImage.url}`} pathname={location.pathname} />
             <div className="pt-5 text-center grid grid-rows-auto grid-cols-1 m-8 md:grid-cols-2 md:mx-24 md:my-4">
                 <h1 className={`text-3xl md:text-5xl font-extrabold self-end ${!CoverImage && `col-span-2`}`}>{pageTitle}</h1>
                 {

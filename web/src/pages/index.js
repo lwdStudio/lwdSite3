@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Layout from '../components/page/layout'
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Button from '../components/button'
 import Hero from '../components/hero'
 import {ShowcaseCard} from '../components/card'
@@ -21,7 +21,7 @@ const IndexPage = ({location, data}) => {
 
   return (
     <Layout pageTitle={heroH1} location={location}>
-      <SEO title={heroH1} pathname={location.pathname} />
+      <Seo title={heroH1} pathname={location.pathname} />
       {notification && <SiteNotification NotificationType={notification.WarningClass} Content={notification.NotificationContent} /> }
       <Hero imageData={heroImage}>
         <h1 className="text-white font-extrabold leading-relax font-serif text-4xl md:text-6xl text-middle p-5 md:p-24 overflow-auto dark:text-gray-100">
