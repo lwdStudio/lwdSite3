@@ -25,7 +25,7 @@ const TosPage = ({data, location}) => {
                 <p className={`italic ${!CoverImage && `col-span-2`}`}>{Excerpt}</p>
             </div>
             <hr className="mx-8 opacity-50 md:mx-24"/>
-            <div className="md:container md:mx-auto px-10">
+            <div className="container mx-auto">
                 <Reactmarkdown 
                     children={Content} 
                     linkTarget="_black"

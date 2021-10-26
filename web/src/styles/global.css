@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+    .markdown-article{
+        @apply lg:mx-12
+    }
+
+    .markdown-article img {
+        @apply lg:max-w-2xl mx-auto block
+    }
+
+}
+
 @layer components {
     .card-common {
         @apply shadow-md rounded-lg bg-white dark:bg-gray-800

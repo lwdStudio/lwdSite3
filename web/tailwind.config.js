@@ -15,13 +15,13 @@ module.exports = {
       '3/4': '75%',
       'full': '100%',
      },
-    container: {
+     container: {
       padding: {
-        DEFAULT: '1rem',
-        sm: '1rem',
-        md: '6rem',
-        lg: '8rem',
-        xl: '12rem',
+        DEFAULT: '1.25rem',
+        sm: '2rem',
+        lg: '4rem',
+        xl: '5rem',
+        '2xl': '6rem',
       },
     },
     extend: {
