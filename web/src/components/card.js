@@ -18,7 +18,7 @@ export const ArticleCard = ({posts}) => {
             <div className="flex-auto p-6">
                 <span className="tag">{posts.tags&&"#"+posts.tags[0].tagName}</span>
                 <h2 className="text-2xl"><LwdLink LinkTo={`/${posts.pageSlug}`} className="p-0.5">{posts.pageTitle}</LwdLink></h2>
-                <p className="text-md font-regular text-gray-500">{posts.Excerpt}</p>
+                <p className="text-md font-regular text-gray-400">{posts.Excerpt}</p>
             </div>
         </div>
     )
@@ -115,7 +115,7 @@ export const ShowcaseCard = ({showcaseArticle}) => {
             <div className="flex-col p-5 w-72 rounded-b-lg">
                 <span className="tag">{showcaseArticle.tags&&"#"+showcaseArticle.tags[0].tagName}</span>
                 <h2 className="text-2xl"><LwdLink LinkTo={`/${showcaseArticle.pageSlug}`} className="p-0.5">{showcaseArticle.pageTitle}</LwdLink></h2>
-                <div className="text-md font-regular text-gray-500">{showcaseArticle.Excerpt}</div>
+                <div className="text-md font-regular text-gray-400">{showcaseArticle.Excerpt}</div>
             </div>
         </div>
     )

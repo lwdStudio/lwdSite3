@@ -14,7 +14,7 @@
         dark:text-blue-500 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:text-black
     }
     .tag {
-        @apply text-sm font-bold text-green-500 dark:text-green-600
+        @apply text-sm font-bold text-green-500 dark:text-green-400
     }
 }
 
@@ -30,7 +30,7 @@
     }
     a {
         @apply  hover:text-black focus:text-black hover:bg-gray-200 focus:bg-yellow-300 rounded-md py-0.5 text-blue-700
-        dark:text-blue-500 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:text-black transition ease-linear
+        dark:text-blue-400 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:text-black transition ease-linear
     }
     p {
         display: block;

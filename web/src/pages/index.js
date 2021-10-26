@@ -38,8 +38,8 @@ const IndexPage = ({location, data}) => {
       </Hero>
 
       <section className="px-16 py-8">
-        <h2 className="text-2xl ">Selected Work & Reading</h2>
-        <span className="text-gray-600 dark:text-gray-500">Explore my recent projects</span>
+        <h2 className="text-2xl dark:text-gray-200">Selected Work & Reading</h2>
+        <span className="text-gray-600 dark:text-gray-400">Explore my recent projects</span>
         <div className="md:bg-gray-50 flex md:p-10 flex-col md:flex-row place-items-center md:overflow-x-auto md:shadow-inner rounded-md md:dark:bg-gray-700 mt-5">
         {
           data.strapiFrontPage.Showcase[0].pages.map((showcaseArticle) => {

@@ -6,14 +6,14 @@ import { StaticQuery,graphql } from 'gatsby'
 export const FooterText = ({children}) => {
     return (
         <div className="px-5 py-1 md:py-0">
-            <p className="flex text-gray-500 justify-center lg:justify-start">{children}</p>
+            <p className="flex text-gray-500 dark:text-gray-300 justify-center lg:justify-start">{children}</p>
         </div>
         
     )
 }
 export const FooterLink = ({LinkTo, children}) => {
     return (
-        <FooterText><LwdLink LinkTo={LinkTo} className="text-gray-500 dark:text-gray-500 px-1.5 rounded-md" >{children}</LwdLink></FooterText>
+        <FooterText><LwdLink LinkTo={LinkTo} className="text-gray-500 dark:text-gray-300 px-1.5 rounded-md" >{children}</LwdLink></FooterText>
     )
 }
 
@@ -36,16 +36,14 @@ const Footer = () => {
                 <footer className="p-1 bg-gray-100 shadow-sm rounded-lg z-50 dark:bg-gray-800">
                     <FooterLink LinkTo="/">
                         <div className="flex space-x-2 h-auto px-8 py-2 justify-center lg:justify-start">
-                            <StaticImage 
-                            src="../../images/lwd-stamp.png"
-                            alt="Liwen Duan's Logo"
-                            placeholder="blurred"
-                            layout="constrained"
-                            width={35}
-                            height={35}
-                            transformOptions={{fit: "cover"}}
-                            />
-                            <span className="inline-flex py-1 text-lg font-serif text-black dark:text-gray-200 dark:text-opacity-50">{data.site.siteMetadata.title}</span>
+                            <div className="h-8 w-8 object-cover">
+                                <StaticImage 
+                                    src="../../images/lwd-stamp.png"
+                                    alt="Liwen Duan's Logo"
+                                    placeholder="blurred"
+                                />
+                            </div>
+                            <span className="inline-flex py-1 text-lg font-serif text-black dark:text-gray-200 dark:text-opacity-80">{data.site.siteMetadata.title}</span>
                         </div>
                     </FooterLink>
                     
