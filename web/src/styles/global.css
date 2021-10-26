@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-    .gridArea-full {
-        grid-area: "1/1";
-    }
-}
-
 @layer components {
     .card-common {
         @apply shadow-md rounded-lg bg-white dark:bg-gray-800
@@ -44,6 +38,8 @@
         margin-bottom: 1em;
         margin-left: 0;
         margin-right: 0;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
     }
     ul {
         display: block;
