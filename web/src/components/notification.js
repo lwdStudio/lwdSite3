@@ -4,10 +4,10 @@ import Reactmarkdown from "react-markdown"
 
 const InfoNotification = ({Content}) => {
   return (
-    <section className="bg-yellow-600 bg-opacity-20 w-full flex p-3 rounded-b-lg shadow-md dark:bg-opacity-60 dark:text-white dark:text-opacity-70">
-      <InformationCircleIcon className="align-middle h-10 py-1 px-2" />
+    <section className="bg-yellow-600 bg-opacity-20 w-full text-black p-3 rounded-b-lg shadow-md align-middle dark:bg-opacity-50 dark:text-white dark:text-opacity-60 flex flex-col md:flex-row text-xs">
+      <InformationCircleIcon className="self-center h-8 pr-2" />
       <Reactmarkdown 
-        className="text-sm align-middle p-0"
+        className="self-center p-0"
         children={Content} 
         transformImageUri={uri => 
             uri.startsWith("http") ? uri : `${process.env.GATSBY_STRAPI_API_URL}${uri}`}
@@ -18,10 +18,10 @@ const InfoNotification = ({Content}) => {
 
 const WarningNotification = ({Content}) => {
   return (
-    <section className="bg-red-600 bg-opacity-20 w-full text-black flex p-3 rounded-b-lg shadow-md align-middle dark:bg-opacity-60 dark:text-white dark:text-opacity-60">
-      <ExclamationIcon className="align-middle h-10 py-1 px-2" />
+    <section className="bg-red-600 bg-opacity-20 w-full text-black p-3 rounded-b-lg shadow-md align-middle dark:bg-opacity-50 dark:text-white dark:text-opacity-60 flex flex-col md:flex-row text-xs">
+      <ExclamationIcon className="self-center h-8 pr-2" />
       <Reactmarkdown 
-        className="text-sm align-middle p-0"
+        className="self-center p-0"
         children={Content} 
         transformImageUri={uri => 
             uri.startsWith("http") ? uri : `${process.env.GATSBY_IMAGE_API_URL}${uri}`}
@@ -32,10 +32,10 @@ const WarningNotification = ({Content}) => {
 
 const ClearNotification = ({Content}) => {
   return (
-    <section className="bg-green-600 bg-opacity-20 w-full text-black flex p-3 rounded-b-lg shadow-md align-middle dark:bg-opacity-50 dark:text-white dark:text-opacity-60">
-      <CheckCircleIcon className="align-middle h-10 py-1 px-2" />
+    <section className="bg-green-600 bg-opacity-20 w-full text-black p-3 rounded-b-lg shadow-md align-middle dark:bg-opacity-50 dark:text-white dark:text-opacity-60 flex flex-col md:flex-row text-xs">
+      <CheckCircleIcon className="self-center h-8 pr-2" />
       <Reactmarkdown 
-        className="text-sm align-middle p-0"
+        className="self-center p-0"
         children={Content} 
         transformImageUri={uri => 
             uri.startsWith("http") ? uri : `${process.env.GATSBY_IMAGE_API_URL}${uri}`}
