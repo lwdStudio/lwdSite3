@@ -27,7 +27,7 @@ const Layout = ({pageType, pageTitle=pageType, children}) => {
           <title>{pageTitle} | lwdSite</title>
         </Helmet>
         <Header pageName={pageType} />
-        <main className="dark:text-white dark:text-opacity-50">
+        <main className="dark:text-white dark:text-opacity-70">
           {children}
         </main>
         <Footer />
