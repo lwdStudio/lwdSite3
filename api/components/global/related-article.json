@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_global_related_articles",
+  "info": {
+    "name": "Related Article",
+    "icon": "newspaper"
+  },
+  "options": {},
+  "attributes": {
+    "pages": {
+      "collection": "pages"
+    }
+  }
+}

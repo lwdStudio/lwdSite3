@@ -73,6 +73,9 @@
       "collection": "tags",
       "via": "pages",
       "dominant": true
+    },
+    "RelatedPage": {
+      "collection": "pages"
     }
   }
 }
