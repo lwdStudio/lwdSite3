@@ -48,7 +48,7 @@ const Header = ({pageName='lwdSite'}) => {
             <LwdLogo pageName={pageName} />
             <div className="flex-grow"></div>
             <div className="flex items-center md:hidden p-2 ">
-                <button onClick={() => setMenuOpen(!isMenuOpen)} className={`p-3 rounded-lg shadow-md dark:bg-gray-700`}>
+                <button onClick={() => setMenuOpen(!isMenuOpen)} className={`p-3 rounded-lg shadow-md dark:bg-gray-700`} aria-label="Menu">
                     {isMenuOpen ? <XIcon className={MenuIconStyle} /> : <MenuIcon className={MenuIconStyle} />}
                 </button>
             </div>
