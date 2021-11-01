@@ -44,7 +44,7 @@ const IndexPage = ({location, data}) => {
         {
           data.strapiFrontPage.Showcase[0].pages.map((showcaseArticle) => {
             return (
-              <ShowcaseCard showcaseArticle={showcaseArticle} />
+              <ShowcaseCard showcaseArticle={showcaseArticle}/>
             )
           })
         }

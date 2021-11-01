@@ -1,9 +1,9 @@
 import React from 'react';
 import { GatsbyImage } from 'gatsby-plugin-image';
 
-export const Hero = ({imageData, children}) => {
+export const Hero = ({imageData, className, children}) => {
     return (
-        <section style={{ display: "grid" }}>
+        <section className={`${className}`} style={{ display: "grid" }}>
             <GatsbyImage 
                 className="h-screen w-full"
                 style={{

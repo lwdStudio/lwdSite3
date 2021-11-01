@@ -6,7 +6,7 @@ import {Helmet} from 'react-helmet'
 import "@fontsource/noto-sans-sc";
 import "@fontsource/noto-serif-sc"
 
-const Layout = ({pageType, pageTitle=pageType, children}) => {
+const Layout = ({pageType, pageTitle=pageType, children, className}) => {
 
   //Fetch MaintainenceStatus
   const [maintainenceMode, setmaintainenceMode] = useState(false)
@@ -23,7 +23,7 @@ const Layout = ({pageType, pageTitle=pageType, children}) => {
   }
 
   return (
-    <div className="">
+    <div className={`${className}`}>
       <div className="dark:bg-gray-900">
         <Helmet defer={false}>
           <title>{pageTitle} | lwdSite</title>

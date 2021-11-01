@@ -44,7 +44,7 @@ const Header = ({pageName='lwdSite'}) => {
     const [isMenuOpen, setMenuOpen] = useState(false)
     const MenuIconStyle = "h-8 w-auto"
     return (
-        <header className="p-1 flex flex-wrap md:flex rounded-b-lg shadow-md bg-white dark:bg-gray-800 dark:text-white dark:text-opacity-50">
+        <header className="p-1 flex flex-wrap md:flex rounded-b-lg shadow-md bg-white dark:bg-gray-800 dark:text-white dark:text-opacity-50 scroll-snap-start">
             <LwdLogo pageName={pageName} />
             <div className="flex-grow"></div>
             <div className="flex items-center md:hidden p-2 ">

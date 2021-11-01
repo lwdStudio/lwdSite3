@@ -101,9 +101,9 @@ export const CertificateCard = ({certificateInfo}) => {
     )
 }
 
-export const ShowcaseCard = ({showcaseArticle}) => {
+export const ShowcaseCard = ({showcaseArticle, className}) => {
     return (
-        <div className="flex flex-col w-72 m-5 min-h-1/2 max-h-1/2 card-common">
+        <div className={`flex flex-col w-72 m-5 min-h-1/2 max-h-1/2 card-common ${className}`}>
             <div className="rounded-lg shadow-md">
                 <GatsbyImage 
                     className="md:max-w-7xl w-72 md:h-auto h-48 rounded-lg object-cover align-middle"
