@@ -3,6 +3,8 @@ import Header from './header'
 import Footer from './footer'
 import Maintainence from '../maintainence'
 import {Helmet} from 'react-helmet'
+import "@fontsource/noto-sans-sc";
+import "@fontsource/noto-serif-sc"
 
 const Layout = ({pageType, pageTitle=pageType, children}) => {
 

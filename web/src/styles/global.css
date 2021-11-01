@@ -11,6 +11,11 @@
         @apply lg:max-w-2xl mx-auto block
     }
 
+    .full-screen {
+        height: 100vh;
+        width: 100vh;
+    }
+
 }
 
 @layer components {
