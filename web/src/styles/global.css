@@ -87,6 +87,11 @@
         margin-left: 0;
         margin-right: 0;
     }
+
+    p a {
+        @apply p-0;
+    }
+
     ul {
         display: block;
         list-style-type: disc;
