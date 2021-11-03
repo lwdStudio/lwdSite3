@@ -45,7 +45,7 @@ const TosPage = ({data, location}) => {
               <div className='container mx-auto mt-10'>
                 <div className='lg:mx-10'>
                   <h2 className='text-lg font-bold'>More to read</h2>
-                  <div className='flex flex-col md:flex-row place-items-center'>
+                  <div className='flex flex-wrap place-items-center justify-center align-middle'>
                     {
                       RelatedPage.map((showcaseArticle) => {
                         return (
