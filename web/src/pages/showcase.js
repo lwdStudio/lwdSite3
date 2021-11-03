@@ -30,7 +30,10 @@ export default BlogIndexPage
 
 export const query = graphql`
 query getPortfolioPages {
-  allStrapiPages(filter: {content_type: {typeSlug: {eq: "portfolio"}}}) {
+  allStrapiPages(
+    filter: {content_type: {typeSlug: {eq: "portfolio"}}}
+    sort: {fields: created_at, order: DESC}
+    ) {
     nodes {
       pageSlug
       pageTitle
