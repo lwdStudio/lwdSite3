@@ -27,16 +27,14 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'yarn'
     - name: Test Strapi part
-      run: 
-        cd api
-        echo "Try to build strapi"
-        rm -rf node_modules && yarn install --frozen-lockfile
-        yarn build --if-present
-        yarn test
+    - run: cd api
+    - run: echo "Try to build strapi"
+    - run: rm -rf node_modules && yarn install --frozen-lockfile
+    - run: yarn build --if-present
+    - run: yarn test
     - name: Test Gatsby part
-      run:
-        cd ../web
-        echo "Try to build Gatsby"
-        rm -rf node_modules && yarn install --frozen-lockfile
-        yarn run build --if-present
-        yarn test
+    - run: cd ../web
+    - run: echo "Try to build Gatsby"
+    - run: rm -rf node_modules && yarn install --frozen-lockfile
+    - run: yarn run build --if-present
+    - run: yarn test
