@@ -1,0 +1,22 @@
+name: Sync to Gitee
+on:
+  push:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Hub Mirror Action.
+      # You may pin to the exact commit or the version.
+      # uses: Yikun/hub-mirror-action@132b206a796926508b73fe82e9f3bb0969a3add6
+      uses: Yikun/hub-mirror-action@v1.1
+      with:
+        # The private SSH key which is used to to push code in destination hub.
+        dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+        # The app token which is used to  create repo in destination hub.
+        dst_token: ${{ secrets.GITEE_TOKEN }}
+        # Destination name. Such as `gitee/kunpengcompute`.
+        dst: gitee/lwdStudio
+        # Source name. Such as `github/kunpengcompute`.
+        src: github/lwdStudio
+        # Only mirror repo in the static list, but don't get from repo api (the white/black list is still available). like 'repo1,repo2,repo3'
+        static_list: 'lwdSite3' # optional, default is 
