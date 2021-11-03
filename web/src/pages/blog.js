@@ -1,7 +1,7 @@
 import * as React from 'react'
-import Layout from '../../components/page/layout'
-import Seo from '../../components/seo'
-import { ArticleCard } from '../../components/card'
+import Layout from '../components/page/layout'
+import Seo from '../components/seo'
+import { ArticleCard } from '../components/card'
 import { graphql } from 'gatsby'
 
 const BlogIndexPage = ({location, data}) => {

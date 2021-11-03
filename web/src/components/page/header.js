@@ -6,7 +6,7 @@ import {GlobeAltIcon, MenuIcon, XIcon, SunIcon, MoonIcon } from '@heroicons/reac
 
 const NavButton = ({LinkTo, children}) => {
     return (
-        <Link to={LinkTo} className="flex w-full md:w-28 p-3 my-3 md:m-3 justify-center rounded-md md:shadow-md font-medium text-gray-700 focus:shadow-none dark:text-white dark:text-opacity-50 md:dark:bg-gray-700 md:dark:hover:bg-gray-600 md:dark:hover:text-white md:dark:focus:bg-yellow-300">{children}</Link>
+        <Link to={LinkTo} className="flex w-full md:w-28 p-3 my-3 md:m-3 justify-center rounded-md md:shadow-md font-medium text-gray-700 focus:shadow-none dark:text-white dark:text-opacity-70 md:dark:bg-gray-700 md:dark:hover:bg-gray-600 md:dark:hover:text-white md:dark:focus:bg-yellow-300">{children}</Link>
     )
 }
 
@@ -28,7 +28,7 @@ const DarkModeSwitch = (onClick) => {
 
 const LwdLogo = ({pageName}) => {
     return (
-        <Link to="/" className="flex h-auto p-2 focus:ring-2 focus:ring-yellow-300 rounded-lg focus:text-black focus:bg-yellow-300 text-gray-800 dark:text-white dark:text-opacity-50 dark:hover:text-white">
+        <Link to="/" className="flex h-auto p-2 focus:ring-2 focus:ring-yellow-300 rounded-lg focus:text-black focus:bg-yellow-300 text-gray-800 dark:text-white dark:text-opacity-70 dark:hover:text-white">
             <StaticImage
                 src="../../images/lwd-stamp.png"
                 alt="Liwen Duan's Logo"

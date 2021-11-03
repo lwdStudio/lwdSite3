@@ -1,7 +1,7 @@
 import * as React from 'react'
-import Layout from '../../components/page/layout'
-import Seo from '../../components/seo'
-import { ShowcaseCard } from '../../components/card'
+import Layout from '../components/page/layout'
+import Seo from '../components/seo'
+import { ShowcaseCard } from '../components/card'
 import { graphql } from 'gatsby'
 
 const BlogIndexPage = ({location, data}) => {
@@ -11,7 +11,7 @@ const BlogIndexPage = ({location, data}) => {
       <div className="md:container md:mx-auto p-4">
         <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-blue-800 py-2">Showcase my work</h1>
         <p className="pb-4">Here are some work sample of my previous project.</p>
-        <div className="md:bg-gray-50 flex md:p-10 flex-col md:flex-row place-items-center md:overflow-x-auto md:shadow-inner rounded-md md:dark:bg-gray-700">
+        <div className="flex flex-wrap place-items-center justify-center align-middle">
         {
           data.allStrapiPages.nodes.map((showcaseArticle) => {
             return (
