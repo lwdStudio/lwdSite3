@@ -18,3 +18,5 @@ jobs:
         dst: gitee/lwdStudio
         # Source name. Such as `github/kunpengcompute`.
         src: github/lwdStudio
+        # Only mirror repo in the static list, but don't get from repo api (the white/black list is still available). like 'repo1,repo2,repo3'
+        static_list: 'lwdSite3' # optional, default is 
