@@ -8,8 +8,8 @@ import Reactmarkdown from "react-markdown"
 import remarkGfm from 'remark-gfm'
 import rehypeRaw from 'rehype-raw'
 import slug from 'rehype-slug'
-import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
-import {dark} from 'react-syntax-highlighter/dist/esm/styles/prism'
+import {PrismAsyncLight as SyntaxHighlighter} from 'react-syntax-highlighter'
+import {materialDark} from 'react-syntax-highlighter/dist/esm/styles/prism/'
 
 const TosPage = ({data, location}) => {
     const {pageTitle, Content, CoverImage, Excerpt, RelatedPage} = data.strapiPages
@@ -45,7 +45,10 @@ const TosPage = ({data, location}) => {
                         return !inline && match ? (
                           <SyntaxHighlighter
                             children={String(children).replace(/\n$/, '')}
-                            style={dark}
+                            style={materialDark}
+                            showLineNumbers={true}
+                            wrapLines={true}
+                            wrapLongLines={true}
                             language={match[1]}
                             PreTag="div"
                             {...props}
