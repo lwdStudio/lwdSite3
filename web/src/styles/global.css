@@ -113,5 +113,8 @@
     li {
         display: list-item;
     }
+    code {
+        font-family: "Noto Mono",monospace;
+    }
 }
 
