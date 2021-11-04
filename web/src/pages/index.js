@@ -14,12 +14,12 @@ const IndexPage = ({location, data}) => {
   //Fetch Notification
   const [notification, setNotification] = useState()
   useEffect(() => {
-    async function fetchNotification() {
+    async function fetchSiteNotification() {
       let response = await fetch(`${process.env.GATSBY_STRAPI_API_URL}/front-page?_limit=1000&_locale=en`)
       response = await response.json()
       setNotification(response.Notification)
     }
-    fetchNotification()
+    fetchSiteNotification()
   },[])
 
   return (
