@@ -11,7 +11,7 @@ const BlogIndexPage = ({location, data}) => {
       <div className="md:container md:mx-auto p-4">
         <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-blue-800 py-2">Showcase my work</h1>
         <p className="pb-4">Here are some work sample of my previous project.</p>
-        <div className="flex flex-wrap place-items-center justify-center align-middle">
+        <div className="flex flex-wrap place-items-center justify-start align-middle">
         {
           data.allStrapiPages.nodes.map((showcaseArticle) => {
             return (
