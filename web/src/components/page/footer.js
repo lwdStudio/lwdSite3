@@ -5,8 +5,8 @@ import { StaticQuery,graphql } from 'gatsby'
 
 export const FooterText = ({children}) => {
     return (
-        <div className="px-5 py-0.5 md:py-0">
-            <p className="flex text-gray-500 dark:text-gray-300 justify-center lg:justify-start">{children}</p>
+        <div className="py-1 px-4 lg:py-0">
+            <p className="flex text-gray-500 dark:text-gray-300 justify-center lg:justify-start m-0">{children}</p>
         </div>
         
     )
@@ -47,7 +47,7 @@ const Footer = () => {
                         </div>
                     </FooterLink>
                     
-                    <div className="grid grid-flow-row auto-rows-max lg:grid-flow-col lg:auto-cols-max px-5">
+                    <div className="grid grid-flow-row auto-rows-max py-2 px-8 text-xs lg:grid-flow-col lg:auto-cols-max">
                         <FooterText>Copyright © {new Date().getFullYear()} Liwen Duan</FooterText>
                         <FooterLink LinkTo="/tos">Legal Terms</FooterLink>
                         <FooterLink LinkTo="https://status.liwenduan.com">System Status</FooterLink>
