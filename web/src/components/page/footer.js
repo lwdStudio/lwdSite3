@@ -3,7 +3,7 @@ import { LwdLink } from './link'
 import { StaticImage } from 'gatsby-plugin-image'
 import { StaticQuery,graphql } from 'gatsby'
 
-const footerTextColor = 'text-gray-900 dark:text-gray-400'
+const footerTextColor = 'text-gray-900 dark:text-gray-200'
 const footerLinkStyle = `text-gray-500 dark:text-gray-300 p-1.5 rounded-md`
 
 export const FooterText = ({children}) => {
