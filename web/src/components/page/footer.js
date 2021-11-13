@@ -62,7 +62,6 @@ const Footer = () => {
                         <section className="pt-2">
                             <h1 className={`${footerTextColor} font-extrabold text-lg md:text-2xl`}>Get in touch?</h1>
                             <p className='p-0'>Send an email to: <br /><LwdLink className={footerLinkStyle} LinkTo="mailto:hi@liwenduan.com">hi@liwenduan.com</LwdLink></p>
-                            <p className='p-0'>Connect with me on: <br /><LwdLink className={footerLinkStyle} LinkTo="https://www.linkedin.com/in/lwd">LinkedIn</LwdLink></p>
                         </section>
                         {/* <section className="pt-2">
                             <h1 className={`${footerTextColor} font-extrabold text-lg md:text-2xl`}>Set your experience:</h1>
@@ -76,7 +75,7 @@ const Footer = () => {
                             <ul className="list-none m-0 mt-1 p-0">
                                 <li><LwdLink className={footerLinkStyle} LinkTo="/blog">Blog</LwdLink></li>
                                 <li><LwdLink className={footerLinkStyle} LinkTo="/showcase">Showcase</LwdLink></li>
-                                <li><LwdLink className={footerLinkStyle} LinkTo="/lwdService">lwdService</LwdLink></li>
+                                <li><LwdLink className={footerLinkStyle} LinkTo="/lwd-service">lwdService</LwdLink></li>
                                 <li><LwdLink className={footerLinkStyle} LinkTo="/about">About me</LwdLink></li>
                             </ul>
                         </section>
