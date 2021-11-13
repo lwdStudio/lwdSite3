@@ -55,7 +55,7 @@ const Header = ({pageName='lwdSite'}) => {
             <nav className={`transition w-full md:flex md:flex-row md:w-auto ${isMenuOpen ? "visible" : "invisible md:visible md:h-auto h-0"}`}>
                 <NavButton LinkTo="/blog">blog</NavButton >
                 <NavButton LinkTo="/showcase">showcase</NavButton>
-                <NavButton LinkTo="/lwdservice">lwdService</NavButton>
+                <NavButton LinkTo="/lwd-service">lwdService</NavButton>
                 <NavButton LinkTo="/about">about me</NavButton>
                 {/* <LanguageSwitcher /> */}
             </nav>
