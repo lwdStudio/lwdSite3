@@ -55,6 +55,7 @@ const Footer = () => {
                                 <ul className="list-none m-0 p-0">
                                     <li><LwdLink className={footerLinkStyle} LinkTo="/tos">Legal Terms</LwdLink></li>
                                     <li><LwdLink className={footerLinkStyle} LinkTo="https://status.liwenduan.com">System Status</LwdLink></li>
+                                    <li><LwdLink className={footerLinkStyle} LinkTo="https://github.com/lwdStudio/lwdSite3/">I made this website!</LwdLink></li>
                                 </ul>
                             </div>
 

@@ -26,7 +26,7 @@ const AboutPage = ({location, data}) => {
         </section>
         
         <section className="p-5">
-          <h2 className="text-center font-serif py-8">My Experience</h2>
+          <h2 className="text-center font-serif py-8">Experiences</h2>
           {
             Job.map((info) => {
               return (
@@ -37,7 +37,7 @@ const AboutPage = ({location, data}) => {
         </section>
 
         <section className="p-5">
-          <h2 className="text-center font-serif py-8">My Education</h2>
+          <h2 className="text-center font-serif py-8">Education</h2>
           {
             Education.map((info) => {
               return (
@@ -48,7 +48,7 @@ const AboutPage = ({location, data}) => {
         </section>
 
         <section className="p-5">
-          <h2 className="text-center font-serif py-8">My Certificates</h2>
+          <h2 className="text-center font-serif py-8">Awards & Certificates</h2>
           {
             Certificate.map((certificateInfo) => {
               return (
