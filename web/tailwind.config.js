@@ -6,7 +6,7 @@ module.exports = {
     fontFamily: {
       'sans':['noto-sans-sc','Helvetica', 'Arial', 'sans-serif'],
       'serif':['noto-serif-sc','ui-serif', 'Georgia','serif'],
-      'mono':['ui-monospace'],
+      'mono':['noto-mono','ui-monospace'],
     },
     minHeight: {
       '0': '0',

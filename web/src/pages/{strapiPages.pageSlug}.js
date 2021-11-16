@@ -58,15 +58,12 @@ const TosPage = ({data, location}) => {
                               {children}
                             </code>
                           )
-                        }
-                      },
-                      {
+                        },
                         a ({node, className, children, ...props}) {
                           return (
                             <LwdLink LinkTo={props.href} className={className} {...props}>{children}</LwdLink>
                           )
                         }
-
                       }
                     }
                 />
