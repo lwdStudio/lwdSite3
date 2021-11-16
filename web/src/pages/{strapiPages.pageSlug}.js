@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/page/layout'
 import Seo from "../components/seo"
 import {ShowcaseCard} from '../components/card'
+import {LwdLink} from '../components/page/link'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { graphql } from 'gatsby'
 import Reactmarkdown from "react-markdown"
@@ -39,27 +40,35 @@ const TosPage = ({data, location}) => {
                         uri.startsWith("http") ? uri : `${process.env.GATSBY_STRAPI_API_URL}${uri}`}
                     remarkPlugins={[remarkGfm]}
                     rehypePlugins={[slug,rehypeRaw]}
-                    components={{
-                      code({node, inline, className, children, ...props}) {
-                        const match = /language-(\w+)/.exec(className || '')
-                        return !inline && match ? (
-                          <SyntaxHighlighter
-                            children={String(children).replace(/\n$/, '')}
-                            style={materialDark}
-                            showLineNumbers={true}
-                            wrapLines={true}
-                            wrapLongLines={true}
-                            language={match[1]}
-                            PreTag="div"
-                            {...props}
-                          />
-                        ) : (
-                          <code className={className} {...props}>
-                            {children}
-                          </code>
-                        )
+                    components={
+                      {
+                        code({node, inline, className, children, ...props}) {
+                          const match = /language-(\w+)/.exec(className || '')
+                          return !inline && match ? (
+                            <SyntaxHighlighter
+                              children={String(children).replace(/\n$/, '')}
+                              style={materialDark}
+                              showLineNumbers={true}
+                              language={match[1]}
+                              PreTag="div"
+                              {...props}
+                            />
+                          ) : (
+                            <code className={className} {...props}>
+                              {children}
+                            </code>
+                          )
+                        }
+                      },
+                      {
+                        a ({node, className, children, ...props}) {
+                          return (
+                            <LwdLink LinkTo={props.href} className={className} {...props}>{children}</LwdLink>
+                          )
+                        }
+
                       }
-                    }}
+                    }
                 />
             </div>
 
