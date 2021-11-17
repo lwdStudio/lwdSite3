@@ -61,3 +61,7 @@ I use Nginx proxy to expose Strapi for lwdSite, learn how to configure your ngin
 
 Now you should be good to go. Good luck.
 
+## Migrate data
+There are no offical way to migrate data from development environment to production environment. My personal experience is to copy ```.tmp/```  and ```public/``` folders to other server. You then can build your api using ```yarn build```
+
+Remember to backup your site data regularly. 
