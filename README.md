@@ -5,7 +5,7 @@ The third generation of my personal website.
 - NodeJS
 - Yarn
 - Gatsby 3 as the front-end of the site. Learn more when you view ```/web``` folder
-- Strapi, a open source content management system (CMS) as the back-end of the site. Learn more when you view ```/api``` folder
+- Strapi, an open source content management system (CMS) as the back-end of the site. Learn more when you view ```/api``` folder
 
 # Notice
 You have to set up front-end and back-end seperately
