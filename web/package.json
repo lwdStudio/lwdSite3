@@ -17,7 +17,7 @@
   "dependencies": {
     "@fontsource/noto-mono": "^4.5.0",
     "@fontsource/noto-sans-sc": "^4.5.1",
-    "@fontsource/noto-serif-sc": "^4.5.1",
+    "@fontsource/noto-serif-sc": "^4.5.2",
     "@heroicons/react": "^1.0.4",
     "@tailwindcss/aspect-ratio": "^0.3.0",
     "add": "^2.0.6",
