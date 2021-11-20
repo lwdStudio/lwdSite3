@@ -49,8 +49,8 @@
   ```
  
  There are two items you can modify:
- - ```GATSBY_ROOT_URL``` Is your site address
- - ```GATSBY_STRAPI_API_URL``` Is your Strapi backend address
+ - ```GATSBY_ROOT_URL``` is your site address.
+ - ```GATSBY_STRAPI_API_URL``` is your Strapi backend address.
 
 For development you can configure:
 ```shell
@@ -122,3 +122,8 @@ It seems like my fontsource package to the latest version solve this issue.
 
 ## Use Docker
 I have create a Dockerfile for this gatsby front-end so you may use it create a docker container image, and serve this site use docker. Learn more on the [```docker.md```](docker.md) file.
+
+## Serveless solution
+You should be able to host this site using services like [Cloudflare Pages](https://pages.cloudflare.com/), [Vercel](https://vercel.com/), [Gatsby Cloud](https://www.gatsbyjs.com/products/cloud/) and more. Follow their instruction on how to do it. They should be able to serve your really fast via their CDN network.
+
+I have my site run on [my own server](http://www.liwenduan.com) and [Cloudflare Pages](https://lwdsite3.pages.dev). You can observe the performance difference easily.
