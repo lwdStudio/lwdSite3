@@ -9,7 +9,7 @@
 
 ## ℹ️ Info
 
-   This is a gatsby front-end that connect to my Strapi headless CMS. In order to make the site work, you need to configure a corresponding Strapi application at ```../api```.
+   This is a gatsby front-end that connect to my Strapi headless CMS. In order to make the site work, you need to configure a corresponding Strapi application at [```../api```](/api).
 
 ## 📜 Feature
 
@@ -118,7 +118,7 @@ Ensure you have configure Strapi so Gatsby can pull data from it. If you not con
   
 ## Issue
 ~~When trying to deploy this site on platforms like Gatsby Cloud, Cloudflare Page or any other similar services, it will have dependency issue on ```@fontsource``` font package. Even the dependency had decleared on ```yarn.lock``` and being installed first time using ```yarn```. I had to reinstall the font again manually using ```yarn add @fontsource/<font-to-be-installed>``` to solve the issue.~~
-It seems like update font file to the latest version solve this issue. 
+It seems like my fontsource package to the latest version solve this issue. 
 
 ## Dockerize
-I have dockerize this gatsby front-end so you may create a docker container image, and potentialy serve this website in scale. View more on the ```docker.md``` file.
+I have dockerize this gatsby front-end so you may create a docker container image, and potentialy serve this website in scale. Learn more on the [```docker.md```](docker.md) file.
