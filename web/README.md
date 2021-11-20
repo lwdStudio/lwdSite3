@@ -117,4 +117,8 @@ Ensure you have configure Strapi so Gatsby can pull data from it. If you not con
   Remember to secure your website using SSL. Easiest way is to use ```certbot``` to get an Let's Encrypt certificate. Certbot should automatically install and configure it to your nginx configuration file.
   
 ## Issue
-When trying to deploy this site on platforms like Gatsby Cloud, Cloudflare Page or any other similar services, it will have dependency issue on ```@fontsource``` font package. Even the dependency had decleared on ```yarn.lock``` and being installed first time using ```yarn```. I had to reinstall the font again manually using ```yarn add @fontsource/<font-to-be-installed>``` to solve the issue. 
+~~When trying to deploy this site on platforms like Gatsby Cloud, Cloudflare Page or any other similar services, it will have dependency issue on ```@fontsource``` font package. Even the dependency had decleared on ```yarn.lock``` and being installed first time using ```yarn```. I had to reinstall the font again manually using ```yarn add @fontsource/<font-to-be-installed>``` to solve the issue.~~
+It seems like update font file to the latest version solve this issue. 
+
+## Dockerize
+I have dockerize this gatsby front-end so you may create a docker container image, and potentialy serve this website in scale. View more on the ```docker.md``` file.
