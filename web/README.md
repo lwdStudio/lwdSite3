@@ -124,6 +124,6 @@ It seems like my fontsource package to the latest version solve this issue.
 I have create a Dockerfile for this gatsby front-end so you may use it create a docker container image, and serve this site use docker. Learn more on the [```docker.md```](docker.md) file.
 
 ## Serveless solution
-You should be able to host this site using services like [Cloudflare Pages](https://pages.cloudflare.com/), [Vercel](https://vercel.com/), [Gatsby Cloud](https://www.gatsbyjs.com/products/cloud/) and more. Follow their instruction on how to do it. They should be able to serve your really fast via their CDN network.
+You should be able to host this site using services like [Cloudflare Pages](https://pages.cloudflare.com/), [Vercel](https://vercel.com/), [Gatsby Cloud](https://www.gatsbyjs.com/products/cloud/) and more. Follow their instruction on how to do it. They should be able to serve your site really fast via their CDN network.
 
 I have my site run on [my own server](http://www.liwenduan.com) and [Cloudflare Pages](https://lwdsite3.pages.dev). You can observe the performance difference easily.
