@@ -9,7 +9,7 @@
 
 ## ℹ️ Info
 
-   This is a gatsby front-end that connect to my Strapi headless CMS. In order to make the site work, you need to configure a corresponding Strapi application at ```../api```.
+   This is a gatsby front-end that connect to my Strapi headless CMS. In order to make the site work, you need to configure a corresponding Strapi application at [```../api```](/api).
 
 ## 📜 Feature
 
@@ -43,25 +43,25 @@
   
   Before you start, configure environment variable first. 
   
-  Copy or rename ```.env.example``` (I prefer copy so there will be a backup file)
+  Create ```.env``` file with ```.env.example```
   ```bash
   cp .env.example .env
-  
-  # or
-  
-  mv .env.example .env
- ```
+  ```
  
  There are two items you can modify:
- - ```GATSBY_ROOT_URL``` for your site address
- - ```GATSBY_STRAPI_API_URL``` for your Strapi backend address
+ - ```GATSBY_ROOT_URL``` is your site address.
+ - ```GATSBY_STRAPI_API_URL``` is your Strapi backend address.
 
 For development you can configure:
 ```shell
 GATSBY_ROOT_URL=
-GATSBY_STRAPI_API_URL=http://localhost:1337
+GATSBY_STRAPI_API_URL=http://localhost:3000
 ```
-⚠️ Specify port after root domain. Your configuration might be different than mine, create your own file to reflect your actural environment.
+⚠️ Specify port after domain. Your configuration might be different than mine, create your own file to reflect your actural environment.
+
+> If you come from docker configuration, continue instruction on [```docker.md```](docker.md#build-image)
+
+For the rest, continue to here:
 
 Ensure you have configure Strapi so Gatsby can pull data from it. If you not configure GATSBY_ROOT_URL, the site will be up at ```http://localhost:8000```. You should be able to see couple links to your site and graphql dashboard on your terminal.
 
@@ -117,4 +117,13 @@ Ensure you have configure Strapi so Gatsby can pull data from it. If you not con
   Remember to secure your website using SSL. Easiest way is to use ```certbot``` to get an Let's Encrypt certificate. Certbot should automatically install and configure it to your nginx configuration file.
   
 ## Issue
-When trying to deploy this site on platforms like Gatsby Cloud, Cloudflare Page or any other similar services, it will have dependency issue on ```@fontsource``` font package. Even the dependency had decleared on ```yarn.lock``` and being installed first time using ```yarn```. I had to reinstall the font again manually using ```yarn add @fontsource/<font-to-be-installed>``` to solve the issue. 
+~~When trying to deploy this site on platforms like Gatsby Cloud, Cloudflare Page or any other similar services, it will have dependency issue on ```@fontsource``` font package. Even the dependency had decleared on ```yarn.lock``` and being installed first time using ```yarn```. I had to reinstall the font again manually using ```yarn add @fontsource/<font-to-be-installed>``` to solve the issue.~~
+It seems like my fontsource package to the latest version solve this issue. 
+
+## Use Docker
+I have create a Dockerfile for this gatsby front-end so you may use it create a docker container image, and serve this site use docker. Learn more on the [```docker.md```](docker.md) file.
+
+## Serveless solution
+You should be able to host this site using services like [Cloudflare Pages](https://pages.cloudflare.com/), [Vercel](https://vercel.com/), [Gatsby Cloud](https://www.gatsbyjs.com/products/cloud/) and more. Follow their instruction on how to do it. They should be able to serve your site really fast via their CDN network.
+
+I have my site run on [my own server](http://www.liwenduan.com) and [Cloudflare Pages](https://lwdsite3.pages.dev). You can observe the performance difference easily.
