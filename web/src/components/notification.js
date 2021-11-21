@@ -1,4 +1,5 @@
 import React from 'react'
+import { LwdLink } from './page/link'
 import {InformationCircleIcon, ExclamationIcon, CheckCircleIcon} from '@heroicons/react/outline'
 import Reactmarkdown from "react-markdown"
 
@@ -11,6 +12,15 @@ const InfoNotification = ({Content}) => {
         children={Content} 
         transformImageUri={uri => 
             uri.startsWith("http") ? uri : `${process.env.GATSBY_STRAPI_API_URL}${uri}`}
+        components={
+          {
+            a ({node, className, children, ...props}) {
+              return (
+                <LwdLink LinkTo={props.href} className={className} {...props}>{children}</LwdLink>
+              )
+            }
+          }
+        }
       />
     </section>
   )
@@ -24,7 +34,16 @@ const WarningNotification = ({Content}) => {
         className="self-center p-0"
         children={Content} 
         transformImageUri={uri => 
-            uri.startsWith("http") ? uri : `${process.env.GATSBY_IMAGE_API_URL}${uri}`}
+            uri.startsWith("http") ? uri : `${process.env.GATSBY_STRAPI_API_URL}${uri}`}
+        components={
+          {
+            a ({node, className, children, ...props}) {
+              return (
+                <LwdLink LinkTo={props.href} className={className} {...props}>{children}</LwdLink>
+              )
+            }
+          }
+        }
       />
     </section>
   )
@@ -38,7 +57,16 @@ const ClearNotification = ({Content}) => {
         className="self-center p-0"
         children={Content} 
         transformImageUri={uri => 
-            uri.startsWith("http") ? uri : `${process.env.GATSBY_IMAGE_API_URL}${uri}`}
+            uri.startsWith("http") ? uri : `${process.env.GATSBY_STRAPI_API_URL}${uri}`}
+        components={
+          {
+            a ({node, className, children, ...props}) {
+              return (
+                <LwdLink LinkTo={props.href} className={className} {...props}>{children}</LwdLink>
+              )
+            }
+          }
+        }
       />
     </section>
   )
