@@ -9,12 +9,12 @@ import slug from 'rehype-slug'
 const TosPage = ({data, location}) => {
     const {pageTitle,updated_at,content} = data.strapiLegal
     return (
-        <Layout pageTitle={pageTitle} pageType="Legal Terms" location={location}>
-            <div className="pt-5 text-center">
+        <Layout pageTitle={pageTitle} pageType="Legal" location={location}>
+            <div className="pt-5 text-center ">
                 <h1 className="text-3xl md:text-5xl font-extrabold py-2">{pageTitle}</h1>
                 <p>Updated {updated_at}</p>
             </div>
-            <div className="md:container md:mx-auto px-10">
+            <div className="md:container md:mx-auto p-10 bg-white dark:bg-gray-800">
                 <Reactmarkdown 
                     children={content} 
                     transformImageUri={uri => 

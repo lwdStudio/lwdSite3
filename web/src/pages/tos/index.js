@@ -5,7 +5,7 @@ import {graphql} from 'gatsby'
 
 const tosIndexPage = ({location, data}) => {
   return (
-    <Layout pageTitle="Legal Terms" pageType="Legal Terms" location={location}>
+    <Layout pageTitle="Legal Terms" pageType="Legal" location={location}>
         <div className="md:container md:mx-auto p-4">
           <h1 className="text-5xl font-extrabold py-2">Terms of Use</h1>
           <p className="pb-4">When accessing this site, we assume that you have agreed to the following terms of use.</p>

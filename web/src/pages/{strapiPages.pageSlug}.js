@@ -18,7 +18,7 @@ const TosPage = ({data, location}) => {
         <Layout pageTitle={pageTitle} pageType="Article" location={location}>
             <Seo title={pageTitle} description={Excerpt} image={CoverImage && `${process.env.GATSBY_STRAPI_API_URL}${CoverImage.url}`} pathname={location.pathname} />
 
-            <div className="p-4 md:p-8 text-center grid grid-rows-auto grid-cols-1 m-8 md:grid-cols-2 md:mx-24 md:my-4 dark:bg-gray-800 shadow-lg rounded-lg">
+            <div className="p-4 md:p-8 text-center grid grid-rows-auto grid-cols-1 m-8 md:grid-cols-2 xl:mx-48 md:my-12 bg-white dark:bg-gray-800 shadow-lg rounded-lg">
                 <h1 className={`text-2xl sm:text-3xl lg:text-5xl font-extrabold self-end ${!CoverImage && `col-span-2`}`}>{pageTitle}</h1>
                 {
                     CoverImage && 
@@ -31,47 +31,47 @@ const TosPage = ({data, location}) => {
                 <p className={`italic ${!CoverImage && `col-span-2`}`}>{Excerpt}</p>
             </div>
 
-            <div className="container mx-auto mt-10">
-                <Reactmarkdown 
-                    children={Content} 
-                    linkTarget="_black"
-                    className="markdown-article"
-                    transformImageUri={uri => 
-                        uri.startsWith("http") ? uri : `${process.env.GATSBY_STRAPI_API_URL}${uri}`}
-                    remarkPlugins={[remarkGfm]}
-                    rehypePlugins={[slug,rehypeRaw]}
-                    components={
-                      {
-                        code({node, inline, className, children, ...props}) {
-                          const match = /language-(\w+)/.exec(className || '')
-                          return !inline && match ? (
-                            <SyntaxHighlighter
-                              children={String(children).replace(/\n$/, '')}
-                              style={materialDark}
-                              showLineNumbers={true}
-                              language={match[1]}
-                              PreTag="div"
-                              {...props}
-                            />
-                          ) : (
-                            <code className={className} {...props}>
-                              {children}
-                            </code>
-                          )
-                        },
-                        a ({node, className, children, ...props}) {
-                          return (
-                            <LwdLink LinkTo={props.href} className={className} {...props}>{children}</LwdLink>
-                          )
-                        }
+            <div className="container mx-auto py-10 bg-white lg:rounded-md dark:bg-gray-800 my-0">
+              <Reactmarkdown 
+                  children={Content} 
+                  linkTarget="_black"
+                  className="markdown-article"
+                  transformImageUri={uri => 
+                      uri.startsWith("http") ? uri : `${process.env.GATSBY_STRAPI_API_URL}${uri}`}
+                  remarkPlugins={[remarkGfm]}
+                  rehypePlugins={[slug,rehypeRaw]}
+                  components={
+                    {
+                      code({node, inline, className, children, ...props}) {
+                        const match = /language-(\w+)/.exec(className || '')
+                        return !inline && match ? (
+                          <SyntaxHighlighter
+                            children={String(children).replace(/\n$/, '')}
+                            style={materialDark}
+                            showLineNumbers={true}
+                            language={match[1]}
+                            PreTag="div"
+                            {...props}
+                          />
+                        ) : (
+                          <code className={className} {...props}>
+                            {children}
+                          </code>
+                        )
+                      },
+                      a ({node, className, children, ...props}) {
+                        return (
+                          <LwdLink LinkTo={props.href} className={className} {...props}>{children}</LwdLink>
+                        )
                       }
                     }
-                />
+                  }
+              />
             </div>
 
             {
               RelatedPage[0] && 
-              <div className='container mx-auto mt-10'>
+              <div className='container mx-auto my-8'>
                 <div className='lg:mx-10'>
                   <h2 className='text-lg font-bold'>More to read</h2>
                   <div className='flex flex-wrap place-items-center justify-center md:justify-start align-middle'>

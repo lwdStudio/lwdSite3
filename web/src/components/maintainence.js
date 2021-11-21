@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet'
 import { StaticImage } from 'gatsby-plugin-image'
 import { StaticQuery,graphql } from 'gatsby'
-import { ExternalLinkIcon } from '@heroicons/react/outline'
+import { LwdLink } from './page/link'
 import Button from '../components/button'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 const Maintainence = () => {
     const [maintainenceModeTitle, setmaintainenceModeTitle] = useState()
@@ -50,13 +52,13 @@ const Maintainence = () => {
                             <p>{maintainenceModeMessage}</p>
                             <div className="m-10">
                                 <p className="mb-5">View Changes on</p>
-                                <Button to="https://github.com/lwdStudio/lwdSite3">GitHub</Button>
+                                <Button to="https://github.com/lwdStudio/lwdSite3"><FontAwesomeIcon icon={faGithub} /> GitHub</Button>
                             </div>
                             <footer>                  
                                 <div className="flex flex-col md:flex-row w-full justify-center text-center text-white">
                                     <p className="m-3 p-1">Copyright © {new Date().getFullYear()} Liwen Duan</p>
-                                    <a href="http://beian.miit.gov.cn/" target="_blank" rel="noreferrer" className="m-3 p-1 text-white">{data.site.siteMetadata.ICPlicense}<ExternalLinkIcon className="h-3 inline px-1 align-middle"/></a>
-                                    <a href={data.site.siteMetadata.PSBeianURL} target="_blank" rel="noreferrer" className="m-3 p-1 text-white">{data.site.siteMetadata.PSBeian}<ExternalLinkIcon className="h-3 inline px-1 align-middle"/></a>
+                                    <LwdLink LinkTo="http://beian.miit.gov.cn/" target="_blank" rel="noreferrer" className="m-3 p-1 text-white">{data.site.siteMetadata.ICPlicense}</LwdLink>
+                                    <LwdLink LinkTo={data.site.siteMetadata.PSBeianURL} target="_blank" rel="noreferrer" className="m-3 p-1 text-white">{data.site.siteMetadata.PSBeian}</LwdLink>
                                 </div>
                             </footer>
                         </div>

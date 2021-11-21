@@ -43,7 +43,8 @@
           "localized": true
         }
       },
-      "type": "text"
+      "type": "text",
+      "maxLength": 160
     },
     "CoverImage": {
       "model": "file",

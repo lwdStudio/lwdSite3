@@ -45,14 +45,14 @@
     }
 
     .embed-video {
-        @apply aspect-w-16 aspect-h-9 justify-center
+        @apply aspect-w-16 aspect-h-9 justify-self-center self-center place-self-center
     }
 
 }
 
 @layer components {
     .card-common {
-        @apply shadow-md rounded-lg bg-white dark:bg-gray-800
+        @apply shadow-lg rounded-lg bg-white dark:bg-gray-800
     }
     .about-card {
         @apply p-8 m-2 

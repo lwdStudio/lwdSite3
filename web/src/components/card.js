@@ -1,6 +1,9 @@
 import React from 'react'
 import { LwdLink } from './page/link'
 import { GatsbyImage } from 'gatsby-plugin-image'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core'
 
 export const ArticleCard = ({posts}) => {
     return (
@@ -18,7 +21,7 @@ export const ArticleCard = ({posts}) => {
             <div className="flex-auto p-6">
                 <span className="tag">{posts.tags&&"#"+posts.tags[0].tagName}</span>
                 <h2 className="text-2xl"><LwdLink LinkTo={`/${posts.pageSlug}`} className="p-0.5">{posts.pageTitle}</LwdLink></h2>
-                <p className="text-md font-regular text-gray-400">{posts.Excerpt}</p>
+                <p className="text-md font-regular text-gray-400">{posts.Excerpt.slice(0,160)+'...'}</p>
             </div>
         </div>
     )
@@ -37,7 +40,7 @@ export const PageCard = ({pages}) => {
 export const LwdServiceCard = ({Service}) => {
     return (
         <div className="flex flex-col w-64 h-auto m-5 card-common">
-            <div className="w-64 h-32 rounded-lg shadow-md dark:bg-gray-700 bg:opacity-50">
+            <div className="w-64 h-32 rounded-t-lg shadow-inner dark:bg-gray-700 bg:opacity-50 bg-gray-50">
                 {
                     Service.serviceIcon && (
                         <img className="w-64 h-32 object-scale-down justify-items-center p-5"
@@ -73,12 +76,10 @@ export const InfoCard = ({info}) => {
 }
 
 export const ContactCard = ({contactInfo}) => {
+    library.add(fab)
     return (
-        <div className="flex card-common about-card">
-            {/* <GatsbyImage 
-                className="object-cover h-6 w-6"
-                image={contactInfo.ContactIcon.localFile.childrenImageSharp[0] && contactInfo.ContactIcon.localFile.childrenImageSharp[0].gatsbyImageData}
-            /> */}
+        <div className="flex card-common about-card gap-1">
+            <FontAwesomeIcon icon={['fab', contactInfo.ContactMethod.toLowerCase()]} className="self-center scale-125" /> 
             <LwdLink LinkTo={contactInfo.Contact} className="px-1">{contactInfo.ContactMethod}</LwdLink>
         </div>
     )
@@ -104,9 +105,9 @@ export const CertificateCard = ({certificateInfo}) => {
 export const ShowcaseCard = ({showcaseArticle, className}) => {
     return (
         <div className={`flex flex-col w-72 m-5 min-h-1/2 max-h-1/2 card-common ${className}`}>
-            <div className="rounded-lg shadow-md">
+            <div className="shadow-md">
                 <GatsbyImage 
-                    className="md:max-w-7xl w-72 md:h-auto h-48 rounded-lg object-cover align-middle"
+                    className="md:max-w-7xl w-72 md:h-auto h-48 rounded-t-lg object-cover align-middle"
                     image={showcaseArticle.CoverImage && showcaseArticle.CoverImage.localFile.childImageSharp.gatsbyImageData}
                     alt={showcaseArticle.CoverImage && showcaseArticle.CoverImage.alternativeText}
                 />
@@ -115,7 +116,7 @@ export const ShowcaseCard = ({showcaseArticle, className}) => {
             <div className="flex-col p-5 w-72 rounded-b-lg">
                 {showcaseArticle.tags && <span className="tag">{"#"+showcaseArticle.tags[0].tagName}</span>}
                 <h2 className="text-2xl"><LwdLink LinkTo={`/${showcaseArticle.pageSlug}`} className="p-0.5">{showcaseArticle.pageTitle}</LwdLink></h2>
-                <div className="text-md font-regular text-gray-400">{showcaseArticle.Excerpt}</div>
+                <div className="text-md font-regular text-gray-500 dark:text-gray-400">{showcaseArticle.Excerpt.slice(0,160)+'...'}</div>
             </div>
         </div>
     )

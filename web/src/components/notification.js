@@ -1,16 +1,30 @@
 import React from 'react'
-import {InformationCircleIcon, ExclamationIcon, CheckCircleIcon} from '@heroicons/react/outline'
+import { LwdLink } from './page/link'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faInfoCircle, faExclamationTriangle, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 import Reactmarkdown from "react-markdown"
+
+const notificationIconStyle = "self-start scale-150 m-4"
+const notificationBarStyle = "bg-opacity-20 w-full text-black p-3 rounded-b-lg shadow-md align-middle dark:bg-opacity-50 dark:text-white dark:text-opacity-60 flex flex-row text-xs"
 
 const InfoNotification = ({Content}) => {
   return (
-    <section className="bg-yellow-600 bg-opacity-20 w-full text-black p-3 rounded-b-lg shadow-md align-middle dark:bg-opacity-50 dark:text-white dark:text-opacity-60 flex flex-col md:flex-row text-xs">
-      <InformationCircleIcon className="self-center h-8 pr-2" />
+    <section className={`bg-yellow-600 ${notificationBarStyle}`}>
+      <FontAwesomeIcon icon={faInfoCircle} className={notificationIconStyle} />
       <Reactmarkdown 
         className="self-center p-0"
         children={Content} 
         transformImageUri={uri => 
             uri.startsWith("http") ? uri : `${process.env.GATSBY_STRAPI_API_URL}${uri}`}
+        components={
+          {
+            a ({node, className, children, ...props}) {
+              return (
+                <LwdLink LinkTo={props.href} className={className} {...props}>{children}</LwdLink>
+              )
+            }
+          }
+        }
       />
     </section>
   )
@@ -18,13 +32,22 @@ const InfoNotification = ({Content}) => {
 
 const WarningNotification = ({Content}) => {
   return (
-    <section className="bg-red-600 bg-opacity-20 w-full text-black p-3 rounded-b-lg shadow-md align-middle dark:bg-opacity-50 dark:text-white dark:text-opacity-60 flex flex-col md:flex-row text-xs">
-      <ExclamationIcon className="self-center h-8 pr-2" />
+    <section className={`bg-red-600 ${notificationBarStyle}`}>
+      <FontAwesomeIcon icon={faExclamationTriangle} className={notificationIconStyle} />
       <Reactmarkdown 
         className="self-center p-0"
         children={Content} 
         transformImageUri={uri => 
-            uri.startsWith("http") ? uri : `${process.env.GATSBY_IMAGE_API_URL}${uri}`}
+            uri.startsWith("http") ? uri : `${process.env.GATSBY_STRAPI_API_URL}${uri}`}
+        components={
+          {
+            a ({node, className, children, ...props}) {
+              return (
+                <LwdLink LinkTo={props.href} className={className} {...props}>{children}</LwdLink>
+              )
+            }
+          }
+        }
       />
     </section>
   )
@@ -32,13 +55,22 @@ const WarningNotification = ({Content}) => {
 
 const ClearNotification = ({Content}) => {
   return (
-    <section className="bg-green-600 bg-opacity-20 w-full text-black p-3 rounded-b-lg shadow-md align-middle dark:bg-opacity-50 dark:text-white dark:text-opacity-60 flex flex-col md:flex-row text-xs">
-      <CheckCircleIcon className="self-center h-8 pr-2" />
+    <section className={`bg-green-600 ${notificationBarStyle}`}>
+      <FontAwesomeIcon icon={faCheckCircle} className={notificationIconStyle} />
       <Reactmarkdown 
         className="self-center p-0"
         children={Content} 
         transformImageUri={uri => 
-            uri.startsWith("http") ? uri : `${process.env.GATSBY_IMAGE_API_URL}${uri}`}
+            uri.startsWith("http") ? uri : `${process.env.GATSBY_STRAPI_API_URL}${uri}`}
+        components={
+          {
+            a ({node, className, children, ...props}) {
+              return (
+                <LwdLink LinkTo={props.href} className={className} {...props}>{children}</LwdLink>
+              )
+            }
+          }
+        }
       />
     </section>
   )
