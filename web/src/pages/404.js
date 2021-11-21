@@ -1,12 +1,13 @@
 import * as React from "react"
 import { Button } from "../components/button"
-import {HomeIcon} from "@heroicons/react/outline"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHome } from '@fortawesome/free-solid-svg-icons'
 import Layout from '../components/page/layout'
 
 const NotFoundPage = ({location}) => {
   return (
     <Layout pageType="Not found (；′⌒`) " location={location}>
-      <main className="p-24">
+      <main className="p-16">
         <h1 className='mb-16'>Page not found</h1>
         <p className="pb-12">
           Sorry{" "}
@@ -23,7 +24,7 @@ const NotFoundPage = ({location}) => {
             </>
           ) : null}
           <br />
-          <Button to="/">Go home<HomeIcon className="h-4 inline px-1 align-middle"/></Button>
+          <Button to="/"><FontAwesomeIcon icon={faHome} /> To Homepage</Button>
         </p>
       </main>
 
