@@ -105,9 +105,9 @@ export const CertificateCard = ({certificateInfo}) => {
 export const ShowcaseCard = ({showcaseArticle, className}) => {
     return (
         <div className={`flex flex-col w-72 m-5 min-h-1/2 max-h-1/2 card-common ${className}`}>
-            <div className="rounded-lg shadow-md">
+            <div className="shadow-md">
                 <GatsbyImage 
-                    className="md:max-w-7xl w-72 md:h-auto h-48 rounded-lg object-cover align-middle"
+                    className="md:max-w-7xl w-72 md:h-auto h-48 rounded-t-lg object-cover align-middle"
                     image={showcaseArticle.CoverImage && showcaseArticle.CoverImage.localFile.childImageSharp.gatsbyImageData}
                     alt={showcaseArticle.CoverImage && showcaseArticle.CoverImage.alternativeText}
                 />
@@ -116,7 +116,7 @@ export const ShowcaseCard = ({showcaseArticle, className}) => {
             <div className="flex-col p-5 w-72 rounded-b-lg">
                 {showcaseArticle.tags && <span className="tag">{"#"+showcaseArticle.tags[0].tagName}</span>}
                 <h2 className="text-2xl"><LwdLink LinkTo={`/${showcaseArticle.pageSlug}`} className="p-0.5">{showcaseArticle.pageTitle}</LwdLink></h2>
-                <div className="text-md font-regular text-gray-400">{showcaseArticle.Excerpt}</div>
+                <div className="text-md font-regular text-gray-500 dark:text-gray-400">{showcaseArticle.Excerpt}</div>
             </div>
         </div>
     )

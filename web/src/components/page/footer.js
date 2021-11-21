@@ -3,8 +3,8 @@ import { LwdLink } from './link'
 import { StaticImage } from 'gatsby-plugin-image'
 import { StaticQuery,graphql } from 'gatsby'
 
-const footerTextColor = 'text-gray-900 dark:text-gray-200'
-const footerLinkStyle = `text-gray-500 dark:text-gray-300 p-1.5 rounded-md`
+const footerTextColor = 'text-gray-600 dark:text-gray-300'
+const footerLinkStyle = `text-gray-600 dark:text-gray-300 p-1.5 rounded-md`
 
 export const FooterText = ({children}) => {
     return (
@@ -81,11 +81,11 @@ const Footer = () => {
                             </ul>
                         </section>
                     </div>
-                    <hr className='m-8 mb-4 opacity-80' />
-                    <div className="grid grid-flow-row auto-rows-max px-8 pb-4 text-xs lg:grid-flow-col lg:auto-cols-max">
-                        <FooterText>Copyright © {new Date().getFullYear()} Liwen Duan</FooterText>
-                        <FooterLink LinkTo="http://beian.miit.gov.cn/">{data.site.siteMetadata.ICPlicense}</FooterLink>
-                        <FooterLink LinkTo={data.site.siteMetadata.PSBeianURL}>{data.site.siteMetadata.PSBeian}</FooterLink>                      
+                    <hr className='m-8 mb-4 opacity-60' />
+                    <div className="grid grid-flow-row auto-rows-max px-8 pb-4 text-xs  md:grid-flow-col md:auto-cols-max md:gap-2">
+                        <span className={footerLinkStyle}>Copyright © {new Date().getFullYear()} Liwen Duan</span>
+                        <LwdLink className={footerLinkStyle} LinkTo="http://beian.miit.gov.cn/">{data.site.siteMetadata.ICPlicense}</LwdLink>
+                        <LwdLink className={footerLinkStyle} LinkTo={data.site.siteMetadata.PSBeianURL}>{data.site.siteMetadata.PSBeian}</LwdLink>                      
                     </div>
                 </footer>
             }
