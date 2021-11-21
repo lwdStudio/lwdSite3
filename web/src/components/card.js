@@ -1,6 +1,9 @@
 import React from 'react'
 import { LwdLink } from './page/link'
 import { GatsbyImage } from 'gatsby-plugin-image'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core'
 
 export const ArticleCard = ({posts}) => {
     return (
@@ -73,12 +76,10 @@ export const InfoCard = ({info}) => {
 }
 
 export const ContactCard = ({contactInfo}) => {
+    library.add(fab)
     return (
-        <div className="flex card-common about-card">
-            {/* <GatsbyImage 
-                className="object-cover h-6 w-6"
-                image={contactInfo.ContactIcon.localFile.childrenImageSharp[0] && contactInfo.ContactIcon.localFile.childrenImageSharp[0].gatsbyImageData}
-            /> */}
+        <div className="flex card-common about-card gap-1">
+            <FontAwesomeIcon icon={['fab', contactInfo.ContactMethod.toLowerCase()]} className="self-center scale-125" /> 
             <LwdLink LinkTo={contactInfo.Contact} className="px-1">{contactInfo.ContactMethod}</LwdLink>
         </div>
     )

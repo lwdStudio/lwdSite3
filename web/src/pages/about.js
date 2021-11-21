@@ -96,14 +96,7 @@ query getAboutMe {
     ContactInfo {
       ContactMethod
       Contact
-      ContactIcon {
-        localFile {
-          childrenImageSharp {
-            gatsbyImageData(layout: CONSTRAINED, transformOptions: {fit: COVER})
-          }
-          url
-        }
-      }
+      fab
     }
     avatar {
       alternativeText
