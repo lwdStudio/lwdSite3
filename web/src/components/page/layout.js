@@ -25,7 +25,7 @@ const Layout = ({pageType, pageTitle=pageType, children, className}) => {
 
   return (
     <div className={`${className}`}>
-      <div className="dark:bg-gray-900">
+      <div className="dark:bg-gray-900 bg-gray-100">
         <Helmet defer={false}>
           <title>{pageTitle} | lwdSite</title>
         </Helmet>

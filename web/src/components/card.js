@@ -40,7 +40,7 @@ export const PageCard = ({pages}) => {
 export const LwdServiceCard = ({Service}) => {
     return (
         <div className="flex flex-col w-64 h-auto m-5 card-common">
-            <div className="w-64 h-32 rounded-lg shadow-md dark:bg-gray-700 bg:opacity-50">
+            <div className="w-64 h-32 rounded-t-lg shadow-inner dark:bg-gray-700 bg:opacity-50 bg-gray-50">
                 {
                     Service.serviceIcon && (
                         <img className="w-64 h-32 object-scale-down justify-items-center p-5"

@@ -36,7 +36,7 @@ const Footer = () => {
                 }
             `}
             render={data => 
-                <footer className="p-1 bg-gray-100 shadow-sm rounded-lg z-50 dark:bg-gray-800 dark:text-white text-center md:text-left">
+                <footer className="p-1 bg-white shadow-top rounded-xl z-50 dark:bg-gray-800 dark:text-white text-center md:text-left">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 mx-8 place-items-stretch">
                         <section className="pt-2">
                             <FooterLink LinkTo="/">

@@ -52,7 +52,7 @@
 
 @layer components {
     .card-common {
-        @apply shadow-md rounded-lg bg-white dark:bg-gray-800
+        @apply shadow-lg rounded-lg bg-white dark:bg-gray-800
     }
     .about-card {
         @apply p-8 m-2 

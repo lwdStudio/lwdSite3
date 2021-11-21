@@ -14,11 +14,14 @@ const AboutPage = ({location, data}) => {
       <div className="md:container md:mx-auto p-4 ">
         <h1 className="col-span-full text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-blue-800 pb-8">{h1}</h1>
         <section className="grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-4">
-          <GatsbyImage 
-            className="object-scale-down h-auto w-3/4 p-20 rounded-full shadow-lg place-self-center row-span-2"
-            image={avatar && avatar.localFile.childImageSharp.gatsbyImageData}
-            alt={avatar && avatar.alternativeText}
-            />
+          <div className="place-self-center row-span-2 h-auto w-3/4">
+            <GatsbyImage 
+                className="rounded-full shadow-lg"
+                image={avatar && avatar.localFile.childImageSharp.gatsbyImageData}
+                alt={avatar && avatar.alternativeText}
+              />
+          </div>
+
           <p>
             {Description}
           </p>
