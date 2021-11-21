@@ -99,7 +99,6 @@ query getAboutMe {
     ContactInfo {
       ContactMethod
       Contact
-      fab
     }
     avatar {
       alternativeText
