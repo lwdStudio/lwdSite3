@@ -46,6 +46,8 @@ const Footer = () => {
                                             src="../../images/lwd-stamp.png"
                                             alt="Liwen Duan's Logo"
                                             placeholder="blurred"
+                                            width={32}
+                                            height={32}
                                         />
                                     </div>
                                     <span className="inline-flex py-1 text-lg font-serif text-black dark:text-gray-200      dark:text-opacity-80">{data.site.siteMetadata.title}</span>
