@@ -53,7 +53,7 @@ const Footer = () => {
                                     <span className="inline-flex py-1 text-lg font-serif ">{data.site.siteMetadata.title}</span>
                                 </div>
                             </FooterLink>
-                            <div className="my-2 md:ml-12">
+                            <div className="my-2">
                                 <ul className="list-none">
                                     <li><LwdLink className={footerLinkStyle} LinkTo="/tos">Legal Terms</LwdLink></li>
                                     <li><LwdLink className={footerLinkStyle} LinkTo="https://status.liwenduan.com">System Status</LwdLink></li>
@@ -75,7 +75,7 @@ const Footer = () => {
                         </section> */}
                         <section className="pt-2">
                             <h1 className={`${footerTextColor} font-extrabold text-lg md:text-2xl`}>Explore</h1>
-                            <ul className="list-none">
+                            <ul className="list-none pl-0">
                                 <li><LwdLink className={footerLinkStyle} LinkTo="/blog">Blog</LwdLink></li>
                                 <li><LwdLink className={footerLinkStyle} LinkTo="/showcase">Showcase</LwdLink></li>
                                 <li><LwdLink className={footerLinkStyle} LinkTo="/lwd-service">lwdService</LwdLink></li>

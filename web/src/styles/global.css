@@ -90,7 +90,7 @@
     }
 
     ul {
-        @apply block list-disc my-4
+        @apply block list-disc my-4 pl-10
     }
     ol {
         @apply block list-decimal my-4 pl-10

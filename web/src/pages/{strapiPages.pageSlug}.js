@@ -31,7 +31,7 @@ const TosPage = ({data, location}) => {
                 <p className={`italic ${!CoverImage && `col-span-2`}`}>{Excerpt}</p>
             </div>
 
-            <div className="container mx-auto py-10 bg-white lg:rounded-md dark:bg-gray-800 my-0">
+            <div className="container mx-auto p-10 bg-white lg:rounded-md dark:bg-gray-800 my-0">
               <Reactmarkdown 
                   children={Content} 
                   linkTarget="_black"
@@ -74,11 +74,11 @@ const TosPage = ({data, location}) => {
               <div className='container mx-auto my-8'>
                 <div className='lg:mx-10'>
                   <h2 className='text-lg font-bold'>More to read</h2>
-                  <div className='flex flex-wrap place-items-center justify-center md:justify-start align-middle'>
+                  <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
                     {
                       RelatedPage.map((showcaseArticle) => {
                         return (
-                          <ShowcaseCard showcaseArticle={showcaseArticle} />
+                          <ShowcaseCard article={showcaseArticle} />
                         )
                       }
                     )}
