@@ -40,14 +40,14 @@ const IndexPage = ({location, data}) => {
         <Button to={heroLink.heroLinkUrl}>{heroLink.heroLinkTitle}</Button>
       </Hero>
 
-      <section className="px-16 py-8">
+      <section className="px-4 md:px-16 py-8">
         <h2 className="text-2xl dark:text-gray-200">Selected Work & Reading</h2>
         <span className="text-gray-600 dark:text-gray-400">Explore my recent projects</span>
-        <div className="md:bg-gray-50 flex md:p-10 flex-col md:flex-row place-items-center md:overflow-x-auto md:shadow-inner rounded-md md:dark:bg-gray-700 mt-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 py-4">
         {
           data.strapiFrontPage.Showcase[0].pages.map((showcaseArticle) => {
             return (
-              <ShowcaseCard showcaseArticle={showcaseArticle}/>
+              <ShowcaseCard article={showcaseArticle}/>
             )
           })
         }

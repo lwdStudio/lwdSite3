@@ -19,7 +19,7 @@ const TosPage = ({data, location}) => {
             <Seo title={pageTitle} description={Excerpt} image={CoverImage && `${process.env.GATSBY_STRAPI_API_URL}${CoverImage.url}`} pathname={location.pathname} />
 
             <div className="p-4 md:p-8 text-center grid grid-rows-auto grid-cols-1 m-8 md:grid-cols-2 xl:mx-48 md:my-12 bg-white dark:bg-gray-800 shadow-lg rounded-lg">
-                <h1 className={`text-2xl sm:text-3xl lg:text-5xl font-extrabold self-end ${!CoverImage && `col-span-2`}`}>{pageTitle}</h1>
+                <h1 className={`text-2xl sm:text-3xl lg:text-5xl font-extrabold self-end lg:leading-tight ${!CoverImage && `col-span-2`}`}>{pageTitle}</h1>
                 {
                     CoverImage && 
                     <GatsbyImage 

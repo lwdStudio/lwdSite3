@@ -16,13 +16,14 @@ const LwdServiceIndex = ({location, data}) => {
     }
     fetchMaintainence()
   },[])
+  const pageTitle = "lwdService"
 
   return (
-    <Layout pageType="lwdService" location={location}>
-      <Seo title='lwdService' description={pageDescription} pathname={location.pathname}/>
+    <Layout pageType={pageTitle} location={location}>
+      <Seo title={pageTitle} description={pageDescription} pathname={location.pathname}/>
       {notification && <SiteNotification NotificationType={notification.WarningClass} Content={notification.NotificationContent} /> }
       <div className="md:container md:mx-auto p-4">
-        <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-blue-800 py-2">All lwdService</h1>
+        <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-blue-800 py-2">All lwdServices</h1>
         <p className="pb-4">{pageDescription}</p>
         
         <div className="flex flex-wrap mx-1 justify-center">

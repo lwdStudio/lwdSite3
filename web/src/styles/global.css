@@ -3,12 +3,11 @@
 @tailwind utilities;
 
 @layer utilities {
-    .markdown-article{
-        @apply lg:mx-12
+    .container .markdown-article {
+        @apply lg:mx-24
     }
-
-    .markdown-article img {
-        @apply lg:max-w-2xl mx-auto block
+    .container .markdown-article img {
+        @apply lg:mx-auto block
     }
 
     .full-screen {
@@ -68,53 +67,39 @@
 
 @layer base {
     h1 {
-        @apply text-2xl py-1 font-bold;
+        @apply text-2xl py-1 font-bold font-serif;
     }
     h2 {
-        @apply text-xl py-1 font-bold;
+        @apply text-xl py-1 font-bold font-serif;
     }
     h3 {
-        @apply text-lg py-1 font-bold;
+        @apply text-lg py-1 font-bold font-serif;
     }
     a {
-        @apply  hover:text-black focus:text-black hover:bg-gray-200 focus:bg-yellow-300 rounded-md py-0.5 text-blue-700
-        dark:text-blue-400 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:text-black transition ease-linear
+        @apply  hover:text-black focus:text-black hover:bg-gray-200 focus:bg-yellow-300 rounded-md p-0.5 text-blue-700
+        dark:text-blue-400 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:text-black transition ease-linear font-sans
+    }
+    p a {
+        @apply rounded-none focus:border-black focus:border-b-2
     }
     p {
-        display: block;
-        margin-top: 1em;
-        margin-bottom: 1em;
-        margin-left: 0;
-        margin-right: 0;
+        @apply block my-4 font-sans
     }
-
     p a {
-        @apply p-0;
+        @apply px-1 inline rounded-sm
     }
 
     ul {
-        display: block;
-        list-style-type: disc;
-        margin-top: 1em;
-        margin-bottom: 1em;
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 40px;
+        @apply block list-disc my-4
     }
     ol {
-        display: block;
-        list-style-type: decimal;
-        margin-top: 1em;
-        margin-bottom: 1em;
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 40px;
+        @apply block list-decimal my-4 pl-10
     }
     li {
-        display: list-item;
+        @apply list-item
     }
     code {
-        font-family: "Noto Mono",monospace;
+        @apply font-mono
     }
 }
 
