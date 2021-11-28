@@ -31,7 +31,7 @@ const TosPage = ({data, location}) => {
                 <p className={`italic ${!CoverImage && `col-span-2`}`}>{Excerpt}</p>
             </div>
 
-            <div className="container mx-auto p-10 bg-white lg:rounded-md dark:bg-gray-800 my-0">
+            <div className="container mx-auto p-8 sm:p-16 bg-white lg:rounded-md dark:bg-gray-800 my-0">
               <Reactmarkdown 
                   children={Content} 
                   linkTarget="_black"
@@ -63,7 +63,14 @@ const TosPage = ({data, location}) => {
                         return (
                           <LwdLink LinkTo={props.href} className={className} {...props}>{children}</LwdLink>
                         )
-                      }
+                      },
+                      iframe ({node, children, ...props}) {
+                        return (
+                          <div className="embed-video">
+                            <iframe {...props}>{children}</iframe>
+                          </div>
+                        )
+                      },
                     }
                   }
               />

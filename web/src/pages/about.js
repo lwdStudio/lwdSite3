@@ -63,7 +63,7 @@ const AboutPage = ({location, data}) => {
 
         <section className="p-5">
           <h2 className="text-center font-serif py-8">Get in touch</h2>
-          <div className="md:flex-row flex-col flex">
+          <div className="flex flex-wrap justify-start">
             {
               ContactInfo.map((info) => {
                 return (

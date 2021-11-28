@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://lwdsite.liwenduan.com",
+    siteUrl: process.env.GATSBY_ROOT_URL || "http://lwdsite.liwenduan.com",
     title: "lwdSite3",
     description:"This website help you learn more about me.",
     image:"src/images/IMG_7079.jpeg",

@@ -40,7 +40,7 @@ const Footer = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 mx-8 place-items-stretch">
                         <section className="pt-2">
                             <FooterLink LinkTo="/" className="text-black dark:text-gray-200 dark:focus:text-black">
-                                <div className="flex space-x-2 h-auto px-8 py-2 justify-center ">
+                                <div className="flex space-x-2 h-auto px-8 py-2 justify-center md:justify-start ">
                                     <div className="h-8 w-8 object-cover">
                                         <StaticImage 
                                             src="../../images/lwd-stamp.png"
@@ -54,7 +54,7 @@ const Footer = () => {
                                 </div>
                             </FooterLink>
                             <div className="my-2">
-                                <ul className="list-none">
+                                <ul className="list-none pl-0 md:pl-10">
                                     <li><LwdLink className={footerLinkStyle} LinkTo="/tos">Legal Terms</LwdLink></li>
                                     <li><LwdLink className={footerLinkStyle} LinkTo="https://status.liwenduan.com">System Status</LwdLink></li>
                                     <li><LwdLink className={footerLinkStyle} LinkTo="https://github.com/lwdStudio/lwdSite3/">I made this website!</LwdLink></li>
