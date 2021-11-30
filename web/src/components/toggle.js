@@ -11,6 +11,8 @@ export const SitePreferenceToggle = () => {
 }
 
 export const DarkToggle = () => {
+    const [isDark, setIsDark] = useState(systemPrefersDark);
+
     const systemPrefersDark = useMediaQuery(
         {
             query: "(prefers-color-scheme: dark)"
@@ -21,7 +23,6 @@ export const DarkToggle = () => {
         }
     );
 
-    const [isDark, setIsDark] = useState(systemPrefersDark);
     useEffect(() => {
         if(isDark){
             document.documentElement.classList.add("dark")
