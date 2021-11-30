@@ -4,7 +4,6 @@ import { StaticImage } from 'gatsby-plugin-image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 
-
 const NavButton = ({LinkTo, children}) => {
     return (
         <Link to={LinkTo} className="flex w-full md:w-28 p-3 my-3 md:m-3 justify-center rounded-md md:shadow-md font-medium text-gray-700 focus:shadow-none dark:text-white dark:text-opacity-70 md:dark:bg-gray-700 md:dark:hover:bg-gray-600 md:dark:hover:text-white md:dark:focus:bg-yellow-300">{children}</Link>
@@ -42,6 +41,7 @@ const Header = ({pageName='lwdSite'}) => {
                 <NavButton LinkTo="/showcase">showcase</NavButton>
                 <NavButton LinkTo="/lwd-service">lwdService</NavButton>
                 <NavButton LinkTo="/about">about me</NavButton>
+
                 {/* <LanguageSwitcher /> */}
             </nav>
         </header>

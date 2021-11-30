@@ -1,5 +1,6 @@
 import React from 'react'
 import { LwdLink } from './link'
+import { SitePreferenceToggle } from '../toggle'
 import { StaticImage } from 'gatsby-plugin-image'
 import { StaticQuery,graphql } from 'gatsby'
 
@@ -66,13 +67,6 @@ const Footer = () => {
                             <h1 className={`${footerTextColor} font-extrabold text-lg md:text-2xl`}>Get in touch?</h1>
                             <span className='block my-6'>Send an email to: <br /><LwdLink className={footerLinkStyle} LinkTo="mailto:hi@liwenduan.com">hi@liwenduan.com</LwdLink></span>
                         </section>
-                        {/* <section className="pt-2">
-                            <h1 className={`${footerTextColor} font-extrabold text-lg md:text-2xl`}>Set your experience:</h1>
-                            <ul className="list-none m-0 mt-1 p-0">
-                                <li>Dark mode: <LwdLink className={footerLinkStyle} LinkTo="/">on</LwdLink></li>
-                                <li>Language: <LwdLink className={footerLinkStyle} LinkTo="/">English</LwdLink></li>
-                            </ul>
-                        </section> */}
                         <section className="pt-2">
                             <h1 className={`${footerTextColor} font-extrabold text-lg md:text-2xl`}>Explore</h1>
                             <ul className="list-none pl-0">
@@ -87,7 +81,8 @@ const Footer = () => {
                     <div className="grid grid-flow-row auto-rows-max px-8 pb-4 text-xs  md:grid-flow-col md:auto-cols-max md:gap-2">
                         <span className={footerLinkStyle}>Copyright © {new Date().getFullYear()} Liwen Duan</span>
                         <LwdLink className={footerLinkStyle} LinkTo="http://beian.miit.gov.cn/">{data.site.siteMetadata.ICPlicense}</LwdLink>
-                        <LwdLink className={footerLinkStyle} LinkTo={data.site.siteMetadata.PSBeianURL}>{data.site.siteMetadata.PSBeian}</LwdLink>                      
+                        <LwdLink className={footerLinkStyle} LinkTo={data.site.siteMetadata.PSBeianURL}>{data.site.siteMetadata.PSBeian}</LwdLink>
+                        <SitePreferenceToggle />
                     </div>
                 </footer>
             }

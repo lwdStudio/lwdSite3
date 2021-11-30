@@ -78,7 +78,7 @@ export const InfoCard = ({info}) => {
 export const ContactCard = ({contactInfo}) => {
     library.add(fab)
     return (
-        <div className="flex card-common about-card gap-1">
+        <div className="flex card-common about-card gap-1 flex-grow md:flex-grow-0 ">
             <FontAwesomeIcon icon={['fab', contactInfo.ContactMethod.toLowerCase()]} className="self-center scale-125" /> 
             <LwdLink LinkTo={contactInfo.Contact} className="px-1">{contactInfo.ContactMethod}</LwdLink>
         </div>

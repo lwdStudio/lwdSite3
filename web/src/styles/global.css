@@ -46,7 +46,6 @@
     .embed-video {
         @apply aspect-w-16 aspect-h-9 justify-self-center self-center place-self-center
     }
-
 }
 
 @layer components {
@@ -62,6 +61,21 @@
     }
     .tag {
         @apply text-sm font-bold text-green-500 dark:text-green-400
+    }
+    input[type = checkbox] {
+        display: none;
+    }
+    input+label {
+        @apply flex justify-center items-center w-8 h-8 rounded-full text-gray-600 dark:text-gray-300 cursor-pointer p-1.5 text-center text-sm self-center
+    }
+    input + label:hover {
+        @apply bg-gray-200 text-black dark:bg-gray-600 dark:text-white
+    }
+    input#darkModeToggle + label:after {
+    content: " ☀️ ";
+    }
+    input#darkModeToggle:checked + label:after {
+    content: "🌙";
     }
 }
 
