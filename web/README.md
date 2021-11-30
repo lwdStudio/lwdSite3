@@ -16,15 +16,13 @@
 -  ✅ Connects to Strapi, a headless CMS via Graphql. 
 -  ✅ Tailwind CSS for page styling.
 -  ✅ Responsive layout.
--  ✅ Dark mode support - via Tailwild CSS media
 -  ✅ External Link Icon - There is a [debate](https://designnotes.blog.gov.uk/2016/11/28/removing-the-external-link-icon-from-gov-uk/) on this, and I will be looking into it.
 -  ✅ SEO and manifest information for each page.
-
+-  ✅ **[new]** Dark mode support with Toggle for user preferences 
 
 ## 📝 To-Do
 
 -  🔜 Add i18n support: query, language switcher, content.
--  🔜 Add dark mode switch.
 -  🔜 Maybe a video for index's hero.
 
 ## 🚀 Get Started
@@ -115,10 +113,6 @@ Ensure you have configure Strapi so Gatsby can pull data from it. If you not con
   When you are done, system link it to ```/etn/nginx/sites-enable```
   
   Remember to secure your website using SSL. Easiest way is to use ```certbot``` to get an Let's Encrypt certificate. Certbot should automatically install and configure it to your nginx configuration file.
-  
-## Issue
-~~When trying to deploy this site on platforms like Gatsby Cloud, Cloudflare Page or any other similar services, it will have dependency issue on ```@fontsource``` font package. Even the dependency had decleared on ```yarn.lock``` and being installed first time using ```yarn```. I had to reinstall the font again manually using ```yarn add @fontsource/<font-to-be-installed>``` to solve the issue.~~
-It seems like my fontsource package to the latest version solve this issue. 
 
 ## Use Docker
 I have create a Dockerfile for this gatsby front-end so you may use it create a docker container image, and serve this site use docker. Learn more on the [```docker.md```](docker.md) file.

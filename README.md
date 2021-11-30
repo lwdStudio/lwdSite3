@@ -20,6 +20,6 @@ You may need to fill in some content in Strapi first before developing/using fro
 ## Get started
 Clone this repo on to your system.
 
-First configure Strapi, check out README file in ```/api``` to learn how to do it.
+First configure Strapi, check out README file in [```/api```](/api) to learn how to do it.
 
-Then configure Gatsby, check out README file in ```/web``` to learn how to do it. 
+Then configure Gatsby, check out README file in [```/web```](/web) to learn how to do it. 
