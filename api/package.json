@@ -11,17 +11,17 @@
   },
   "dependencies": {
     "knex": "0.21.18",
-    "sqlite3": "^5.0.2",
-    "strapi": "3.6.8",
-    "strapi-admin": "3.6.8",
-    "strapi-connector-bookshelf": "3.6.8",
-    "strapi-plugin-content-manager": "3.6.8",
-    "strapi-plugin-content-type-builder": "3.6.8",
-    "strapi-plugin-email": "3.6.8",
-    "strapi-plugin-i18n": "3.6.8",
-    "strapi-plugin-upload": "3.6.8",
-    "strapi-plugin-users-permissions": "3.6.8",
-    "strapi-utils": "3.6.8"
+    "sqlite3": "5.0.2",
+    "@strapi/strapi": "4.0.0",
+    "@strapi/admin": "4.0.0",
+    "@strapi/database": "4.0.0",
+    "@strapi/plugin-content-manager": "4.0.0",
+    "@strapi/plugin-content-type-builder": "4.0.0",
+    "@strapi/plugin-email": "4.0.0",
+    "@strapi/plugin-i18n": "4.0.0",
+    "@strapi/plugin-upload": "4.0.0",
+    "@strapi/plugin-users-permissions": "4.0.0",
+    "@strapi/utils": "4.0.0"
   },
   "author": {
     "name": "Liwen Duan"
@@ -30,7 +30,7 @@
     "uuid": "9c057328-5f3a-497b-a1c1-22916a6efddd"
   },
   "engines": {
-    "node": ">=10.16.0 <=14.x.x",
+    "node": ">=10.16.0 <=16.x.x",
     "npm": "^8.0.0"
   },
   "license": "MIT"
