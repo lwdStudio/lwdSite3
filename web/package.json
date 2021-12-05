@@ -61,5 +61,6 @@
     "tailwindcss": "^2.2.15",
     "typewriter-effect": "^2.18.2",
     "yarn": "^1.22.15"
-  }
+  },
+  "packageManager": "yarn@3.1.1"
 }
