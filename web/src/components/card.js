@@ -104,7 +104,7 @@ export const CertificateCard = ({certificateInfo}) => {
 
 export const ShowcaseCard = ({article}) => {
     return (
-        <div className="flex flex-col card-common">
+        <div className="flex flex-col card-common" key={article.id}>
             <div className="shadow-md w-full">
                 <GatsbyImage 
                     className="rounded-t-lg h-64 object-cover align-middle"
@@ -120,23 +120,3 @@ export const ShowcaseCard = ({article}) => {
         </div>
     )
 }
-
-// export const ShowcaseCard = ({showcaseArticle, className}) => {
-//     return (
-//         <div className={`flex flex-col w-72 md:w-64 m-5 h-1/2 card-common ${className}`}>
-//             <div className="shadow-md">
-//                 <GatsbyImage 
-//                     className="md:max-w-7xl w-full md:h-auto h-48 rounded-t-lg object-cover align-middle"
-//                     image={showcaseArticle.CoverImage && showcaseArticle.CoverImage.localFile.childImageSharp.gatsbyImageData}
-//                     alt={showcaseArticle.CoverImage && showcaseArticle.CoverImage.alternativeText}
-//                 />
-//             </div>
-
-//             <div className="flex-col p-5 w-full rounded-b-lg">
-//                 {showcaseArticle.tags && <span className="tag">{"#"+showcaseArticle.tags[0].tagName}</span>}
-//                 <h2><LwdLink LinkTo={`/${showcaseArticle.pageSlug}`} className="inline px-1 text-2xl">{showcaseArticle.pageTitle}</LwdLink></h2>
-//                 <div className="text-md font-regular text-gray-500 dark:text-gray-400">{showcaseArticle.Excerpt.slice(0,160)+'...'}</div>
-//             </div>
-//         </div>
-//     )
-// }

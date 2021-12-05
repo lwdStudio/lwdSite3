@@ -24,7 +24,7 @@ const LwdLogo = ({pageName}) => {
     )
 }
 
-const Header = ({pageName='lwdSite'}) => {
+export const Header = ({pageName='lwdSite'}) => {
     const [isMenuOpen, setMenuOpen] = useState(false)
     const MenuIconStyle = "scale-150"
     return (
@@ -47,5 +47,3 @@ const Header = ({pageName='lwdSite'}) => {
         </header>
     )
 }
-
-export default Header;

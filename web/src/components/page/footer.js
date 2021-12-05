@@ -7,7 +7,7 @@ import { StaticQuery,graphql } from 'gatsby'
 const footerTextColor = 'text-gray-900 dark:text-gray-200'
 const footerLinkStyle = `text-gray-600 dark:text-gray-300 p-1.5 rounded-md hover:bg-opacity-50`
 
-export const FooterText = ({children}) => {
+const FooterText = ({children}) => {
     return (
         <div className="py-1 px-4 lg:py-0">
             <p className={`flex ${footerTextColor} justify-center lg:justify-start m-0`}>{children}</p>
@@ -15,13 +15,13 @@ export const FooterText = ({children}) => {
         
     )
 }
-export const FooterLink = ({LinkTo, className, children}) => {
+const FooterLink = ({LinkTo, className, children}) => {
     return (
         <FooterText><LwdLink LinkTo={LinkTo} className={`${footerTextColor} px-1.5 rounded-md ${className}`} >{children}</LwdLink></FooterText>
     )
 }
 
-const Footer = () => {
+export const Footer = () => {
     return (
         <StaticQuery 
             query={graphql`
