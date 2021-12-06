@@ -1,33 +1,26 @@
 import React, {useState,useEffect} from 'react'
 import { useMediaQuery } from "react-responsive";
 
-export const SitePreferenceToggle = () => {
-    return (
-        <div className="flex justify-center align-middle">
-            <DarkToggle />
-        </div>
-    )
-
-}
-
 export const DarkToggle = () => {
-    const systemPrefersDark = useMediaQuery(
-        {
-            query: "(prefers-color-scheme: dark)"
-        },
-        undefined,
-        prefersDark => {
-            setIsDark(prefersDark);
+    const userPrefersDark = localStorage.getItem("userPrefersDark")
+    const systemPrefersDark = useMediaQuery({query: "(prefers-color-scheme: dark)"});
+    const [isDark, setIsDark] = useState(() => {
+        if(userPrefersDark !== null){
+            return JSON.parse(userPrefersDark)
         }
-    );
+        else {
+            return JSON.parse(systemPrefersDark)
+        }
+    });
 
-    const [isDark, setIsDark] = useState(systemPrefersDark);
     useEffect(() => {
         if(isDark){
             document.documentElement.classList.add("dark")
+            localStorage.setItem("userPrefersDark", JSON.stringify(isDark))
         }
         else {
             document.documentElement.classList.remove("dark")
+            localStorage.setItem("userPrefersDark", JSON.stringify(isDark))
         }
     }, [isDark]);
     return (
