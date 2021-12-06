@@ -11,7 +11,7 @@ export const ArticleCard = ({posts}) => {
             {posts.CoverImage && 
                 <div className="flex-none w-full md:w-72 relative">
                     <GatsbyImage 
-                        className="object-cover w-full h-full card-common"
+                        className="relative object-cover w-full h-full card-common"
                         image={posts.CoverImage.localFile.childrenImageSharp[0].gatsbyImageData}
                         alt={posts.CoverImage.alternativeText}
                     />
@@ -46,6 +46,7 @@ export const LwdServiceCard = ({Service}) => {
                         <img className="w-64 h-32 object-scale-down justify-items-center p-5"
                         src={`${process.env.GATSBY_STRAPI_API_URL}`+ Service.serviceIcon.url}
                         alt={Service.serviceIcon.alternativeText}
+                        loading={`lazy`}
                         />
                     )
                 }
@@ -107,7 +108,7 @@ export const ShowcaseCard = ({article}) => {
         <div className="flex flex-col card-common" key={article.id}>
             <div className="shadow-md w-full">
                 <GatsbyImage 
-                    className="rounded-t-lg h-64 object-cover align-middle"
+                    className="relative rounded-t-lg h-64 object-cover align-middle"
                     image={article.CoverImage && article.CoverImage.localFile.childImageSharp.gatsbyImageData}
                     alt={article.CoverImage && article.CoverImage.alternativeText}
                 />
