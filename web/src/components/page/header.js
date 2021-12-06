@@ -1,18 +1,18 @@
 import React, {useState} from 'react'
-import { Link } from 'gatsby'
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { StaticImage } from 'gatsby-plugin-image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 
 const NavButton = ({LinkTo, children}) => {
     return (
-        <Link to={LinkTo} className="flex w-full md:w-28 p-3 my-3 md:m-3 justify-center rounded-md md:shadow-md font-medium text-gray-700 focus:shadow-none dark:text-white dark:text-opacity-70 md:dark:bg-gray-700 md:dark:hover:bg-gray-600 md:dark:hover:text-white md:dark:focus:bg-yellow-300">{children}</Link>
+        <AniLink paintDrip hex="#fcd34d" to={LinkTo} className="flex w-full md:w-28 p-3 my-3 md:m-3 justify-center rounded-md md:shadow-md font-medium text-gray-700 focus:shadow-none dark:text-white dark:text-opacity-70 md:dark:bg-gray-700 md:dark:hover:bg-gray-600 md:dark:hover:text-white md:dark:focus:bg-yellow-300">{children}</AniLink>
     )
 }
 
 const LwdLogo = ({pageName}) => {
     return (
-        <Link to="/" className="flex h-auto p-2 focus:ring-2 focus:ring-yellow-300 rounded-lg focus:text-black focus:bg-yellow-300 text-gray-800 dark:text-white dark:text-opacity-70 dark:hover:text-white">
+        <AniLink cover direction="right" bg="#fcd34d" to="/" className="flex h-auto p-2 focus:ring-2 focus:ring-yellow-300 rounded-lg focus:text-black focus:bg-yellow-300 text-gray-800 dark:text-white dark:text-opacity-70 dark:hover:text-white" title="Back to Home Page">
             <StaticImage
                 src="../../images/lwd-stamp.png"
                 alt="Liwen Duan's Logo"
@@ -20,7 +20,7 @@ const LwdLogo = ({pageName}) => {
                 width={50}
                 height={50} />
             <span className="inline-flex p-3 text-2xl font-serif">{pageName}</span>
-        </Link>
+        </AniLink>
     )
 }
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faExternalLinkAlt} from '@fortawesome/free-solid-svg-icons'
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 
 export const LwdLink = ({LinkTo, className, children, ...props}) => {
     if (LinkTo.startsWith('/')) {
