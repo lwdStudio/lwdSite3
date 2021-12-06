@@ -3,6 +3,7 @@ import Layout from '../components/page/layout'
 import Seo from "../components/seo"
 import { LwdServiceCard } from '../components/card'
 import {SiteNotification} from '../components/notification'
+import { ClientOnly } from '../components/utility'
 import {graphql} from 'gatsby'
 
 const LwdServiceIndex = ({location, data}) => {
@@ -21,7 +22,9 @@ const LwdServiceIndex = ({location, data}) => {
   return (
     <Layout pageType={pageTitle} location={location}>
       <Seo title={pageTitle} description={pageDescription} pathname={location.pathname}/>
-      {notification && <SiteNotification NotificationType={notification.WarningClass} Content={notification.NotificationContent} /> }
+      <ClientOnly>
+        {notification && <SiteNotification NotificationType={notification.WarningClass} Content={notification.NotificationContent} /> }
+      </ClientOnly>
       <div className="md:container md:mx-auto p-4">
         <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-blue-800 py-2">All lwdServices</h1>
         <p className="pb-4">{pageDescription}</p>

@@ -5,6 +5,7 @@ import Button from '../components/button'
 import Hero from '../components/hero'
 import {ShowcaseCard} from '../components/card'
 import {SiteNotification} from '../components/notification'
+import { ClientOnly } from '../components/utility'
 import {graphql} from 'gatsby'
 import Typewriter from 'typewriter-effect'
   
@@ -25,7 +26,9 @@ const IndexPage = ({location, data}) => {
   return (
     <Layout pageTitle={heroH1} location={location}>
       <Seo title={heroH1} pathname={location.pathname} />
-      {notification && <SiteNotification NotificationType={notification.WarningClass} Content={notification.NotificationContent} /> }
+      <ClientOnly>
+        {notification && <SiteNotification NotificationType={notification.WarningClass} Content={notification.NotificationContent} /> }
+      </ClientOnly>
       <Hero imageData={heroImage}>
         <h1 className="text-white font-extrabold leading-relax font-serif text-4xl md:text-6xl text-middle p-5 md:p-24 overflow-auto dark:text-gray-100">
           <Typewriter
