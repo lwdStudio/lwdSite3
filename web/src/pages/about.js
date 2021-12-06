@@ -16,7 +16,7 @@ const AboutPage = ({location, data}) => {
         <section className="grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-4">
           <div className="place-self-center row-span-2 h-auto w-3/4">
             <GatsbyImage 
-                className="relative rounded-full shadow-lg"
+                className="overflow-hidden rounded-full shadow-lg"
                 image={avatar && avatar.localFile.childImageSharp.gatsbyImageData}
                 alt={avatar && avatar.alternativeText}
               />
