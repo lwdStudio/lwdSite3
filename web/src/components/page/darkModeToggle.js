@@ -1,7 +1,18 @@
 import React, {useState,useEffect} from 'react'
 import { useMediaQuery } from "react-responsive";
 
-export const DarkToggle = () => {
+export const RenderDarkToggle = () => {
+    if (typeof window !== "undefined"){
+        return(
+            <DarkToggle />
+        )
+    }
+    else {
+        return null;
+    }
+}
+
+const DarkToggle = () => {
     const userPrefersDark = localStorage.getItem("userPrefersDark")
     const systemPrefersDark = useMediaQuery({query: "(prefers-color-scheme: dark)"});
     const [isDark, setIsDark] = useState(() => {
