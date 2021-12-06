@@ -79,11 +79,13 @@ query getFrontPage {
       }
     }
     Showcase {
+      id
       pages {
         pageTitle
         pageSlug
         Excerpt
         CoverImage {
+          alternativeText
           localFile {
             childImageSharp {
               gatsbyImageData
@@ -94,5 +96,4 @@ query getFrontPage {
     }
   }
 }
-
 `

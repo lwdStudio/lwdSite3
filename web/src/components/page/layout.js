@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import Header from './header'
-import Footer from './footer'
-import Maintainence from '../maintainence'
+import {Header} from './header'
+import {Footer} from './footer'
+import {Maintainence} from '../maintainence'
 import {Helmet} from 'react-helmet'
 
 const Layout = ({pageType, pageTitle=pageType, children, className}) => {

@@ -7,7 +7,7 @@ import Button from '../components/button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
-const Maintainence = () => {
+export const Maintainence = () => {
     const [maintainenceModeTitle, setmaintainenceModeTitle] = useState()
     const [maintainenceModeMessage, setmaintainenceModeMessage] = useState()
 
