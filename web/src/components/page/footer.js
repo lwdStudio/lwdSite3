@@ -1,6 +1,6 @@
 import React from 'react'
 import { LwdLink } from './link'
-import { SitePreferenceToggle } from '../toggle'
+import { DarkToggle } from '../darkModeToggle'
 import { StaticImage } from 'gatsby-plugin-image'
 import { StaticQuery,graphql } from 'gatsby'
 
@@ -82,7 +82,7 @@ export const Footer = () => {
                         <span className={footerLinkStyle}>Copyright © {new Date().getFullYear()} Liwen Duan</span>
                         <LwdLink className={footerLinkStyle} LinkTo="http://beian.miit.gov.cn/">{data.site.siteMetadata.ICPlicense}</LwdLink>
                         <LwdLink className={footerLinkStyle} LinkTo={data.site.siteMetadata.PSBeianURL}>{data.site.siteMetadata.PSBeian}</LwdLink>
-                        <SitePreferenceToggle />
+                        <DarkToggle />
                     </div>
                 </footer>
             }
