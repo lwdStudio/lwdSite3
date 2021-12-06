@@ -1405,7 +1405,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.10.0, @babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.12.0, @babel/runtime@npm:^7.14.0, @babel/runtime@npm:^7.14.5, @babel/runtime@npm:^7.14.6, @babel/runtime@npm:^7.15.4, @babel/runtime@npm:^7.16.3, @babel/runtime@npm:^7.3.1, @babel/runtime@npm:^7.7.2, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.9.2":
+"@babel/runtime@npm:^7.10.0, @babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.14.0, @babel/runtime@npm:^7.14.5, @babel/runtime@npm:^7.15.4, @babel/runtime@npm:^7.16.3, @babel/runtime@npm:^7.3.1, @babel/runtime@npm:^7.7.2, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.9.2":
   version: 7.16.3
   resolution: "@babel/runtime@npm:7.16.3"
   dependencies:
@@ -3327,13 +3327,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"add@npm:^2.0.6":
-  version: 2.0.6
-  resolution: "add@npm:2.0.6"
-  checksum: e2d23d40494565dfed4acd65e478570c444db5ac6c053551ed429c39ea0f2c99d83df63e7befec936df601827d2254d06a2fb6f7dcfd2022e810b25eab818b8c
-  languageName: node
-  linkType: hard
-
 "address@npm:1.1.2, address@npm:^1.0.1":
   version: 1.1.2
   resolution: "address@npm:1.1.2"
@@ -4407,7 +4400,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"camelcase@npm:^6.2.0, camelcase@npm:^6.2.1":
+"camelcase@npm:^6.2.0":
   version: 6.2.1
   resolution: "camelcase@npm:6.2.1"
   checksum: d876272ef76391ebf8442fb7ea1d77e80ae179ce1339e021a8731b4895fd190dc19e148e045469cff5825d4c089089f3fff34d804d3f49115d55af97dd6ac0af
@@ -7727,7 +7720,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby@npm:^4.0.0":
+"gatsby@npm:^4.3.0":
   version: 4.3.0
   resolution: "gatsby@npm:4.3.0"
   dependencies:
@@ -8818,33 +8811,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"i18next-browser-languagedetector@npm:^6.1.2":
-  version: 6.1.2
-  resolution: "i18next-browser-languagedetector@npm:6.1.2"
-  dependencies:
-    "@babel/runtime": ^7.14.6
-  checksum: 927719d2ad186ced97b16348d9db730333632f3ca47c762022e46315045f4fcacb86df33ed3f5c57aa90cac1e010ec2227de51776cf55a2ec0ab54b4d79cc06b
-  languageName: node
-  linkType: hard
-
-"i18next-http-backend@npm:^1.3.1":
-  version: 1.3.1
-  resolution: "i18next-http-backend@npm:1.3.1"
-  dependencies:
-    cross-fetch: 3.1.4
-  checksum: 4ee1d241f562e56b45f7125a3aee73517623a1af3eca7a4c5af8c537c732ed848268fde68c44fce3a34dec2ac2e30e8e5a4f8679abd3de0241fbb72d2f4fd65f
-  languageName: node
-  linkType: hard
-
-"i18next@npm:^21.5.4":
-  version: 21.5.4
-  resolution: "i18next@npm:21.5.4"
-  dependencies:
-    "@babel/runtime": ^7.12.0
-  checksum: d8834fef527f9ec1d631639aedf5e8035b47f0da775f2973e1fa72036d2eb02e94f6a63d4ae97d35a7b0f108d87e948e0bc9fa3a43182717367f11844b7a95ab
-  languageName: node
-  linkType: hard
-
 "iconv-lite@npm:0.4.24, iconv-lite@npm:^0.4.24, iconv-lite@npm:^0.4.4":
   version: 0.4.24
   resolution: "iconv-lite@npm:0.4.24"
@@ -9026,13 +8992,6 @@ __metadata:
     strip-ansi: ^6.0.0
     through: ^2.3.6
   checksum: 4d387fc1eb6126acbd58cbdb9ad99d2887d181df86ab0c2b9abdf734e751093e2d5882c2b6dc7144d9ab16b7ab30a78a1d7f01fb6a2850a44aeb175d1e3f8778
-  languageName: node
-  linkType: hard
-
-"install@npm:^0.13.0":
-  version: 0.13.0
-  resolution: "install@npm:0.13.0"
-  checksum: 645bad1253115309c64d791c901caa8acd61a4012731015e3ee5eef88baaca026f3a48dc15a73a2827f7f5b05609804968ea1e3c6525dc0b3a21241837b9cf59
   languageName: node
   linkType: hard
 
@@ -10452,11 +10411,9 @@ __metadata:
     "@fortawesome/free-solid-svg-icons": ^5.15.4
     "@fortawesome/react-fontawesome": ^0.1.16
     "@tailwindcss/aspect-ratio": ^0.3.0
-    add: ^2.0.6
     assert: ^2.0.0
     autoprefixer: ^10.3.5
-    camelcase: ^6.2.1
-    gatsby: ^4.0.0
+    gatsby: ^4.3.0
     gatsby-plugin-catch-links: ^4.2.0
     gatsby-plugin-fontawesome-css: ^1.2.0
     gatsby-plugin-image: ^2.2.0
@@ -10468,11 +10425,6 @@ __metadata:
     gatsby-source-filesystem: ^4.2.0
     gatsby-source-strapi: ^1.0.2
     gatsby-transformer-sharp: ^4.2.0
-    i18next: ^21.5.4
-    i18next-browser-languagedetector: ^6.1.2
-    i18next-http-backend: ^1.3.1
-    install: ^0.13.0
-    moment: ^2.29.1
     postcss: ^8.3.7
     prop-types: ^15.7.2
     react: ^17.0.1
@@ -10480,7 +10432,6 @@ __metadata:
     react-helmet: ^6.1.0
     react-i18next: ^11.14.3
     react-markdown: ^7.0.1
-    react-moment: ^1.1.1
     react-responsive: ^9.0.0-beta.5
     react-syntax-highlighter: ^15.4.4
     rehype-raw: ^6.1.0
@@ -13619,17 +13570,6 @@ __metadata:
     "@types/react": ">=16"
     react: ">=16"
   checksum: 108759c9e1b083402e1f38a88d32e6eb640c0d38d24ccfdec86a5ac3262ecc59e7494dc45eaecd6d613e7b91914dc54558ffc2b2e6cf3d2f6e5230b27fe348c9
-  languageName: node
-  linkType: hard
-
-"react-moment@npm:^1.1.1":
-  version: 1.1.1
-  resolution: "react-moment@npm:1.1.1"
-  peerDependencies:
-    moment: ^2.29.0
-    prop-types: ^15.7.0
-    react: ^16.0 || ^17.0.0
-  checksum: 7b80e2dd6a395e3ffd5cf3d0454c9413acfda1cfbf60f9aceb3f15316dcbdafb309390cd74403a0fb5debedb645147f63a24697c36d1a7cdb8c3fe51f9c68c87
   languageName: node
   linkType: hard
 

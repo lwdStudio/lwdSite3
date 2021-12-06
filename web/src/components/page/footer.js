@@ -1,9 +1,8 @@
 import React from 'react'
 import { LwdLink } from './link'
-import { SitePreferenceToggle } from '../toggle'
 import { StaticImage } from 'gatsby-plugin-image'
 import { StaticQuery,graphql } from 'gatsby'
-
+import { RenderDarkToggle } from './darkModeToggle'
 const footerTextColor = 'text-gray-900 dark:text-gray-200'
 const footerLinkStyle = `text-gray-600 dark:text-gray-300 p-1.5 rounded-md hover:bg-opacity-50`
 
@@ -20,7 +19,6 @@ const FooterLink = ({LinkTo, className, children}) => {
         <FooterText><LwdLink LinkTo={LinkTo} className={`${footerTextColor} px-1.5 rounded-md ${className}`} >{children}</LwdLink></FooterText>
     )
 }
-
 export const Footer = () => {
     return (
         <StaticQuery 
@@ -82,12 +80,10 @@ export const Footer = () => {
                         <span className={footerLinkStyle}>Copyright © {new Date().getFullYear()} Liwen Duan</span>
                         <LwdLink className={footerLinkStyle} LinkTo="http://beian.miit.gov.cn/">{data.site.siteMetadata.ICPlicense}</LwdLink>
                         <LwdLink className={footerLinkStyle} LinkTo={data.site.siteMetadata.PSBeianURL}>{data.site.siteMetadata.PSBeian}</LwdLink>
-                        <SitePreferenceToggle />
+                        <RenderDarkToggle />
                     </div>
                 </footer>
             }
         />
     )
 }
-
-export default Footer
