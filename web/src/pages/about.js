@@ -12,11 +12,11 @@ const AboutPage = ({location, data}) => {
     <Layout location={location} pageType="About me">
       <Seo title="About me" description={Description} image={`${process.env.GATSBY_STRAPI_API_URL}${avatar.url}`} pathname={location.pathname}/>
       <div className="md:container md:mx-auto p-4 ">
-        <h1 className="col-span-full text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-blue-800 pb-8">{h1}</h1>
+        <h1 className="col-span-full text-3xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-blue-800 pb-8">{h1}</h1>
         <section className="grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-4">
           <div className="place-self-center row-span-2 h-auto w-3/4">
             <GatsbyImage 
-                className="rounded-full shadow-lg"
+                className="overflow-hidden rounded-full shadow-lg"
                 image={avatar && avatar.localFile.childImageSharp.gatsbyImageData}
                 alt={avatar && avatar.alternativeText}
               />

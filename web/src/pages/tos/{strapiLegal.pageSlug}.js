@@ -1,10 +1,7 @@
 import React from 'react'
 import Layout from '../../components/page/layout'
 import { graphql } from 'gatsby'
-import Reactmarkdown from "react-markdown"
-import remarkGfm from 'remark-gfm'
-import rehypeRaw from 'rehype-raw'
-import slug from 'rehype-slug'
+import { MarkdownArticle } from '../../components/article'
 
 const TosPage = ({data, location}) => {
     const {pageTitle,updated_at,content} = data.strapiLegal
@@ -15,13 +12,7 @@ const TosPage = ({data, location}) => {
                 <p>Updated {updated_at}</p>
             </div>
             <div className="md:container md:mx-auto p-10 bg-white dark:bg-gray-800">
-                <Reactmarkdown 
-                    children={content} 
-                    transformImageUri={uri => 
-                        uri.startsWith("http") ? uri : `${process.env.GATSBY_STRAPI_API_URL}${uri}`}
-                    remarkPlugins={[remarkGfm]}
-                    rehypePlugins={[slug,rehypeRaw]}
-                />
+                <MarkdownArticle article={content} className="markdown-article" />
             </div>
         </Layout>
     )

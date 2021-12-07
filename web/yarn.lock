@@ -438,7 +438,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-proposal-class-properties@npm:^7.14.0, @babel/plugin-proposal-class-properties@npm:^7.16.0":
+"@babel/plugin-proposal-class-properties@npm:^7.0.0, @babel/plugin-proposal-class-properties@npm:^7.14.0, @babel/plugin-proposal-class-properties@npm:^7.16.0":
   version: 7.16.0
   resolution: "@babel/plugin-proposal-class-properties@npm:7.16.0"
   dependencies:
@@ -575,7 +575,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-proposal-optional-chaining@npm:^7.14.5, @babel/plugin-proposal-optional-chaining@npm:^7.16.0":
+"@babel/plugin-proposal-optional-chaining@npm:^7.0.0, @babel/plugin-proposal-optional-chaining@npm:^7.14.5, @babel/plugin-proposal-optional-chaining@npm:^7.16.0":
   version: 7.16.0
   resolution: "@babel/plugin-proposal-optional-chaining@npm:7.16.0"
   dependencies:
@@ -588,7 +588,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-proposal-private-methods@npm:^7.16.0":
+"@babel/plugin-proposal-private-methods@npm:^7.12.1, @babel/plugin-proposal-private-methods@npm:^7.16.0":
   version: 7.16.0
   resolution: "@babel/plugin-proposal-private-methods@npm:7.16.0"
   dependencies:
@@ -659,7 +659,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-syntax-dynamic-import@npm:^7.8.3":
+"@babel/plugin-syntax-dynamic-import@npm:^7.0.0, @babel/plugin-syntax-dynamic-import@npm:^7.8.3":
   version: 7.8.3
   resolution: "@babel/plugin-syntax-dynamic-import@npm:7.8.3"
   dependencies:
@@ -678,6 +678,17 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.0.0-0
   checksum: 85740478be5b0de185228e7814451d74ab8ce0a26fcca7613955262a26e99e8e15e9da58f60c754b84515d4c679b590dbd3f2148f0f58025f4ae706f1c5a5d4a
+  languageName: node
+  linkType: hard
+
+"@babel/plugin-syntax-flow@npm:^7.16.0":
+  version: 7.16.0
+  resolution: "@babel/plugin-syntax-flow@npm:7.16.0"
+  dependencies:
+    "@babel/helper-plugin-utils": ^7.14.5
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  checksum: 21ce1b81581ef3c2a36a8342c9bfea2783115479d6833a25ef82055d6113562ebfef2b8a46dd13d9be94168bdcb0e77a5ca0aad917dab6225bfb6506970e2d81
   languageName: node
   linkType: hard
 
@@ -933,6 +944,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/plugin-transform-flow-strip-types@npm:^7.16.0":
+  version: 7.16.0
+  resolution: "@babel/plugin-transform-flow-strip-types@npm:7.16.0"
+  dependencies:
+    "@babel/helper-plugin-utils": ^7.14.5
+    "@babel/plugin-syntax-flow": ^7.16.0
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  checksum: 589f65e8da13c710ee37ba01b6cfbeaa8ea2ee4bc150a1c3739403b78deeff43da766152014e74dda5c04ab14e3ad354c52dbb008f999bc3449a09e44032d216
+  languageName: node
+  linkType: hard
+
 "@babel/plugin-transform-for-of@npm:^7.16.0":
   version: 7.16.0
   resolution: "@babel/plugin-transform-for-of@npm:7.16.0"
@@ -1159,7 +1182,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-runtime@npm:^7.15.0":
+"@babel/plugin-transform-runtime@npm:^7.0.0, @babel/plugin-transform-runtime@npm:^7.15.0":
   version: 7.16.4
   resolution: "@babel/plugin-transform-runtime@npm:7.16.4"
   dependencies:
@@ -1267,7 +1290,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-env@npm:^7.15.4":
+"@babel/preset-env@npm:^7.0.0, @babel/preset-env@npm:^7.15.4":
   version: 7.16.4
   resolution: "@babel/preset-env@npm:7.16.4"
   dependencies:
@@ -1351,6 +1374,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/preset-flow@npm:^7.0.0":
+  version: 7.16.0
+  resolution: "@babel/preset-flow@npm:7.16.0"
+  dependencies:
+    "@babel/helper-plugin-utils": ^7.14.5
+    "@babel/helper-validator-option": ^7.14.5
+    "@babel/plugin-transform-flow-strip-types": ^7.16.0
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  checksum: 4417293f64d171bd4f063b2acdf7e88850ef15e1c72b4730798f7feb813785e1318bad6ae4c6bdb8d78b43a349be3e343e9d7902dc7a5b95a91abd53efe14904
+  languageName: node
+  linkType: hard
+
 "@babel/preset-modules@npm:^0.1.5":
   version: 0.1.5
   resolution: "@babel/preset-modules@npm:0.1.5"
@@ -1366,7 +1402,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-react@npm:^7.14.0":
+"@babel/preset-react@npm:^7.0.0, @babel/preset-react@npm:^7.14.0":
   version: 7.16.0
   resolution: "@babel/preset-react@npm:7.16.0"
   dependencies:
@@ -1405,7 +1441,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.10.0, @babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.14.0, @babel/runtime@npm:^7.14.5, @babel/runtime@npm:^7.15.4, @babel/runtime@npm:^7.16.3, @babel/runtime@npm:^7.3.1, @babel/runtime@npm:^7.7.2, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.9.2":
+"@babel/runtime@npm:^7.1.2, @babel/runtime@npm:^7.10.0, @babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.14.0, @babel/runtime@npm:^7.14.5, @babel/runtime@npm:^7.14.8, @babel/runtime@npm:^7.15.4, @babel/runtime@npm:^7.16.3, @babel/runtime@npm:^7.3.1, @babel/runtime@npm:^7.7.2, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.9.2":
   version: 7.16.3
   resolution: "@babel/runtime@npm:7.16.3"
   dependencies:
@@ -3927,10 +3963,34 @@ __metadata:
   languageName: node
   linkType: hard
 
+"babel-plugin-root-import@npm:^6.5.0":
+  version: 6.6.0
+  resolution: "babel-plugin-root-import@npm:6.6.0"
+  dependencies:
+    slash: ^3.0.0
+  checksum: 51af42caef272efc2292ebb0fd55477c651cb4219bb77e431ee55dc0dee5d27340362dd74c883f217e75bc4636e298aeff23ff5f3063cdf4962f95635d6bbcd2
+  languageName: node
+  linkType: hard
+
 "babel-plugin-transform-react-remove-prop-types@npm:^0.4.24":
   version: 0.4.24
   resolution: "babel-plugin-transform-react-remove-prop-types@npm:0.4.24"
   checksum: 54afe56d67f0d118c9da23996f39948e502a152b3f582eb6e8f163fcb76c2c1ea4e0cdd4f9fac5c0ef050eab4fe0a950b0b74aae6237bcc0d31d8fc4cc808d1a
+  languageName: node
+  linkType: hard
+
+"babel-preset-gatsby-package@npm:^0.1.2":
+  version: 0.1.4
+  resolution: "babel-preset-gatsby-package@npm:0.1.4"
+  dependencies:
+    "@babel/plugin-proposal-class-properties": ^7.0.0
+    "@babel/plugin-proposal-optional-chaining": ^7.0.0
+    "@babel/plugin-syntax-dynamic-import": ^7.0.0
+    "@babel/plugin-transform-runtime": ^7.0.0
+    "@babel/preset-env": ^7.0.0
+    "@babel/preset-flow": ^7.0.0
+    "@babel/preset-react": ^7.0.0
+  checksum: 0e49d0a68220af2528c9021c809b0234d798b7b30d057bc444e091e5823878e6ac362f161e18a9c9a739a131c6062dcb7b531fa63d6f30c7cb6af13fa1bd76e0
   languageName: node
   linkType: hard
 
@@ -4679,7 +4739,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"color-convert@npm:^1.9.0":
+"color-convert@npm:^1.9.0, color-convert@npm:^1.9.3":
   version: 1.9.3
   resolution: "color-convert@npm:1.9.3"
   dependencies:
@@ -5782,6 +5842,15 @@ __metadata:
   dependencies:
     utila: ~0.4
   checksum: ea52fe303f5392e48dea563abef0e6fb3a478b8dbe3c599e99bb5d53981c6c38fc4944e56bb92a8ead6bb989d10b7914722ae11febbd2fd0910e33b9fc4aaa77
+  languageName: node
+  linkType: hard
+
+"dom-helpers@npm:^3.4.0":
+  version: 3.4.0
+  resolution: "dom-helpers@npm:3.4.0"
+  dependencies:
+    "@babel/runtime": ^7.1.2
+  checksum: 58d9f1c4a96daf77eddc63ae1236b826e1cddd6db66bbf39b18d7e21896d99365b376593352d52a60969d67fa4a8dbef26adc1439fa2c1b355efa37cacbaf637
   languageName: node
   linkType: hard
 
@@ -7502,6 +7571,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gatsby-plugin-transition-link@npm:^1.20.5":
+  version: 1.20.5
+  resolution: "gatsby-plugin-transition-link@npm:1.20.5"
+  dependencies:
+    "@babel/plugin-proposal-private-methods": ^7.12.1
+    babel-plugin-root-import: ^6.5.0
+    babel-preset-gatsby-package: ^0.1.2
+    color-convert: ^1.9.3
+    json-bump: ^0.1.3
+    polyfill-array-includes: ^1.0.0
+    react-transition-group: ^2.5.0
+    requestanimationframe-timer: ^1.0.4
+  peerDependencies:
+    react: ^16.8.5
+  checksum: 96ef9cc2ee290ea703f2a6dcc446a12b2b0a316c9c42227a7a53a985a777072ab94378b5dbac94572b3abfb5cbd165a3db4aea285b71fd6707f9d2246d27ca43
+  languageName: node
+  linkType: hard
+
 "gatsby-plugin-typescript@npm:^4.3.0":
   version: 4.3.0
   resolution: "gatsby-plugin-typescript@npm:4.3.0"
@@ -8313,6 +8400,13 @@ __metadata:
   version: 15.7.2
   resolution: "graphql@npm:15.7.2"
   checksum: eacb746e2981d0c346ef7365601873963af5356f64ce4d890ab89d213c67bf5bc1ae957b93c3902198798774c842b55dff219f38bad858691765e4debc265750
+  languageName: node
+  linkType: hard
+
+"gsap@npm:^3.8.0":
+  version: 3.8.0
+  resolution: "gsap@npm:3.8.0"
+  checksum: db7ca05441138e082cafb78b3fae981e2c5bd02dfa7caebd78e0a195f924822718e69475642ada42bebab6a17327acfb64b11dbeca5e955851dc2ff4896d1a8b
   languageName: node
   linkType: hard
 
@@ -9838,6 +9932,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"json-bump@npm:^0.1.3":
+  version: 0.1.4
+  resolution: "json-bump@npm:0.1.4"
+  dependencies:
+    jsonfile: ^3.0.1
+  bin:
+    json-bump: index.js
+  checksum: e961d5d49e596fca8f6b01fb34db06476d3057063e8e18bce619cd2478876aff9b71f4dba06ff8c3aedacb8cca38cb5678b117e9726a144419add268d8006cbf
+  languageName: node
+  linkType: hard
+
 "json-loader@npm:^0.5.7":
   version: 0.5.7
   resolution: "json-loader@npm:0.5.7"
@@ -9906,6 +10011,18 @@ __metadata:
   bin:
     json5: lib/cli.js
   checksum: e88fc5274bb58fc99547baa777886b069d2dd96d9cfc4490b305fd16d711dabd5979e35a4f90873cefbeb552e216b041a304fe56702bedba76e19bc7845f208d
+  languageName: node
+  linkType: hard
+
+"jsonfile@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "jsonfile@npm:3.0.1"
+  dependencies:
+    graceful-fs: ^4.1.6
+  dependenciesMeta:
+    graceful-fs:
+      optional: true
+  checksum: f2935da339462fe6489c3b8961b637e4eeebd42bcbbe1c8d88f4e937fe19d2d9bc222167281ada2e2f6ddc0324edb43b18107a9b12c743b350326d83ba4db5ef
   languageName: node
   linkType: hard
 
@@ -10422,9 +10539,11 @@ __metadata:
     gatsby-plugin-react-helmet: ^5.2.0
     gatsby-plugin-sharp: ^4.2.0
     gatsby-plugin-sitemap: ^5.2.0
+    gatsby-plugin-transition-link: ^1.20.5
     gatsby-source-filesystem: ^4.2.0
     gatsby-source-strapi: ^1.0.2
     gatsby-transformer-sharp: ^4.2.0
+    gsap: ^3.8.0
     postcss: ^8.3.7
     prop-types: ^15.7.2
     react: ^17.0.1
@@ -12567,6 +12686,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"polyfill-array-includes@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "polyfill-array-includes@npm:1.0.0"
+  checksum: 559642bd3141ee0b6a4bba5599c4ee0a12bba5b1361f8a425eccde3a86e73aae7ee2e4864a9eda60a554ab42c8dd8cd68baf8dc813c1b39874f5bf5782cc81d4
+  languageName: node
+  linkType: hard
+
 "posix-character-classes@npm:^0.1.0":
   version: 0.1.1
   resolution: "posix-character-classes@npm:0.1.1"
@@ -13366,7 +13492,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"raf@npm:^3.4.0":
+"raf@npm:^3.4.0, raf@npm:^3.4.1":
   version: 3.4.1
   resolution: "raf@npm:3.4.1"
   dependencies:
@@ -13615,6 +13741,21 @@ __metadata:
   peerDependencies:
     react: ">= 0.14.0"
   checksum: 120bac5cfbd65eb47e513b8057e3cb71843ce15241bbf933c1818c294965b87d8e074c7929a8fc2ced66c3e3f38c4cc6bf04365a8345e3a382cd524d0093949f
+  languageName: node
+  linkType: hard
+
+"react-transition-group@npm:^2.5.0":
+  version: 2.9.0
+  resolution: "react-transition-group@npm:2.9.0"
+  dependencies:
+    dom-helpers: ^3.4.0
+    loose-envify: ^1.4.0
+    prop-types: ^15.6.2
+    react-lifecycles-compat: ^3.0.4
+  peerDependencies:
+    react: ">=15.0.0"
+    react-dom: ">=15.0.0"
+  checksum: d8c9e50aabdc2cfc324e5cdb0ad1c6eecb02e1c0cd007b26d5b30ccf49015e900683dd489348c71fba4055858308d9ba7019e0d37d0e8d37bd46ed098788f670
   languageName: node
   linkType: hard
 
@@ -14024,6 +14165,15 @@ __metadata:
   version: 1.6.1
   resolution: "repeat-string@npm:1.6.1"
   checksum: 1b809fc6db97decdc68f5b12c4d1a671c8e3f65ec4a40c238bc5200e44e85bcc52a54f78268ab9c29fcf5fe4f1343e805420056d1f30fa9a9ee4c2d93e3cc6c0
+  languageName: node
+  linkType: hard
+
+"requestanimationframe-timer@npm:^1.0.4":
+  version: 1.0.5
+  resolution: "requestanimationframe-timer@npm:1.0.5"
+  dependencies:
+    raf: ^3.4.1
+  checksum: 1a515ee475ffc955f7937fd46bb9cc95bc7f6199617ab48315b778cac3cb9f61f81350dd5197f9f5304918bf6f0ea26e0abc04f59a6f3eb84dac85b582541ca5
   languageName: node
   linkType: hard
 

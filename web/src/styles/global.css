@@ -10,6 +10,10 @@
         @apply lg:mx-auto block
     }
 
+    .notification p {
+        @apply text-xs font-medium leading-relaxed my-4
+    }
+
     .full-screen {
         height: 100vh;
         width: 100vh;
@@ -60,7 +64,7 @@
         dark:text-blue-500 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:text-black
     }
     .tag {
-        @apply text-sm font-bold text-green-500 dark:text-green-400
+        @apply text-sm font-medium text-green-500 dark:text-green-400
     }
     input[type = checkbox] {
         display: none;
@@ -81,23 +85,23 @@
 
 @layer base {
     h1 {
-        @apply text-2xl py-1 font-bold font-serif;
+        @apply text-2xl font-extrabold font-serif antialiased sm:subpixel-antialiased md:antialiased;
     }
     h2 {
-        @apply text-xl py-1 font-bold font-serif;
+        @apply text-xl font-extrabold font-serif antialiased sm:subpixel-antialiased md:antialiased;
     }
     h3 {
-        @apply text-lg py-1 font-bold font-serif;
+        @apply text-lg font-extrabold font-serif antialiased sm:subpixel-antialiased md:antialiased;
     }
     a {
         @apply  hover:text-black focus:text-black hover:bg-gray-200 focus:bg-yellow-300 rounded-md p-0.5 text-blue-700
-        dark:text-blue-400 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:text-black transition ease-linear font-sans
+        dark:text-blue-400 dark:hover:bg-gray-600 dark:hover:text-white hover:bg-opacity-50 dark:focus:text-black transition ease-linear font-sans antialiased sm:subpixel-antialiased md:antialiased
     }
     p a {
         @apply rounded-none focus:border-black focus:border-b-2
     }
     p {
-        @apply block my-4 font-sans
+        @apply block my-6 font-sans text-base leading-relaxed font-medium antialiased sm:subpixel-antialiased md:antialiased
     }
     p a {
         @apply px-1 inline rounded-sm

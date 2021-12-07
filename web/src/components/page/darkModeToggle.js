@@ -1,15 +1,11 @@
 import React, {useState,useEffect} from 'react'
+import { ClientOnly } from '../utility'
 import { useMediaQuery } from "react-responsive";
 
 export const RenderDarkToggle = () => {
-    if (typeof window !== "undefined"){
-        return(
-            <DarkToggle />
-        )
-    }
-    else {
-        return null;
-    }
+    return(
+        <ClientOnly><DarkToggle /></ClientOnly>
+    )
 }
 
 const DarkToggle = () => {
@@ -39,11 +35,11 @@ const DarkToggle = () => {
             <input 
                 type='checkbox' 
                 name='darkModeToggle' 
-                id='darkModeToggle' 
+                id='darkModeToggle'
                 checked={isDark} 
                 onChange={event=>setIsDark(event.target.checked)}
             />
-            <label htmlFor='darkModeToggle'></label>
+            <label htmlFor='darkModeToggle' title={`Switch to ${isDark?`Light`:`Dark`} Mode`}></label>
         </div>
     )
 }

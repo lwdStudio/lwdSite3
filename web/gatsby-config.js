@@ -19,6 +19,7 @@ module.exports = {
     "gatsby-plugin-catch-links",
     "gatsby-plugin-fontawesome-css",
     "gatsby-plugin-sitemap",
+    "gatsby-plugin-transition-link",
     "gatsby-transformer-sharp",
     // gatsby-plugin-manifest
     {

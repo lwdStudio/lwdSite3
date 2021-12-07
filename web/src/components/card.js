@@ -11,7 +11,7 @@ export const ArticleCard = ({posts}) => {
             {posts.CoverImage && 
                 <div className="flex-none w-full md:w-72 relative">
                     <GatsbyImage 
-                        className="object-cover w-full h-full card-common"
+                        className="overflow-hidden object-cover w-full h-full card-common"
                         image={posts.CoverImage.localFile.childrenImageSharp[0].gatsbyImageData}
                         alt={posts.CoverImage.alternativeText}
                     />
@@ -21,7 +21,7 @@ export const ArticleCard = ({posts}) => {
             <div className="flex-auto p-6">
                 <span className="tag">{posts.tags&&"#"+posts.tags[0].tagName}</span>
                 <h2 className="text-2xl"><LwdLink LinkTo={`/${posts.pageSlug}`} className="p-0.5">{posts.pageTitle}</LwdLink></h2>
-                <p className="text-md font-regular text-gray-400">{posts.Excerpt.slice(0,160)+'...'}</p>
+                <p className="text-md font-regular text-gray-500">{posts.Excerpt.slice(0,160)+'...'}</p>
             </div>
         </div>
     )
@@ -39,13 +39,14 @@ export const PageCard = ({pages}) => {
 
 export const LwdServiceCard = ({Service}) => {
     return (
-        <div className="flex flex-col w-64 h-auto m-5 card-common">
-            <div className="w-64 h-32 rounded-t-lg shadow-inner dark:bg-gray-700 bg:opacity-50 bg-gray-50">
+        <div className="flex flex-col w-72 h-auto m-5 card-common">
+            <div className="w-72 h-36 rounded-t-lg shadow-inner dark:bg-gray-700 bg:opacity-50 bg-gray-50">
                 {
                     Service.serviceIcon && (
-                        <img className="w-64 h-32 object-scale-down justify-items-center p-5"
+                        <img className="w-72 h-36 object-scale-down justify-items-center p-5"
                         src={`${process.env.GATSBY_STRAPI_API_URL}`+ Service.serviceIcon.url}
                         alt={Service.serviceIcon.alternativeText}
+                        loading={`lazy`}
                         />
                     )
                 }
@@ -107,14 +108,14 @@ export const ShowcaseCard = ({article}) => {
         <div className="flex flex-col card-common" key={article.id}>
             <div className="shadow-md w-full">
                 <GatsbyImage 
-                    className="rounded-t-lg h-64 object-cover align-middle"
+                    className="overflow-hidden rounded-t-lg h-64 object-cover align-middle"
                     image={article.CoverImage && article.CoverImage.localFile.childImageSharp.gatsbyImageData}
                     alt={article.CoverImage && article.CoverImage.alternativeText}
                 />
             </div>
             <div className="flex-col p-5 w-full rounded-b-lg">
                 {article.tags && <span className="tag">{"#"+article.tags[0].tagName}</span>}
-                <h2><LwdLink LinkTo={`/${article.pageSlug}`} className="inline px-1 text-2xl">{article.pageTitle}</LwdLink></h2>
+                <h2 className="pb-2 font-bold"><LwdLink LinkTo={`/${article.pageSlug}`} className="inline text-2xl">{article.pageTitle}</LwdLink></h2>
                 <div className="text-md font-regular text-gray-500 dark:text-gray-400">{article.Excerpt.slice(0,160)+'...'}</div>
             </div>
         </div>

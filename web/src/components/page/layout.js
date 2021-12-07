@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import {Header} from './header'
 import {Footer} from './footer'
 import {Maintainence} from '../maintainence'
+import { ClientOnly } from '../utility'
 import {Helmet} from 'react-helmet'
 
 const Layout = ({pageType, pageTitle=pageType, children, className}) => {
@@ -19,7 +20,9 @@ const Layout = ({pageType, pageTitle=pageType, children, className}) => {
 
   if (maintainenceMode) {
     return (
-      <Maintainence />
+      <ClientOnly>
+        <Maintainence />
+      </ClientOnly>
     )
   }
 

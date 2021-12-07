@@ -7,12 +7,12 @@ import {PrismAsyncLight as SyntaxHighlighter} from 'react-syntax-highlighter'
 import {materialDark} from 'react-syntax-highlighter/dist/esm/styles/prism/'
 import {LwdLink} from './page/link'
 
-export const MarkdownArticle = ({article}) => {
+export const MarkdownArticle = ({article, className}) => {
     return (
         <Reactmarkdown 
             children={article} 
             linkTarget="_black"
-            className="markdown-article"
+            className={className}
             transformImageUri={uri => 
                 uri.startsWith("http") ? uri : `${process.env.GATSBY_STRAPI_API_URL}${uri}`}
             remarkPlugins={[remarkGfm]}
