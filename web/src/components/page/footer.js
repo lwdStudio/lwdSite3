@@ -3,8 +3,8 @@ import { LwdLink } from './link'
 import { StaticImage } from 'gatsby-plugin-image'
 import { StaticQuery,graphql } from 'gatsby'
 import { RenderDarkToggle } from './darkModeToggle'
-const footerTextColor = 'text-gray-900 dark:text-gray-200'
-const footerLinkStyle = `text-gray-600 dark:text-gray-300 p-1.5 rounded-md hover:bg-opacity-50`
+const footerTextColor = 'text-gray-900 dark:text-gray-200 font-medium'
+const footerLinkStyle = `text-gray-600 dark:text-gray-300 p-1.5 rounded-md hover:bg-opacity-50 font-medium`
 
 const FooterText = ({children}) => {
     return (
@@ -49,7 +49,7 @@ export const Footer = () => {
                                             height={32}
                                         />
                                     </div>
-                                    <span className="inline-flex py-1 text-lg font-serif ">{data.site.siteMetadata.title}</span>
+                                    <span className="inline-flex py-1 text-lg font-serif font-medium">{data.site.siteMetadata.title}</span>
                                 </div>
                             </FooterLink>
                             <div className="my-2">
@@ -77,9 +77,9 @@ export const Footer = () => {
                     </div>
                     <hr className='m-8 mb-4 dark:opacity-40' />
                     <div className="grid grid-flow-row auto-rows-max px-8 pb-4 text-xs  md:grid-flow-col md:auto-cols-max md:gap-2">
-                        <span className={footerLinkStyle}>Copyright © {new Date().getFullYear()} Liwen Duan</span>
-                        <LwdLink className={footerLinkStyle} LinkTo="http://beian.miit.gov.cn/">{data.site.siteMetadata.ICPlicense}</LwdLink>
-                        <LwdLink className={footerLinkStyle} LinkTo={data.site.siteMetadata.PSBeianURL}>{data.site.siteMetadata.PSBeian}</LwdLink>
+                        <span className={`${footerLinkStyle} font-light`}>Copyright © {new Date().getFullYear()} Liwen Duan</span>
+                        <LwdLink className={`${footerLinkStyle} font-light`} LinkTo="http://beian.miit.gov.cn/">{data.site.siteMetadata.ICPlicense}</LwdLink>
+                        <LwdLink className={`${footerLinkStyle} font-light`} LinkTo={data.site.siteMetadata.PSBeianURL}>{data.site.siteMetadata.PSBeian}</LwdLink>
                         <RenderDarkToggle />
                     </div>
                 </footer>

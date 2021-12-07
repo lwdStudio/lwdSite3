@@ -26,19 +26,19 @@ const TosPage = ({data, location}) => {
             </div>
 
             <div className="container mx-auto p-8 sm:p-16 bg-white lg:rounded-md dark:bg-gray-800 my-0">
-              <MarkdownArticle article={Content} />
+              <MarkdownArticle article={Content}  className="markdown-article"/>
             </div>
 
             {
               RelatedPage[0] && 
               <div className='container mx-auto my-8'>
                 <div className='lg:mx-10'>
-                  <h2 className='text-lg font-bold'>More to read</h2>
+                  <h2 className='text-lg font-bold pb-4'>More to read</h2>
                   <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
                     {
                       RelatedPage.map((showcaseArticle) => {
                         return (
-                          <ShowcaseCard article={showcaseArticle} />
+                          <ShowcaseCard article={showcaseArticle}/>
                         )
                       }
                     )}

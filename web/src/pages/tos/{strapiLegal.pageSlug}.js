@@ -12,7 +12,7 @@ const TosPage = ({data, location}) => {
                 <p>Updated {updated_at}</p>
             </div>
             <div className="md:container md:mx-auto p-10 bg-white dark:bg-gray-800">
-                <MarkdownArticle article={content} />
+                <MarkdownArticle article={content} className="markdown-article" />
             </div>
         </Layout>
     )

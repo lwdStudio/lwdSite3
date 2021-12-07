@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import {LwdLink} from './link'
 import { StaticImage } from 'gatsby-plugin-image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
@@ -12,15 +13,15 @@ const NavButton = ({LinkTo, children}) => {
 
 const LwdLogo = ({pageName}) => {
     return (
-        <AniLink cover direction="right" bg="#fcd34d" to="/" className="flex h-auto p-2 focus:ring-2 focus:ring-yellow-300 rounded-lg focus:text-black focus:bg-yellow-300 text-gray-800 dark:text-white dark:text-opacity-70 dark:hover:text-white" title="Back to Home Page">
+        <LwdLink LinkTo="/" className="flex h-auto p-2 focus:ring-2 focus:ring-yellow-300 rounded-lg focus:text-black focus:bg-yellow-300 text-gray-800 dark:text-white dark:text-opacity-70 dark:hover:text-white" title="Back to Home Page">
             <StaticImage
                 src="../../images/lwd-stamp.png"
                 alt="Liwen Duan's Logo"
                 layout="fixed"
                 width={50}
                 height={50} />
-            <span className="inline-flex p-3 text-2xl font-serif">{pageName}</span>
-        </AniLink>
+            <span className="inline-flex p-3 text-2xl font-bold font-serif">{pageName}</span>
+        </LwdLink>
     )
 }
 
@@ -30,13 +31,13 @@ export const Header = ({pageName='lwdSite'}) => {
     return (
         <header className="p-1 flex flex-wrap md:flex rounded-b-lg shadow-lg bg-white dark:bg-gray-800 dark:text-white dark:text-opacity-50">
             <LwdLogo pageName={pageName} />
-            <div className="flex-grow" />
-            <div className="flex items-center md:hidden p-2 ">
+            <div className="order-2 flex flex-grow" />
+            <div className="order-3 flex items-center md:hidden p-2 ">
                 <button onClick={() => setMenuOpen(!isMenuOpen)} className={`h-12 w-12 rounded-lg shadow-md dark:bg-gray-700`} aria-label="Menu">
                     {isMenuOpen ? <FontAwesomeIcon icon={faTimes} className={MenuIconStyle} /> : <FontAwesomeIcon icon={faBars} className={MenuIconStyle}/>}
                 </button>
             </div>
-            <nav className={`w-full md:flex md:flex-row md:w-auto ${isMenuOpen ? "visible" : "invisible md:visible md:h-auto h-0"}`}>
+            <nav className={`order-4 w-full md:flex md:flex-row md:w-auto ${isMenuOpen ? "visible" : "invisible md:visible md:h-auto h-0"}`}>
                 <NavButton LinkTo="/blog">blog</NavButton >
                 <NavButton LinkTo="/showcase">showcase</NavButton>
                 <NavButton LinkTo="/lwd-service">lwdService</NavButton>
