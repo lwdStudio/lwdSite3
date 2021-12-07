@@ -30,13 +30,13 @@ export const Header = ({pageName='lwdSite'}) => {
     return (
         <header className="p-1 flex flex-wrap md:flex rounded-b-lg shadow-lg bg-white dark:bg-gray-800 dark:text-white dark:text-opacity-50">
             <LwdLogo pageName={pageName} />
-            <div className="flex-grow"></div>
+            <div className="flex-grow" />
             <div className="flex items-center md:hidden p-2 ">
                 <button onClick={() => setMenuOpen(!isMenuOpen)} className={`h-12 w-12 rounded-lg shadow-md dark:bg-gray-700`} aria-label="Menu">
                     {isMenuOpen ? <FontAwesomeIcon icon={faTimes} className={MenuIconStyle} /> : <FontAwesomeIcon icon={faBars} className={MenuIconStyle}/>}
                 </button>
             </div>
-            <nav className={`transition w-full md:flex md:flex-row md:w-auto ${isMenuOpen ? "visible" : "invisible md:visible md:h-auto h-0"}`}>
+            <nav className={`w-full md:flex md:flex-row md:w-auto ${isMenuOpen ? "visible" : "invisible md:visible md:h-auto h-0"}`}>
                 <NavButton LinkTo="/blog">blog</NavButton >
                 <NavButton LinkTo="/showcase">showcase</NavButton>
                 <NavButton LinkTo="/lwd-service">lwdService</NavButton>
