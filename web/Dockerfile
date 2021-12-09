@@ -1,14 +1,12 @@
-FROM node:14-bullseye AS builder
+FROM node:16-bullseye AS builder
 
 # Build Gatsby Applpication
 WORKDIR /app
-# Install Dependencies
-COPY ./package*.json .
-
-RUN yarn
 
 # Copy application sources
 COPY . .
+
+RUN yarn
 
 RUN yarn build
 
