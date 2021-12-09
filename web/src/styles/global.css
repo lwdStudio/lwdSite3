@@ -119,5 +119,12 @@
     code {
         @apply font-mono
     }
+    blockquote {
+        @apply ml-4 pl-4 border-l-4 border-gray-700 dark:border-gray-300
+    }
+
+    blockquote p {
+        @apply italic font-serif text-gray-700 dark:text-gray-300
+    }
 }
 
