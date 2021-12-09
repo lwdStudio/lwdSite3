@@ -46,14 +46,16 @@
   cp .env.example .env
   ```
  
- There are two items you can modify:
+ There are three items you can modify:
  - ```GATSBY_ROOT_URL``` is your site address.
  - ```GATSBY_STRAPI_API_URL``` is your Strapi backend address.
+ - ```GATSBY_JPEG_ENCODER``` is for your JPEG encoding option. Learn more at [gatsby-plugin-sharp's documentation](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-plugin-sharp/README.md#using-mozjpeg)
 
 For development you can configure:
 ```shell
 GATSBY_ROOT_URL=
 GATSBY_STRAPI_API_URL=http://localhost:3000
+GATSBY_JPEG_ENCODER=MOZJPEG
 ```
 ⚠️ Specify port after domain. Your configuration might be different than mine, create your own file to reflect your actural environment.
 
