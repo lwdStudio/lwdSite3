@@ -9,7 +9,7 @@
 
 ## ℹ️ Info
 
-   This is a gatsby front-end that connect to my Strapi headless CMS. In order to make the site work, you need to configure a corresponding Strapi application at [```../api```](/api).
+   This is a gatsby front-end that connects to my Strapi headless CMS. In order to make the site work, you need to configure a corresponding Strapi application at [```../api```](/api).
 
 ## 📜 Feature
 
@@ -35,11 +35,11 @@
   yarn
   ```
   
-  Follow promt on your terminal if anything happens.
+  Follow prompts on your terminal if anything happens.
   
   ### Configure
   
-  Before you start, configure environment variable first. 
+  Before you start, configure the environment variable first. 
   
   Create ```.env``` file with ```.env.example```
   ```bash
@@ -57,16 +57,16 @@ GATSBY_ROOT_URL=
 GATSBY_STRAPI_API_URL=http://localhost:3000
 GATSBY_JPEG_ENCODER=MOZJPEG
 ```
-⚠️ Specify port after domain. Your configuration might be different than mine, create your own file to reflect your actural environment.
+⚠️ Specify port after the domain. Your configuration might be different than mine, create your own file to reflect your actual environment.
 
 > If you come from docker configuration, continue instruction on [```docker.md```](docker.md#build-image)
 
 For the rest, continue to here:
 
-Ensure you have configure Strapi so Gatsby can pull data from it. If you not configure GATSBY_ROOT_URL, the site will be up at ```http://localhost:8000```. You should be able to see couple links to your site and graphql dashboard on your terminal.
+Ensure you have configured Strapi so Gatsby can pull data from it. If you did not configure GATSBY_ROOT_URL, the site will be up at ```http://localhost:8000```. Check your terminal output to see your development site URL and Graphql interface.
 
   ### Develop
-  Start Gatsby development server is simple after you have configure it.
+  Start Gatsby development server is simple after you have configured it.
   
   Ensure you are in this folder, then
   
@@ -74,10 +74,10 @@ Ensure you have configure Strapi so Gatsby can pull data from it. If you not con
   yarn develop
   ```
   
-  It will take some time to build your site and admin bundle. When it finish, you can access your site and Graphql as prompted.
+  It will take some time to build your site and admin bundle. When it finishes, you can access your site and Graphql as prompted.
   
   ### Production
-  Before started, configure your ```.env``` file using acutural domain.
+  Before started, configure your ```.env``` file using the actual domain.
   
   There are two ways to serve your site:
   #### Using NodeJS server.
@@ -93,7 +93,7 @@ Ensure you have configure Strapi so Gatsby can pull data from it. If you not con
   ```
   
   #### Serve as static file.
-  First build your site
+  First, build your site
   ```bash
   yarn build
   ```
@@ -112,14 +112,16 @@ Ensure you have configure Strapi so Gatsby can pull data from it. If you not con
     }
   }
   ```
-  When you are done, system link it to ```/etn/nginx/sites-enable```
+  When you are done, set a system link to ```/etn/nginx/sites-enable```
   
-  Remember to secure your website using SSL. Easiest way is to use ```certbot``` to get an Let's Encrypt certificate. Certbot should automatically install and configure it to your nginx configuration file.
+  Remember to secure your website using SSL. Easiest way is to use ```certbot``` to get a Let's Encrypt certificate. If you have install right plugin, Certbot should automatically install and configure it to your nginx configuration file.
 
 ## Use Docker
-I have create a Dockerfile for this gatsby front-end so you may use it create a docker container image, and serve this site use docker. Learn more on the [```docker.md```](docker.md) file.
+I have created a Dockerfile for this gatsby front-end so you may use it to create a docker container image, and serve this site using docker. Learn more on the [```docker.md```](docker.md) file.
 
 ## Serveless solution
-You should be able to host this site using services like [Cloudflare Pages](https://pages.cloudflare.com/), [Vercel](https://vercel.com/), [Gatsby Cloud](https://www.gatsbyjs.com/products/cloud/) and more. Follow their instruction on how to do it. They should be able to serve your site really fast via their CDN network.
+You should be able to host this site using services like [Cloudflare Pages](https://pages.cloudflare.com/), [Vercel](https://vercel.com/), ~~[Gatsby Cloud](https://www.gatsbyjs.com/products/cloud/)~~[^1], and more. Follow their instruction on how to do it. They should be able to serve your site really fast via their CDN network.
 
 I have my site run on [my own server](http://www.liwenduan.com) and [Cloudflare Pages](https://lwdsite3.pages.dev). You can observe the performance difference easily.
+
+[^1]: As of now, Gatsby Cloud does not support Yarn 2 yet. Refer to [Gatsby Cloud FAQ](https://support.gatsbyjs.com/hc/en-us/articles/1500009113962-Does-Gatsby-Cloud-work-with-Yarn-2-)
