@@ -39,7 +39,7 @@ const DarkToggle = () => {
                 checked={isDark} 
                 onChange={event=>setIsDark(event.target.checked)}
             />
-            <label htmlFor='darkModeToggle' title={`Switch to ${isDark?`Light`:`Dark`} Mode`}></label>
+            <label htmlFor='darkModeToggle' title={`Switch to ${isDark?`Light`:`Dark`} Mode`} aria-label={`Switch to ${isDark?`Light`:`Dark`} Mode`}></label>
         </div>
     )
 }
