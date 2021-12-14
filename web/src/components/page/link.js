@@ -10,11 +10,18 @@ export const LwdLink = ({LinkTo, className, children, ...props}) => {
         )
     } else if (LinkTo.startsWith('mailto:')) {
         return (
-            <a href={LinkTo} target="_blank" rel="noreferrer" className={`${className}`} {...props}><FontAwesomeIcon icon={faEnvelope} className="scale-75 self-center"/> {children}</a>
+            <div className="flex gap-1">
+                <FontAwesomeIcon icon={faEnvelope} className="self-center scale-125"/>
+                <a href={LinkTo} target="_blank" rel="noreferrer" className={`${className} px-1`} {...props}> {children}</a>
+            </div>
+            
         )
     } else if (LinkTo.startsWith('tel:')) {
         return (
-            <a href={LinkTo} target="_blank" rel="noreferrer" className={`${className}`} {...props}><FontAwesomeIcon icon={faPhoneAlt} className="scale-75 self-center"/> {children}</a>
+            <div className="flex gap-1">
+                <FontAwesomeIcon icon={faPhoneAlt} className="self-center scale-125"/>
+                <a href={LinkTo} target="_blank" rel="noreferrer" className={`${className} px-1`} {...props}> {children}</a>
+            </div>
         )
     }
     return (
