@@ -19,34 +19,6 @@
         width: 100vh;
     }
 
-    .scroll-snap-x-proximity {
-        scroll-snap-type: x proximity;
-    }
-
-    .scroll-snap-x-mandatory {
-        scroll-snap-type: x mandatory;
-    }
-
-    .scroll-snap-y-proximity {
-        scroll-snap-type: y proximity;
-    }
-
-    .scroll-snap-y-mandatory {
-        scroll-snap-type: y mandatory;
-    }
-    
-    .scroll-snap-start {
-        scroll-snap-align: start;
-    }
-
-    .scroll-snap-center {
-        scroll-snap-align: center;
-    }
-
-    .scroll-snap-end {
-        scroll-snap-align: end;
-    }
-
     .embed-video {
         @apply aspect-w-16 aspect-h-9 justify-self-center self-center place-self-center
     }
