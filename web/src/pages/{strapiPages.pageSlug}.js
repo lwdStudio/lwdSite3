@@ -62,7 +62,7 @@ query getGeneraticPageContent($id: String!) {
       url
       localFile {
         childImageSharp {
-          gatsbyImageData
+          gatsbyImageData(placeholder: DOMINANT_COLOR, layout: CONSTRAINED)
         }
       }
       alternativeText
