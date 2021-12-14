@@ -68,7 +68,7 @@ export const InfoCard = ({info}) => {
         <div className="about-card card-common">
             <div className="md:flex mb-4">
                 <h3>{info.Title}</h3>
-                <div className="md:flex-grow"></div>
+                <div className="md:grow"></div>
                 <span className="md:float-right">{info.FromDate} - {info.ToDate}</span>
             </div>
             <h4>{info.Location}</h4>
@@ -79,7 +79,7 @@ export const InfoCard = ({info}) => {
 export const ContactCard = ({contactInfo}) => {
     library.add(fab)
     return (
-        <div className="flex card-common about-card gap-1 flex-grow md:flex-grow-0 ">
+        <div className="flex card-common about-card gap-1 grow md:grow-0 ">
             <FontAwesomeIcon icon={['fab', contactInfo.ContactMethod.toLowerCase()]} className="self-center scale-125" /> 
             <LwdLink LinkTo={contactInfo.Contact} className="px-1">{contactInfo.ContactMethod}</LwdLink>
         </div>
@@ -91,12 +91,12 @@ export const CertificateCard = ({certificateInfo}) => {
         <div className="about-card card-common">
             <div className="md:flex mb-4">
                 <h3>{certificateInfo.CertificateName}</h3>
-                <div className="md:flex-grow"></div>
+                <div className="md:grow"></div>
                 <span className="md:float-right">{certificateInfo.IssueDate}</span>
             </div>
             <div className="md:flex mb-4">
                 <h4>{certificateInfo.IssueAgency}</h4>
-                <div className="md:flex-grow"></div>
+                <div className="md:grow"></div>
                 <LwdLink LinkTo={certificateInfo.CertificateLink} className="md:float-right">See Certificate</LwdLink>
             </div>
         </div>

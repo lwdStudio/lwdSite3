@@ -44,7 +44,7 @@ export const MarkdownArticle = ({article, className}) => {
                 iframe ({node, children, ...props}) {
                 return (
                     <div className="embed-video">
-                    <iframe {...props}>{children}</iframe>
+                        <iframe {...props} loading="lazy">{children}</iframe>
                     </div>
                 )
                 },

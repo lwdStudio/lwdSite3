@@ -1,6 +1,5 @@
 module.exports = {
-  mode:'jit',
-  purge: ['./src/**/*.{js,jsx,ts,tsx}'],
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     fontFamily: {
@@ -41,9 +40,6 @@ module.exports = {
       'top': '0 -10px 15px -3px rgba(0, 0, 0, 0.05);',
       none: 'none',
     }
-  },
-  variants: {
-    extend: {},
   },
   plugins: [
     require('@tailwindcss/aspect-ratio'),

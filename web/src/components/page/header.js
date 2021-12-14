@@ -31,7 +31,7 @@ export const Header = ({pageName='lwdSite'}) => {
     return (
         <header className="p-1 flex flex-wrap md:flex rounded-b-lg shadow-lg bg-white dark:bg-gray-800 dark:text-white dark:text-opacity-50">
             <LwdLogo pageName={pageName} />
-            <div className="order-2 flex flex-grow" />
+            <div className="order-2 flex grow" />
             <div className="order-3 flex items-center md:hidden p-2 ">
                 <button onClick={() => setMenuOpen(!isMenuOpen)} className={`h-12 w-12 rounded-lg shadow-md dark:bg-gray-700`} aria-label="Menu">
                     {isMenuOpen ? <FontAwesomeIcon icon={faTimes} className={MenuIconStyle} /> : <FontAwesomeIcon icon={faBars} className={MenuIconStyle}/>}
