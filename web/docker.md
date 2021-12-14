@@ -11,7 +11,7 @@ While in this folder, use this command to build your docker image.
 ```shell
 docker build . -t <your-username>/<image-name>
 ```
-If your configuration are correct, you should be able to build the image without any problems.
+If your configuration is correct, you should be able to build the image without any problems.
 
 ### Running it on Docker
 Run this command in your terminal:
@@ -20,5 +20,5 @@ docker run -p 8000:80 <your-username>/<image-name>
 ```
 You should be able to access your site at ```http://<your-ip-address>:8000```
 
-To properply serve this site, configure a reverse proxy on your web server. I recommend nginx or caddy.
+To properly serve this site, configure a reverse proxy on your web server. I recommend nginx or caddy.
 
