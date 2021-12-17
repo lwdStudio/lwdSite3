@@ -57,7 +57,8 @@ export const LwdServiceCard = ({Service}) => {
                 <h2 className={`text-xl font-bold py-1`}>
                     <LwdLink LinkTo={Service.serviceLink}>{Service.serviceName}</LwdLink>           
                 </h2>
-                <p className="py-1">Powered by <LwdLink LinkTo={Service.serviceIsPoweredByUrl}>{Service.serviceIsPoweredBy}</LwdLink></p>
+                {Service.serviceNameAdditionalInfo && <p className="py-1 m-0 text-gray-500 text-xs font-light">{Service.serviceNameAdditionalInfo}</p>}
+                <p className="py-1 mb-0">Powered by <LwdLink LinkTo={Service.serviceIsPoweredByUrl}>{Service.serviceIsPoweredBy}</LwdLink></p>
             </div>
         </div>
     )
