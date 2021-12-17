@@ -63,7 +63,7 @@ export const Footer = () => {
                         </section>
                         <section className="pt-2">
                             <h1 className={`${footerTextColor} font-extrabold text-lg md:text-2xl`}>Get in touch?</h1>
-                            <span className='block my-6'>Send an email to: <br /><LwdLink className={footerLinkStyle} LinkTo="mailto:hi@liwenduan.com">hi@liwenduan.com</LwdLink></span>
+                            <span className='inline-block my-6'>Send an email to: <br /><LwdLink className={`${footerLinkStyle}`} LinkTo="mailto:hi@liwenduan.com">hi@liwenduan.com</LwdLink></span>
                         </section>
                         <section className="pt-2">
                             <h1 className={`${footerTextColor} font-extrabold text-lg md:text-2xl`}>Explore</h1>
