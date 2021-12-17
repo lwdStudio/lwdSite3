@@ -61,6 +61,7 @@ query getlwdService {
         serviceIsPoweredByUrl
         serviceLink
         serviceName
+        serviceNameAdditionalInfo
       }
       pageDescription
     }

@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInfoCircle, faExclamationTriangle, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 import { MarkdownArticle } from './article'
 
-const notificationIconStyle = "self-start scale-150 my-8 mx-4"
+const notificationIconStyle = "self-start scale-150 m-5"
 const notificationBarStyle = "bg-opacity-20 w-full text-black rounded-b-lg shadow-md align-middle dark:bg-opacity-50 dark:text-white dark:text-opacity-60 flex flex-row "
-const notificationTextStyle = "notification"
+const notificationTextStyle = "notification py-2"
 
 const InfoNotification = ({Content}) => {
   return (

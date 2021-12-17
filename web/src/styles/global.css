@@ -11,7 +11,7 @@
     }
 
     .notification p {
-        @apply text-xs font-medium leading-relaxed my-4
+        @apply text-sm font-medium leading-relaxed my-2
     }
 
     .full-screen {
