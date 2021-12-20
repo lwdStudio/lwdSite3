@@ -50,6 +50,9 @@ export const SiteNotification = ({Content, NotificationType}) => {
       <ClearNotification Content={Content} />
     )
   }
+  else {
+    return (null)
+  }
 }
 
 export default SiteNotification

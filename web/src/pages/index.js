@@ -9,6 +9,8 @@ import { ClientOnly } from '../components/utility'
 import {graphql} from 'gatsby'
 import Typewriter from 'typewriter-effect'
   
+const Lang = en
+
 const IndexPage = ({location, data}) => {
   const {heroLink,heroH1,heroImage} = data.strapiFrontPage.Hero
 
@@ -16,7 +18,7 @@ const IndexPage = ({location, data}) => {
   const [notification, setNotification] = useState()
   useEffect(() => {
     async function fetchSiteNotification() {
-      let response = await fetch(`${process.env.GATSBY_STRAPI_API_URL}/front-page?_limit=1000&_locale=en`)
+      let response = await fetch(`${process.env.GATSBY_STRAPI_API_URL}/front-page?_limit=1000&_locale=${Lang}`)
       response = await response.json()
       setNotification(response.Notification)
     }
@@ -24,8 +26,8 @@ const IndexPage = ({location, data}) => {
   },[])
 
   return (
-    <Layout pageTitle={heroH1} location={location}>
-      <Seo title={heroH1} pathname={location.pathname} />
+    <Layout pageTitle={heroH1} location={location} >
+      <Seo title={heroH1} pathname={location.pathname} lang={Lang}/>
       <ClientOnly>
         {notification && <SiteNotification NotificationType={notification.WarningClass} Content={notification.NotificationContent} /> }
       </ClientOnly>
