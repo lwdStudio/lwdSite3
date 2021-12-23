@@ -21,6 +21,7 @@ module.exports = {
     "gatsby-plugin-sitemap",
     "gatsby-plugin-transition-link",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-printer",
     // gatsby-plugin-manifest
     {
       resolve: "gatsby-plugin-manifest",
@@ -82,7 +83,7 @@ module.exports = {
             api:{
               qs:{
                 _locale:`all`,
-                // _publicationState: 'preview',
+                _publicationState: 'preview',
               }
             }
           },
@@ -91,7 +92,7 @@ module.exports = {
             api:{
               qs:{
                 _locale:`all`,
-                // _publicationState: 'preview',
+                _publicationState: 'preview',
               }
             }
           },
@@ -100,7 +101,7 @@ module.exports = {
             api:{
               qs:{
                 _locale:`all`,
-                // _publicationState: 'preview',
+                _publicationState: 'preview',
               }
             }
           },
@@ -109,7 +110,7 @@ module.exports = {
             api:{
               qs:{
                 _locale:`all`,
-                // _publicationState: 'preview',
+                _publicationState: 'preview',
               }
             }
           },
@@ -120,7 +121,7 @@ module.exports = {
             api:{
               qs:{
                 _locale:`en`,
-                // _publicationState: 'preview',
+                _publicationState: 'preview',
               }
             }
           },
@@ -129,7 +130,7 @@ module.exports = {
             api:{
               qs:{
                 _locale:`en`,
-                // _publicationState: 'preview',
+                _publicationState: 'preview',
               }
             }
           },          
@@ -138,7 +139,7 @@ module.exports = {
             api:{
               qs:{
                 _locale:`en`,
-                // _publicationState: 'preview',
+                _publicationState: 'preview',
               }
             }
           },

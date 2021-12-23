@@ -9,7 +9,7 @@ import { ClientOnly } from '../components/utility'
 import {graphql} from 'gatsby'
 import Typewriter from 'typewriter-effect'
   
-const Lang = en
+const Lang = "en"
 
 const IndexPage = ({location, data}) => {
   const {heroLink,heroH1,heroImage} = data.strapiFrontPage.Hero
