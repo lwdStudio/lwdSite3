@@ -21,7 +21,7 @@ export const ArticleCard = ({posts}) => {
             <div className="flex-auto p-6">
                 <span className="tag">{posts.tags&&"#"+posts.tags[0].tagName}</span>
                 <h2 className="text-2xl"><LwdLink LinkTo={`/${posts.pageSlug}`} className="p-0.5">{posts.pageTitle}</LwdLink></h2>
-                <p className="text-md font-regular text-gray-500">{posts.Excerpt.slice(0,160)+'...'}</p>
+                <p className="text-md font-regular text-gray-500 dark:text-gray-400">{posts.Excerpt.slice(0,160)+'...'}</p>
             </div>
         </div>
     )
@@ -57,7 +57,7 @@ export const LwdServiceCard = ({Service}) => {
                 <h2 className={`text-xl font-bold py-1`}>
                     <LwdLink LinkTo={Service.serviceLink}>{Service.serviceName}</LwdLink>           
                 </h2>
-                {Service.serviceNameAdditionalInfo && <p className="py-1 m-0 text-gray-500 text-xs font-light">{Service.serviceNameAdditionalInfo}</p>}
+                {Service.serviceNameAdditionalInfo && <p className="py-1 m-0 text-gray-500 text-xs font-light dark:text-gray-400">{Service.serviceNameAdditionalInfo}</p>}
                 <p className="py-1 mb-0">Powered by <LwdLink LinkTo={Service.serviceIsPoweredByUrl}>{Service.serviceIsPoweredBy}</LwdLink></p>
             </div>
         </div>

@@ -18,4 +18,10 @@ export const ColorDripButton = ({to, className, children}) => {
     )
 }
 
+export const SkipNav = () => {
+    return (
+        <LwdLink paintDrip hex="#fcd34d" LinkTo="#main-content" className="absolute transform -translate-y-[150%] focus:translate-y-0 left-52 w-full md:w-48 p-3 my-3 md:m-3 text-center rounded-md md:shadow-md font-medium text-gray-700 focus:shadow-none dark:text-white dark:text-opacity-70 md:dark:bg-gray-700 md:dark:hover:bg-gray-600 md:dark:hover:text-white md:dark:focus:bg-yellow-300" aria-label="skip navigataion" aria-hidden="false" role='button'>Skip Navigation</LwdLink>
+    )
+}
+
 export default Button
