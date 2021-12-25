@@ -21,7 +21,7 @@ export const ArticleCard = ({posts}) => {
             <div className="flex-auto p-6">
                 <span className="tag">{posts.tags&&"#"+posts.tags[0].tagName}</span>
                 <h2 className="text-2xl"><LwdLink LinkTo={`/${posts.pageSlug}`} className="p-0.5">{posts.pageTitle}</LwdLink></h2>
-                <p className="text-md font-regular text-gray-500">{posts.Excerpt.slice(0,160)+'...'}</p>
+                <p className="text-md font-regular text-gray-500 dark:text-gray-400">{posts.Excerpt.slice(0,160)+'...'}</p>
             </div>
         </div>
     )
