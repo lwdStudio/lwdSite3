@@ -32,7 +32,7 @@ const Layout = ({pageType, pageTitle=pageType, children, className}) => {
         <title>{pageTitle} | lwdSite</title>
       </Helmet>
       <Header pageName={pageType} />
-      <main className="dark:text-white dark:text-opacity-70" id='main-content'>
+      <main className="dark:text-white dark:text-opacity-70 dark:print:text-black" id='main-content'>
         {children}
       </main>
       <Footer />

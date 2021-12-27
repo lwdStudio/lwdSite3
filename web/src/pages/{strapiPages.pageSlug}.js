@@ -31,7 +31,7 @@ const TosPage = ({data, location}) => {
 
             {
               RelatedPage[0] && 
-              <div className='container mx-auto my-8'>
+              <div className='container mx-auto my-8 print:hidden'>
                 <div className='lg:mx-10'>
                   <h2 className='text-lg font-bold pb-4'>More to read</h2>
                   <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
