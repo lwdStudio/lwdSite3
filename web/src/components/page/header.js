@@ -30,7 +30,7 @@ export const Header = ({pageName='lwdSite'}) => {
     const [isMenuOpen, setMenuOpen] = useState(false)
     const MenuIconStyle = "scale-150"
     return (
-        <header className="p-1 flex flex-wrap md:flex rounded-b-lg shadow-lg bg-white dark:bg-gray-800 dark:text-white dark:text-opacity-50">
+        <header className="p-1 flex flex-wrap md:flex rounded-b-lg shadow-lg bg-white dark:bg-gray-800 dark:text-white dark:text-opacity-50 print:hidden">
             <SkipNav />
             <LwdLogo pageName={pageName} />
             <div className="order-2 flex grow" />

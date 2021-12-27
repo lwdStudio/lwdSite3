@@ -35,7 +35,7 @@ export const Footer = () => {
                 }
             `}
             render={data => 
-                <footer className="p-1 bg-white shadow-top rounded-xl z-50 dark:bg-gray-800 dark:text-gray-200 text-center md:text-left">
+                <footer className="p-1 bg-white shadow-top rounded-xl z-50 dark:bg-gray-800 dark:text-gray-200 text-center md:text-left print:hidden">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 mx-8 place-items-stretch">
                         <section className="pt-2">
                             <FooterLink LinkTo="/" className="text-black dark:text-gray-200 dark:focus:text-black">

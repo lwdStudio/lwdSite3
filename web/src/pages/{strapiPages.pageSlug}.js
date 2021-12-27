@@ -12,8 +12,8 @@ const TosPage = ({data, location}) => {
         <Layout pageTitle={pageTitle} pageType="Article" location={location}>
             <Seo title={pageTitle} description={Excerpt} image={CoverImage && `${process.env.GATSBY_STRAPI_API_URL}${CoverImage.url}`} pathname={location.pathname} />
 
-            <div className="p-4 md:p-8 text-center grid grid-rows-auto grid-cols-1 m-8 md:grid-cols-2 xl:mx-48 md:my-12 bg-white dark:bg-gray-800 shadow-lg rounded-lg">
-                <h1 className={`text-2xl sm:text-3xl lg:text-5xl font-extrabold self-end lg:leading-tight ${!CoverImage && `col-span-2`}`}>{pageTitle}</h1>
+            <div className="p-4 md:p-8 text-center grid grid-rows-auto grid-cols-1 m-8 md:grid-cols-2 xl:mx-48 md:my-12 bg-white dark:bg-gray-800 shadow-lg rounded-lg print:p-0 print:shadow-none">
+                <h1 className={`text-2xl sm:text-3xl lg:text-5xl font-extrabold self-end lg:leading-tight ${!CoverImage && `col-span-2`} print:text-3xl`}>{pageTitle}</h1>
                 {
                     CoverImage && 
                     <GatsbyImage 
@@ -22,10 +22,10 @@ const TosPage = ({data, location}) => {
                         className="row-span-2 m-2 md:m-4 md:ml-8 rounded-lg shadow-lg"
                     />
                 }
-                <p className={`italic ${!CoverImage && `col-span-2`}`}>{Excerpt}</p>
+                <p className={`italic ${!CoverImage && `col-span-2`} print:text-sm print:text-gray-700`}>{Excerpt}</p>
             </div>
 
-            <div className="container mx-auto p-8 sm:p-16 bg-white lg:rounded-md dark:bg-gray-800 my-0">
+            <div className="container mx-auto p-8 sm:p-16 bg-white lg:rounded-md dark:bg-gray-800 my-0 print:py-0">
               <MarkdownArticle article={Content}  className="markdown-article"/>
             </div>
 
