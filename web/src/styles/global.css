@@ -89,7 +89,7 @@
         @apply list-item
     }
     code {
-        @apply font-mono
+        @apply font-mono font-normal antialiased sm:subpixel-antialiased md:antialiased
     }
     blockquote {
         @apply ml-4 pl-4 border-l-4 border-gray-700 dark:border-gray-300
