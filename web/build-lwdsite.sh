@@ -1,4 +1,4 @@
 #!/bin/sh
 
 # build page
-yarn build
+npm run build

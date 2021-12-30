@@ -7,8 +7,8 @@ sleep 1m
 git pull -f origin main
 
 # install dependencies
-yarn
+npm install
 
 # build page
-yarn build
+npm run build
 
