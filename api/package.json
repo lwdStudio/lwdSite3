@@ -1,8 +1,8 @@
 {
-  "name": "lwdsite-strapi-backend",
+  "name": "lwdSite-API",
   "private": true,
-  "version": "1.0.0",
-  "description": "A Strapi backend for lwdSite3",
+  "version": "1.1.0",
+  "description": "API for lwdSite, Powered by Strapi",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
@@ -10,16 +10,16 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/admin": "4.0.2",
-    "@strapi/database": "4.0.2",
-    "@strapi/plugin-content-manager": "4.0.2",
-    "@strapi/plugin-content-type-builder": "4.0.2",
-    "@strapi/plugin-email": "4.0.2",
-    "@strapi/plugin-i18n": "4.0.2",
-    "@strapi/plugin-upload": "4.0.2",
-    "@strapi/plugin-users-permissions": "4.0.2",
-    "@strapi/strapi": "4.0.2",
-    "@strapi/utils": "4.0.2",
+    "@strapi/admin": "4.0.0",
+    "@strapi/database": "4.0.0",
+    "@strapi/plugin-content-manager": "4.0.0",
+    "@strapi/plugin-content-type-builder": "4.0.0",
+    "@strapi/plugin-email": "4.0.0",
+    "@strapi/plugin-i18n": "4.0.0",
+    "@strapi/plugin-upload": "4.0.0",
+    "@strapi/plugin-users-permissions": "4.0.0",
+    "@strapi/strapi": "4.0.0",
+    "@strapi/utils": "4.0.0",
     "knex": "0.21.18",
     "sqlite3": "5.0.2"
   },
