@@ -4,15 +4,12 @@ Strapi is an open-source headless content management system (CMS). You may learn
 For detailed instruction on how to use Strapi, [Quick Start Guide](https://strapi.io/documentation/developer-docs/latest/getting-started/quick-start.html) provided by Strapi is a good place to go.
 
 ## Configure the environment
-Install NodeJS and yarn package manager. 
+Install NodeJS. 
 
 ### NodeJS
 [Nodesource](https://github.com/nodesource/distributions/blob/master/README.md) has detailed instructions on how to configure NodeJS with npm on your Debian (deb) based or Enterprise Linux (rpm) based distribution
 
 For other platforms, check out [NodeJS](https://nodejs.org/en/download/) website for instruction on how to install it.
-
-### Yarn
-[Yarn](https://yarnpkg.com/getting-started/install) also has instructions on how to install it on your system.
 
 ## Install
 If you are not in this folder, then ```cd api``` to enter this folder.
@@ -22,7 +19,7 @@ While you are inside this folder:
 Install all dependency
 
 ```bash
-yarn
+npm i
 ```
 
 Follow the prompt on your terminal if anything happens.
@@ -35,7 +32,7 @@ While you inside this folder:
 Start Strapi development server
 
 ```bash
-yarn develop
+npm run develop
 ```
 
 Follow the prompt on your terminal if anything happens. The link to your admin panel should prompt if the server is successfully started.
@@ -48,7 +45,7 @@ Strapi has provided this [deployment guide](https://strapi.io/documentation/deve
 After you have configured your port, and URL, you want to build your admin UI:
 
 ```bash
-yarn build
+npm run build
 ```
 
 I recommend using PM2 to manage your process. Head to [PM2](https://pm2.keymetrics.io/docs/usage/quick-start/) to learn how to use it.
@@ -66,6 +63,6 @@ I use Nginx proxy to expose Strapi for lwdSite, learn how to configure your ngin
 Now you can play around with the Strapi and fill in some contents. Then you can move on to build the front-end of the site following README on the [```/web```](/web#-get-started) folders.
 
 ## Migrate data
-There is no official way to migrate data from the development environment to the production environment. My personal experience is to copy ```.tmp/```  and ```public/``` folders to the destination server. You then can build your api using ```yarn build```
+There is no official way to migrate data from the development environment to the production environment. My personal experience is to copy ```.tmp/```  and ```public/``` folders to the destination server. You then can build your api using ```npm run build```
 
 Remember to backup your site data regularly. 

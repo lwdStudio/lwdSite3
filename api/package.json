@@ -1,18 +1,17 @@
 {
-  "name": "strapi-backend",
+  "name": "lwdsite-strapi-backend",
   "private": true,
-  "version": "0.1.0",
-  "description": "A Strapi application",
+  "version": "1.0.0",
+  "description": "A Strapi backend for lwdSite3",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
   "dependencies": {
     "knex": "0.21.18",
-    "sqlite3": "5.0.0",
+    "sqlite3": "^5.0.2",
     "strapi": "3.6.8",
     "strapi-admin": "3.6.8",
     "strapi-connector-bookshelf": "3.6.8",
@@ -25,14 +24,14 @@
     "strapi-utils": "3.6.8"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "Liwen Duan"
   },
   "strapi": {
     "uuid": "9c057328-5f3a-497b-a1c1-22916a6efddd"
   },
   "engines": {
     "node": ">=10.16.0 <=14.x.x",
-    "npm": "^6.0.0"
+    "npm": "^8.0.0"
   },
   "license": "MIT"
 }
