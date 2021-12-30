@@ -29,10 +29,10 @@
 
   ### Initial Environment
   
-  While you are in this folder, initialize and install dependency using yarn:
+  While you are in this folder, initialize and install dependency using npm:
   
   ```bash
-  yarn
+  npm i
   ```
   
   Follow prompts on your terminal if anything happens.
@@ -71,7 +71,7 @@ Ensure you have configured Strapi so Gatsby can pull data from it. If you did no
   Ensure you are in this folder, then
   
   ```
-  yarn develop
+  npm run develop
   ```
   
   It will take some time to build your site and admin bundle. When it finishes, you can access your site and Graphql as prompted.
@@ -89,13 +89,13 @@ Ensure you have configured Strapi so Gatsby can pull data from it. If you did no
   ```
   If using gatsby command failed, install gatsby-cli tools first
   ```
-  yarn global add gatsby-cli
+  npm i -g gatsby-cli
   ```
   
   #### Serve as static file.
   First, build your site
   ```bash
-  yarn build
+  npm run build
   ```
   
   Configure nginx for access

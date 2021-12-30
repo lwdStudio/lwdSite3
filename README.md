@@ -3,7 +3,6 @@ This is my third generation personal website. Use JAMStack, build with Gatsby an
 
 ## Technologies
 - [NodeJS](https://nodejs.org/)
-- [Yarn 2](https://yarnpkg.com/)
 - [Gatsby 4](https://www.gatsbyjs.com/) as the front-end of the site. Learn more in the [```/web```](/web) folder
 - [TailwindCSS 3](https://tailwindcss.com/), a utility-first CSS framework.
 - [Strapi 3](http://strapi.io/), an open source content management system (CMS) as the back-end of the site. Learn more in the [```/api```](/api) folder
