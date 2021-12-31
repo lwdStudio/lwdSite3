@@ -26,7 +26,7 @@
     "assert": "^2.0.0",
     "autoprefixer": "latest",
     "gatsby": "^4.3.0",
-    "gatsby-plugin-catch-links": "^4.2.0",
+    "gatsby-plugin-catch-links": "^4.4.0",
     "gatsby-plugin-fontawesome-css": "^1.2.0",
     "gatsby-plugin-image": "^2.2.0",
     "gatsby-plugin-manifest": "^4.2.0",
