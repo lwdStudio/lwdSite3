@@ -1,7 +1,6 @@
 import './src/styles/global.css';
-import '@fontsource/noto-sans-sc/300.css';
-import '@fontsource/noto-sans-sc/500.css';
-import '@fontsource/noto-sans-sc/900.css';
-import '@fontsource/noto-serif-sc/500.css';
-import '@fontsource/noto-serif-sc/900.css';
+import '@fontsource/noto-sans/400.css';
+import '@fontsource/noto-sans/700.css';
+import '@fontsource/noto-serif/400.css';
+import '@fontsource/noto-serif/700.css';
 import '@fontsource/noto-mono/400.css'
