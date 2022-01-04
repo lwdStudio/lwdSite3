@@ -10,8 +10,6 @@ This is my third generation personal website. Use JAMStack, build with Gatsby an
 ## Notice
 JAMStack separates the front-end and back-end, so you need to build ```api``` and ```web``` separately as well.
 
-I use yarn as my node package manager of choice. checkout [yarn](https://yarnpkg.com/getting-started)'s website to learn how to install yarn on your system. 
-
 Both front-end and back-end have something to configure before build. Ensure you have configured it before moving on to production.
 
 You may need to fill in some content in Strapi first before developing/using the strapi front-end.
