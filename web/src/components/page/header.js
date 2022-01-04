@@ -12,7 +12,7 @@ const NavButton = ({LinkTo, children}) => {
     )
 }
 
-const LwdLogo = ({pageName}) => {
+export const LwdLogo = ({pageName}) => {
     return (
         <LwdLink LinkTo="/" className="flex h-auto p-2 focus:ring-2 focus:ring-yellow-300 rounded-lg focus:text-black focus:bg-yellow-300 text-gray-800 dark:text-white dark:text-opacity-70 dark:hover:text-white" title="Back to Home Page">
             <StaticImage

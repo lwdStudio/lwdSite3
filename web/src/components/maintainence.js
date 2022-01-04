@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet'
 import { StaticImage } from 'gatsby-plugin-image'
 import { StaticQuery,graphql } from 'gatsby'
 import { LwdLink } from './page/link'
-import Button from '../components/button'
+import { Button } from '../components/button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 

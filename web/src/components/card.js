@@ -12,7 +12,7 @@ export const ArticleCard = ({posts}) => {
                 <div className="flex-none w-full md:w-72 relative">
                     <GatsbyImage 
                         className="overflow-hidden object-cover w-full h-full card-common"
-                        image={posts.CoverImage.localFile.childrenImageSharp[0].gatsbyImageData}
+                        image={posts.CoverImage.localFile.childImageSharp.gatsbyImageData}
                         alt={posts.CoverImage.alternativeText}
                     />
                 </div>
@@ -21,7 +21,7 @@ export const ArticleCard = ({posts}) => {
             <div className="flex-auto p-6">
                 <span className="tag">{posts.tags&&"#"+posts.tags[0].tagName}</span>
                 <h2 className="text-2xl"><LwdLink LinkTo={`/${posts.pageSlug}`} className="p-0.5">{posts.pageTitle}</LwdLink></h2>
-                <p className="text-md font-regular text-gray-500 dark:text-gray-400">{posts.Excerpt.slice(0,160)+'...'}</p>
+                <p className="text-md font-normal text-gray-500 dark:text-gray-400">{posts.Excerpt.slice(0,160)+'...'}</p>
             </div>
         </div>
     )
@@ -109,7 +109,7 @@ export const ShowcaseCard = ({article}) => {
         <div className="flex flex-col card-common" key={article.id}>
             <div className="shadow-md w-full">
                 <GatsbyImage 
-                    className="overflow-hidden rounded-t-lg h-64 object-cover align-middle"
+                    className="overflow-hidden rounded-t-lg h-48 object-cover align-middle"
                     image={article.CoverImage && article.CoverImage.localFile.childImageSharp.gatsbyImageData}
                     alt={article.CoverImage && article.CoverImage.alternativeText}
                 />
@@ -117,7 +117,7 @@ export const ShowcaseCard = ({article}) => {
             <div className="flex-col p-5 w-full rounded-b-lg">
                 {article.tags && <span className="tag">{"#"+article.tags[0].tagName}</span>}
                 <h2 className="pb-2 font-bold"><LwdLink LinkTo={`/${article.pageSlug}`} className="inline text-2xl">{article.pageTitle}</LwdLink></h2>
-                <div className="text-md font-regular text-gray-500 dark:text-gray-400">{article.Excerpt.slice(0,160)+'...'}</div>
+                <div className="text-md font-normal text-gray-500 dark:text-gray-400">{article.Excerpt.slice(0,160)+'...'}</div>
             </div>
         </div>
     )

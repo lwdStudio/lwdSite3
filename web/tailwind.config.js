@@ -3,8 +3,8 @@ module.exports = {
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     fontFamily: {
-      'sans':['Noto Sans SC','Helvetica', 'Arial', 'sans-serif'],
-      'serif':['Noto Serif SC','ui-serif', 'Georgia','serif'],
+      'sans':['Noto Sans','Helvetica', 'Arial', 'sans-serif'],
+      'serif':['Noto Serif','ui-serif', 'Georgia','serif'],
       'mono':['Noto Mono','ui-monospace'],
     },
     minHeight: {
