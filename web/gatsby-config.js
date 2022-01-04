@@ -21,7 +21,6 @@ module.exports = {
     "gatsby-plugin-sitemap",
     "gatsby-plugin-transition-link",
     "gatsby-transformer-sharp",
-    "gatsby-plugin-printer",
     // gatsby-plugin-manifest
     {
       resolve: "gatsby-plugin-manifest",
