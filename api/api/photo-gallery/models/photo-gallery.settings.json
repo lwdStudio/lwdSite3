@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "photo-gallery",
+  "info": {
+    "name": "Photo Gallery ",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "Title": {
+      "type": "string"
+    },
+    "tags": {
+      "collection": "tags",
+      "via": "photo_galleries",
+      "dominant": true
+    }
+  }
+}
