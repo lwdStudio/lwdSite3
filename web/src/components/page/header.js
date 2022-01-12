@@ -42,6 +42,7 @@ export const Header = ({pageName='lwdSite'}) => {
             <nav className={`order-4 w-full md:flex md:flex-row md:w-auto ${isMenuOpen ? "visible" : "invisible md:visible md:h-auto h-0"}`}>
                 <NavButton LinkTo="/blog">blog</NavButton >
                 <NavButton LinkTo="/showcase">showcase</NavButton>
+                <NavButton LinkTo="/photo">photo</NavButton>
                 <NavButton LinkTo="/lwd-service">lwdService</NavButton>
                 <NavButton LinkTo="/about">about me</NavButton>
 

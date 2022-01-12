@@ -31,6 +31,10 @@
       "collection": "tags",
       "via": "photo_galleries",
       "dominant": true
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "Title"
     }
   }
 }
