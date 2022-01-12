@@ -6,9 +6,9 @@ WORKDIR /app
 # Copy application sources
 COPY . .
 
-RUN yarn
+RUN npm install
 
-RUN yarn build
+RUN npm run build
 
 FROM nginx:latest
 
