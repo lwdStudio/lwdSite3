@@ -2,6 +2,8 @@ require("dotenv").config({
   path: `.env`,
 });
 
+const siteLang = "en"
+
 module.exports = {
   siteMetadata: {
     siteUrl: process.env.GATSBY_ROOT_URL || "http://lwdsite.liwenduan.com",
@@ -28,21 +30,12 @@ module.exports = {
         name: `lwdSite`,
         short_name: `lwdSite`,
         description: `This website help you learn more about me.`,
-        lang:`en`,
+        lang:`${siteLang}`,
         start_url: `/`,
         background_color: `#f7f0eb`,
-        theme_color: `#ffffff`,
+        theme_color: `#000000`,
         display: `standalone`,
         icon: `src/images/lwd-stamp-mono-red.svg`,      
-        localize: [
-          {
-            start_url: `/zh/`,
-            lang: `zh`,
-            name: `这里是力文`,
-            short_name: `这里是力文`,
-            description: `你可以通过这个网站了解我`,
-          },
-        ],
       },
     },
     // gatsby-plugin-sharp
@@ -81,7 +74,7 @@ module.exports = {
             name:`content-type`,
             api:{
               qs:{
-                _locale:`all`,
+                _locale:`${siteLang}`,
                //  _publicationState: 'preview',
               }
             }
@@ -90,7 +83,7 @@ module.exports = {
             name:`pages`,
             api:{
               qs:{
-                _locale:`all`,
+                _locale:`${siteLang}`,
                //  _publicationState: 'preview',
               }
             }
@@ -99,7 +92,7 @@ module.exports = {
             name:`tags`,
             api:{
               qs:{
-                _locale:`all`,
+                _locale:`${siteLang}`,
                //  _publicationState: 'preview',
               }
             }
@@ -108,7 +101,7 @@ module.exports = {
             name:`legal`,
             api:{
               qs:{
-                _locale:`all`,
+                _locale:`${siteLang}`,
                //  _publicationState: 'preview',
               }
             }
@@ -119,7 +112,7 @@ module.exports = {
             name:'front-page',
             api:{
               qs:{
-                _locale:`en`,
+                _locale:`${siteLang}`,
                //  _publicationState: 'preview',
               }
             }
@@ -128,7 +121,7 @@ module.exports = {
             name:'about-me',
             api:{
               qs:{
-                _locale:`en`,
+                _locale:`${siteLang}`,
                //  _publicationState: 'preview',
               }
             }
@@ -137,7 +130,7 @@ module.exports = {
             name:'lwd-service',
             api:{
               qs:{
-                _locale:`en`,
+                _locale:`${siteLang}`,
                //  _publicationState: 'preview',
               }
             }
