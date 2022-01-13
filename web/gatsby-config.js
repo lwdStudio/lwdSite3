@@ -75,7 +75,7 @@ module.exports = {
             api:{
               qs:{
                 _locale:`${siteLang}`,
-                                //  _publicationState: 'preview',
+                //  _publicationState: 'preview',
               }
             }
           },
@@ -84,7 +84,7 @@ module.exports = {
             api:{
               qs:{
                 _locale:`${siteLang}`,
-                                //  _publicationState: 'preview',
+                //  _publicationState: 'preview',
               }
             }
           },
@@ -93,7 +93,7 @@ module.exports = {
             api:{
               qs:{
                 _locale:`${siteLang}`,
-                                //  _publicationState: 'preview',
+                //  _publicationState: 'preview',
               }
             }
           },
@@ -102,7 +102,7 @@ module.exports = {
             api:{
               qs:{
                 _locale:`${siteLang}`,
-                                //  _publicationState: 'preview',
+                //  _publicationState: 'preview',
               }
             }
           },
@@ -110,7 +110,7 @@ module.exports = {
             name:`photo-gallery`,
             api:{
               qs:{
-                                //  _publicationState: 'preview',
+                //  _publicationState: 'preview',
               }
             }
           },
@@ -121,7 +121,7 @@ module.exports = {
             api:{
               qs:{
                 _locale:`${siteLang}`,
-                                //  _publicationState: 'preview',
+                //  _publicationState: 'preview',
               }
             }
           },
@@ -130,7 +130,7 @@ module.exports = {
             api:{
               qs:{
                 _locale:`${siteLang}`,
-                                //  _publicationState: 'preview',
+                //  _publicationState: 'preview',
               }
             }
           },          
@@ -139,7 +139,7 @@ module.exports = {
             api:{
               qs:{
                 _locale:`${siteLang}`,
-                                //  _publicationState: 'preview',
+                //  _publicationState: 'preview',
               }
             }
           },
