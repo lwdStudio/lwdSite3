@@ -13,20 +13,6 @@ const ImagePage = ({data}) => {
     // show and hide
     const [hideUi, setHideUi] = useState(false)
 
-    // function checkImageOrientation(image){
-    //     if (image.width >= image.height) {
-    //         if (window.screen.width >= window.screen.height) {
-    //             return "h-screen"
-    //         }
-    //         return "w-screen"
-    //     }
-    //     if (image.width < image.height) {
-    //         if (window.screen.width < window.screen.height) {
-    //             return "w-screen"
-    //         }
-    //         return "h-screen"
-    //     }
-    // }
     return (
         <div className="bg-black h-screen w-screen relative flex justify-center items-center object-scale-down" >
             <Seo title={`${Title} | lwdSite Photo`} />
