@@ -40,18 +40,25 @@ export const PageCard = ({pages}) => {
 export const LwdServiceCard = ({Service}) => {
     return (
         <div className="flex flex-col w-72 h-auto m-5 card-common">
-            <div className="w-72 h-36 rounded-t-lg shadow-inner dark:bg-gray-700 bg:opacity-50 bg-gray-50">
-                {
-                    Service.serviceIcon && (
-                        <img className="w-72 h-36 object-scale-down justify-items-center p-5"
-                        src={`${process.env.GATSBY_STRAPI_API_URL}`+ Service.serviceIcon.url}
-                        alt={Service.serviceIcon.alternativeText}
-                        loading={`lazy`}
-                        />
-                    )
-                }
-                
-            </div>
+            {
+                Service.serviceIcon.localFile.childImageSharp ? 
+                <GatsbyImage
+                    image={Service.serviceIcon.localFile.childImageSharp.gatsbyImageData}
+                    alt={Service.serviceIcon.alternativeText}
+                    className="w-72 h-36 rounded-t-lg shadow-inner dark:bg-gray-700 bg:opacity-50 bg-gray-50"
+                    imgClassName="w-72 h-36 justify-items-center"
+                    imgStyle={{"padding":"1.25rem"}}
+                    objectFit='scale-down'
+                /> :
+                <div className="w-72 h-36 rounded-t-lg shadow-inner dark:bg-gray-700 bg:opacity-50 bg-gray-50">
+                    <img className="w-72 h-36 object-scale-down justify-items-center p-5"
+                    src={`${process.env.GATSBY_STRAPI_API_URL}`+ Service.serviceIcon.url}
+                    alt={Service.serviceIcon.alternativeText}
+                    loading={`lazy`}
+                />
+                </div>
+    
+            }
             <div className="flex-col p-5 content-center rounded-b-lg">
                 <span className="tag">{Service.serviceDescription}</span>
                 <h2 className={`text-xl font-bold py-1`}>

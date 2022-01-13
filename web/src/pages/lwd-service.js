@@ -56,6 +56,11 @@ query getlwdService {
         serviceIcon {
           url
           alternativeText
+          localFile {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
         }
         serviceIsPoweredBy
         serviceIsPoweredByUrl
