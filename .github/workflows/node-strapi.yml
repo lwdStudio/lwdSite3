@@ -12,17 +12,17 @@ jobs:
   build:
     name: Test build Strapi    
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: api
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js 14
       uses: actions/setup-node@v2
+      working-directory: api
       with:
         node-version: 14
         cache: 'npm'
-    - run: |
+    - name: Try to build with Node
+      working-directory: api
+      run: |
         npm ci
         npm run build --if-present
         npm test
