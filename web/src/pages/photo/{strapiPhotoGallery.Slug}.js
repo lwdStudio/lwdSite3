@@ -1,12 +1,10 @@
-import React, { Suspense, useState } from 'react'
+import React, { useState } from 'react'
 import { graphql } from 'gatsby'
 import {Helmet} from 'react-helmet'
 import { LwdLink } from '../../components/page/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faTimes } from '@fortawesome/free-solid-svg-icons'
 import Seo from '../../components/seo'
-import Skeleton from 'react-loading-skeleton'
-import 'react-loading-skeleton/dist/skeleton.css'
 import { StaticImage } from 'gatsby-plugin-image'
 
 const ImagePage = ({data}) => {
@@ -35,17 +33,23 @@ const ImagePage = ({data}) => {
             <Helmet defer={false}>
                 <title>{Title} - Photo</title>
             </Helmet>
-            <LwdLink LinkTo="/photo" className="absolute top-5 left-5 z-10 w-12 h-12 bg-black bg-opacity-80 rounded-full p-4 text-white flex items-center justify-center" ><FontAwesomeIcon icon={faArrowLeft} className="self-center scale-125"/></LwdLink>
-            <button onClick={() => setHideUi(!hideUi)} className={`absolute top-5 right-5 z-10 w-12 h-12 bg-black bg-opacity-80 rounded-full p-4 text-white flex items-center justify-center transform transition link-common ${hideUi ? '-rotate-45 hover:rotate-0' : 'rotate-0 hover:-rotate-45' }`} title={`${hideUi ? 'Open' : 'Close' } UI`} aria-label={`${hideUi ? 'Open' : 'Close' } UI`}><FontAwesomeIcon icon={faTimes} className="self-center scale-125"/></button>
+            <LwdLink LinkTo="/photo" className="absolute top-5 left-5 z-10 w-12 h-12 bg-black bg-opacity-80 rounded-full p-4 text-white flex items-center justify-center" >
+                <FontAwesomeIcon icon={faArrowLeft} className="self-center scale-125"/>
+            </LwdLink>
+            <button 
+            onClick={() => setHideUi(!hideUi)} 
+            className={`absolute top-5 right-5 z-10 w-12 h-12 bg-black bg-opacity-80 rounded-full p-4 text-white flex items-center justify-center transform transition link-common ${hideUi ? '-rotate-45 hover:rotate-0' : 'rotate-0 hover:-rotate-45' }`} 
+            title={`${hideUi ? 'Open' : 'Close' } UI`} 
+            aria-label={`${hideUi ? 'Open' : 'Close' } UI`}>
+                <FontAwesomeIcon icon={faTimes} className="self-center scale-125"/>
+            </button>
             <div className={`z-0`}>
-                <Suspense fallback={<Skeleton />}>
-                    <img
-                        src={`${process.env.GATSBY_STRAPI_API_URL}${Image.url}`}
-                        alt={Title}
-                        className="h-screen w-screen object-contain overflow-scroll"
-                        loading="lazy"
-                    />
-                </Suspense>
+                <img
+                    src={`${process.env.GATSBY_STRAPI_API_URL}${Image.url}`}
+                    alt={Title}
+                    className="h-screen w-screen object-contain overflow-scroll"
+                    loading="lazy"
+                />
             </div>
 
             <div className={`${hideUi ? 'hidden' : 'grid' } grid-cols-2 md:grid-cols-3 justify-items-center items-center absolute transform transition bottom-0 z-10 w-screen bg-black bg-opacity-80 rounded-t-md text-white py-4 px-2 text-center `} id="ui">
