@@ -1,0 +1,21 @@
+name: Gatsby Publish
+
+on:
+  pull_request:
+    branches:
+      - main
+env:
+  GATSBY_JPEG_ENCODER: MOZJPEG
+  GATSBY_STRAPI_API_URL: https://api.liwenduan.com/lwd-site
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: enriikke/gatsby-gh-pages-action@v2
+        with:
+          access-token: ${{ secrets.ACCESS_TOKEN }}
+          deploy-brance: gh-pages
+          gatsby-args: --prefix-paths
+          working-dir: web
