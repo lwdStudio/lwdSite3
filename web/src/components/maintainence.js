@@ -6,6 +6,7 @@ import { LwdLink } from './page/link'
 import { Button } from '../components/button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faChartLine } from '@fortawesome/free-solid-svg-icons'
 
 export const Maintainence = () => {
     const [maintainenceModeTitle, setmaintainenceModeTitle] = useState()
@@ -50,10 +51,18 @@ export const Maintainence = () => {
                             </div>
                             <h1 className="p-5 text-3xl ">{maintainenceModeTitle}</h1>
                             <p>{maintainenceModeMessage}</p>
-                            <div className="m-10">
-                                <p className="mb-5">View Changes on</p>
-                                <Button to="https://github.com/lwdStudio/lwdSite3"><FontAwesomeIcon icon={faGithub} /> GitHub</Button>
+                            <div className="grid grid-cols-2 w-[50%] mx-auto">
+                                <div className="m-10">
+                                    <p className="mb-5">View Site Changes on</p>
+                                    <Button to="https://github.com/lwdStudio/lwdSite3"><FontAwesomeIcon icon={faGithub} /> GitHub</Button>
+                                </div>
+                                <div className="m-10">
+                                    <p className="mb-5">Check System Status on</p>
+                                    <Button to="https://status.liwenduan.com"><FontAwesomeIcon icon={faChartLine} /> lwdStatus</Button>
+                                </div>
                             </div>
+
+
                             <footer>                  
                                 <div className="flex flex-col md:flex-row w-full justify-center text-center text-white">
                                     <p className="m-3 p-1">Copyright © {new Date().getFullYear()} Liwen Duan</p>
