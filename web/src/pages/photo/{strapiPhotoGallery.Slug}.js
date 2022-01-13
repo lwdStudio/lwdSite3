@@ -5,7 +5,7 @@ import { LwdLink } from '../../components/page/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faTimes } from '@fortawesome/free-solid-svg-icons'
 import Seo from '../../components/seo'
-import { StaticImage } from 'gatsby-plugin-image'
+import { GatsbyImage, StaticImage } from 'gatsby-plugin-image'
 
 const ImagePage = ({data}) => {
     const {Image, Title} = data.strapiPhotoGallery
@@ -43,14 +43,15 @@ const ImagePage = ({data}) => {
             aria-label={`${hideUi ? 'Open' : 'Close' } UI`}>
                 <FontAwesomeIcon icon={faTimes} className="self-center scale-125"/>
             </button>
-            <div className={`z-0`}>
-                <img
-                    src={`${process.env.GATSBY_STRAPI_API_URL}${Image.url}`}
+            <GatsbyImage
+                    image={Image.localFile.childImageSharp.gatsbyImageData}
+                    // src={`${process.env.GATSBY_STRAPI_API_URL}${Image.url}`}
                     alt={Title}
-                    className="h-screen w-screen object-contain overflow-scroll"
+                    className="z-0 h-screen w-screen"
+                    imgClassName="h-screen w-screen"
                     loading="lazy"
+                    objectFit='contain'
                 />
-            </div>
 
             <div className={`${hideUi ? 'hidden' : 'grid' } grid-cols-2 md:grid-cols-3 justify-items-center items-center absolute transform transition bottom-0 z-10 w-screen bg-black bg-opacity-80 rounded-t-md text-white py-4 px-2 text-center `} id="ui">
                 <div className="flex space-x-2 h-auto px-8 py-2 justify-center md:justify-start ">
@@ -81,7 +82,12 @@ query getImage($id: String!) {
         height
         width
         url
+        localFile {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
       }
     }
-  }   
+  }     
 `
