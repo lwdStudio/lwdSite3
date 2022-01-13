@@ -22,6 +22,7 @@
     .embed-video {
         @apply aspect-w-16 aspect-h-9 justify-self-center self-center place-self-center
     }
+
 }
 
 @layer components {
@@ -32,8 +33,8 @@
         @apply p-8 m-2 
     }
     .link-common {
-        @apply hover:text-black focus:text-black hover:bg-gray-200 focus:bg-yellow-300 rounded-md 
-        dark:text-blue-500 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:text-black
+        @apply hover:text-black focus:text-black hover:bg-gray-200 focus:bg-yellow-300 rounded-md p-0.5 text-blue-700
+        dark:text-blue-400 dark:hover:bg-gray-600 dark:hover:text-white hover:bg-opacity-50 dark:focus:text-black transition ease-linear font-sans antialiased sm:subpixel-antialiased md:antialiased dark:print:text-blue-700
     }
     .tag {
         @apply text-sm font-medium text-green-700 dark:text-green-400

@@ -80,9 +80,19 @@ export const InfoCard = ({info}) => {
 export const ContactCard = ({contactInfo}) => {
     library.add(fab)
     return (
-        <div className="flex card-common about-card gap-1 grow md:grow-0 ">
+        <div className="flex card-common about-card gap-1 grow md:grow-0 justify-center align-middle">
             <FontAwesomeIcon icon={['fab', contactInfo.ContactMethod.toLowerCase()]} className="self-center scale-125" /> 
             <LwdLink LinkTo={contactInfo.Contact} className="px-1">{contactInfo.ContactMethod}</LwdLink>
+        </div>
+    )
+}
+
+export const SkillCard = ({skill}) => {
+    library.add(fab)
+    return (
+        <div className="flex card-common m-2 px-4 py-2 grow md:grow-0 justify-center align-middle">
+            <FontAwesomeIcon icon={['fab', skill.fabIcon]} className="self-center scale-125" /> 
+            <span className="px-2">{skill.SkillName}</span>
         </div>
     )
 }

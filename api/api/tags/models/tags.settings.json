@@ -37,6 +37,10 @@
     "pages": {
       "via": "tags",
       "collection": "pages"
+    },
+    "photo_galleries": {
+      "via": "tags",
+      "collection": "photo-gallery"
     }
   }
 }

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_skills_skills",
+  "info": {
+    "name": "Skill",
+    "icon": "check-circle",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "SkillName": {
+      "type": "string"
+    },
+    "fabIcon": {
+      "type": "string"
+    }
+  }
+}

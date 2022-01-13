@@ -1,28 +1,5 @@
 node_modules/
 .cache/
 public
-
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
-
-
-# node_modules
-# npm-debug.log
-# .env.example
-# yarn-error.log
-# .cache
-# public
-
-# # yarn2 ignore
-# .pnp.*
-# .yarn/*
-# !.yarn/patches
-# !.yarn/plugins
-# !.yarn/releases
-# !.yarn/sdks
-# !.yarn/versions
+npm-debug.log
+.env.example

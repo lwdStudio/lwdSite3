@@ -101,6 +101,16 @@
           "localized": true
         }
       }
+    },
+    "Skills": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "skills.skills"
     }
   }
 }

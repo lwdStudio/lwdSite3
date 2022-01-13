@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_skills_skills",
+  "info": {
+    "name": "Skills",
+    "icon": "lightbulb"
+  },
+  "options": {},
+  "attributes": {
+    "Skill": {
+      "type": "component",
+      "repeatable": true,
+      "component": "skills.skill"
+    },
+    "SkillCatagory": {
+      "type": "string"
+    }
+  }
+}
