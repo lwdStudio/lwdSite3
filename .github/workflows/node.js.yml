@@ -26,13 +26,13 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - name: Test "Strapi"
-    - run: |
+      run: |
         cd api
         npm ci
         npm run build --if-present
         npm test
     - name: Test "Gatsby"
-    - run: |
+      run: |
         cd ../web
         npm ci
         npm run build --if-present
