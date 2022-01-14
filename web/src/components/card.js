@@ -9,13 +9,13 @@ export const ArticleCard = ({posts}) => {
     return (
         <div className="flex flex-col md:flex-row card-common m-5">
             {posts.CoverImage && 
-                <div className="flex-none w-full md:w-72 relative">
-                    <GatsbyImage 
-                        className="overflow-hidden object-cover w-full h-full card-common"
-                        image={posts.CoverImage.localFile.childImageSharp.gatsbyImageData}
-                        alt={posts.CoverImage.alternativeText}
-                    />
-                </div>
+                <GatsbyImage 
+                    className="flex-none w-full md:w-72 relative card-common"
+                    image={posts.CoverImage.localFile.childImageSharp.gatsbyImageData}
+                    alt={posts.CoverImage.alternativeText}
+                    imgClassName="w-full h-full rounded-lg"
+                    objectFit="cover"
+                />
             }
             
             <div className="flex-auto p-6">
@@ -124,13 +124,13 @@ export const CertificateCard = ({certificateInfo}) => {
 export const ShowcaseCard = ({article}) => {
     return (
         <div className="flex flex-col card-common" key={article.id}>
-            <div className="shadow-md w-full">
-                <GatsbyImage 
-                    className="overflow-hidden rounded-t-lg h-48 object-cover align-middle"
-                    image={article.CoverImage && article.CoverImage.localFile.childImageSharp.gatsbyImageData}
-                    alt={article.CoverImage && article.CoverImage.alternativeText}
-                />
-            </div>
+            <GatsbyImage 
+                className="shadow-md h-48"
+                image={article.CoverImage && article.CoverImage.localFile.childImageSharp.gatsbyImageData}
+                alt={article.CoverImage && article.CoverImage.alternativeText}
+                imgClassName="rounded-t-lg h-48 align-middle"
+                objectFit="cover"
+            />
             <div className="flex-col p-5 w-full rounded-b-lg">
                 {article.tags && <span className="tag">{"#"+article.tags[0].tagName}</span>}
                 <h2 className="pb-2 font-bold"><LwdLink LinkTo={`/${article.pageSlug}`} className="inline text-2xl">{article.pageTitle}</LwdLink></h2>

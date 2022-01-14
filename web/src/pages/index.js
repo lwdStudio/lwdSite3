@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Layout from '../components/page/layout'
 import Seo from "../components/seo"
-import { ColorDripButton } from '../components/button'
+import { Button } from '../components/button'
 import Hero from '../components/hero'
 import {ShowcaseCard} from '../components/card'
 import {SiteNotification} from '../components/notification'
@@ -42,7 +42,7 @@ const IndexPage = ({location, data}) => {
             }}
           />
         </h1> 
-        <ColorDripButton to={heroLink.heroLinkUrl}>{heroLink.heroLinkTitle}</ColorDripButton>
+        <Button to={heroLink.heroLinkUrl}>{heroLink.heroLinkTitle}</Button>
       </Hero>
 
       <section className="px-4 md:px-16 py-8">

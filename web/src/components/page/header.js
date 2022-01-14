@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
-import AniLink from "gatsby-plugin-transition-link/AniLink"
-import {LwdLink} from './link'
+import { LwdLink } from './link'
 import { SkipNav } from '../button'
 import { StaticImage } from 'gatsby-plugin-image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -8,7 +7,7 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 
 const NavButton = ({LinkTo, children}) => {
     return (
-        <AniLink paintDrip hex="#fcd34d" to={LinkTo} className="flex w-full lg:w-28 p-3 my-3 lg:m-3 justify-center rounded-md lg:shadow-md font-medium text-gray-700 focus:shadow-none dark:text-white dark:text-opacity-70 lg:dark:bg-gray-700 lg:dark:hover:bg-gray-600 lg:dark:hover:text-white lg:dark:focus:bg-yellow-300">{children}</AniLink>
+        <LwdLink LinkTo={LinkTo} className="flex w-full lg:w-28 p-3 my-3 lg:m-3 justify-center rounded-md lg:shadow-md font-medium text-gray-700 focus:shadow-none dark:text-white dark:text-opacity-70 lg:dark:bg-gray-700 lg:dark:hover:bg-gray-600 lg:dark:hover:text-white lg:dark:focus:bg-yellow-300">{children}</LwdLink>
     )
 }
 
