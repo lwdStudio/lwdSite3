@@ -37,13 +37,13 @@ const ImageIndexPage = ({location, data}) => {
             setList([...list, ...nextResults])
             setLoadMore(false)
         }
-    }, [loadMore, hasMore])
+    }, [loadMore, hasMore, allImages, list])
 
     //Check if there is more
     useEffect(() => {
         const isMore = list.length < allImages.length
         setHasMore(isMore)
-    }, [list])
+    }, [list, allImages])
     
     
     
