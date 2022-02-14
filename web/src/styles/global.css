@@ -39,20 +39,17 @@
     .tag {
         @apply text-sm font-medium text-green-700 dark:text-green-400
     }
-    input[type = checkbox] {
-        display: none;
+
+    .hidden-text {
+        @apply inline-block lg:hidden
     }
-    input+label {
-        @apply flex justify-center items-center w-8 h-8 rounded-full text-gray-600 dark:text-gray-300 cursor-pointer p-1.5 text-center text-sm self-center
+
+    .hidden-text-companion:hover .hidden-text{
+        @apply inline-block
     }
-    input + label:hover {
-        @apply bg-gray-200 text-black dark:bg-gray-600 dark:text-white
-    }
-    input#darkModeToggle + label:after {
-    content: " ☀️ ";
-    }
-    input#darkModeToggle:checked + label:after {
-    content: "🌙";
+
+    .hidden-text-companion:focus .hidden-text{
+        @apply inline-block
     }
 }
 

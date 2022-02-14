@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { LwdLink } from './link'
-import { SkipNav } from '../button'
+import { SkipContent, SkipNav } from '../button'
 import { StaticImage } from 'gatsby-plugin-image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
@@ -29,8 +29,9 @@ export const Header = ({pageName='lwdSite'}) => {
     const [isMenuOpen, setMenuOpen] = useState(false)
     const MenuIconStyle = "scale-150"
     return (
-        <header className="p-1 flex flex-wrap lg:flex rounded-b-lg shadow-lg bg-white dark:bg-gray-800 dark:text-white dark:text-opacity-50 print:hidden">
+        <header className="p-1 flex flex-wrap lg:flex rounded-b-lg shadow-lg bg-white dark:bg-gray-800 dark:text-white dark:text-opacity-50 print:hidden" tabIndex='-1' id='after-switch-theme'>
             <SkipNav />
+            <SkipContent />
             <LwdLogo pageName={pageName} />
             <div className="order-2 flex grow" />
             <div className="order-3 flex items-center lg:hidden p-2 ">

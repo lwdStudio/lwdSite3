@@ -32,14 +32,7 @@ const DarkToggle = () => {
     }, [isDark]);
     return (
         <div className="flex justify-center align-middle">
-            <input 
-                type='checkbox' 
-                name='darkModeToggle' 
-                id='darkModeToggle'
-                checked={isDark} 
-                onChange={event=>setIsDark(event.target.checked)}
-            />
-            <label htmlFor='darkModeToggle' title={`Switch to ${isDark?`Light`:`Dark`} Mode`} aria-label={`Switch to ${isDark?`Light`:`Dark`} Mode`}></label>
+            <a href='#after-switch-theme' role='button' className='text-gray-600 dark:text-gray-300 p-1.5 rounded-full hover:bg-opacity-50 font-light hidden-text-companion' aria-label={`Switch to ${isDark?`Light`:`Dark`} Mode`} onClick={isDark ? () => setIsDark(false) : () => setIsDark(true)}>{`${isDark?`🌙`:`☀`}`} <span className='hidden-text'>Switch to {isDark?`Light`:`Dark`} Mode</span></a>
         </div>
     )
 }

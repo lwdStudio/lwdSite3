@@ -35,7 +35,7 @@ export const Footer = () => {
                 }
             `}
             render={data => 
-                <footer className="p-1 bg-white shadow-top rounded-xl z-50 dark:bg-gray-800 dark:text-gray-200 text-center md:text-left print:hidden">
+                <footer className="p-1 bg-white shadow-top rounded-xl z-50 dark:bg-gray-800 dark:text-gray-200 text-center md:text-left print:hidden" id='footer' tabIndex="-1">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 mx-8 place-items-stretch">
                         <section className="pt-2">
                             <FooterLink LinkTo="/" className="text-black dark:text-gray-200 dark:focus:text-black">
@@ -76,7 +76,7 @@ export const Footer = () => {
                         </section>
                     </div>
                     <hr className='m-8 mb-4 dark:opacity-40' />
-                    <div className="grid grid-flow-row auto-rows-max px-8 pb-4 text-xs  md:grid-flow-col md:auto-cols-max md:gap-2">
+                    <div className="grid grid-flow-row auto-rows-max px-8 pb-4 text-xs md:grid-flow-col md:auto-cols-max md:gap-2">
                         <span className={`${footerLinkStyle} font-light`}>Copyright © {new Date().getFullYear()} Liwen Duan</span>
                         <LwdLink className={`${footerLinkStyle} font-light`} LinkTo="http://beian.miit.gov.cn/">{data.site.siteMetadata.ICPlicense}</LwdLink>
                         <LwdLink className={`${footerLinkStyle} font-light`} LinkTo={data.site.siteMetadata.PSBeianURL}>{data.site.siteMetadata.PSBeian}</LwdLink>

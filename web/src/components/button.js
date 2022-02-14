@@ -9,9 +9,15 @@ export const Button = ({to, className, children}) => {
     )
 }
 
-export const SkipNav = () => {
+export const SkipNav = ({onClick}) => {
     return (
-        <LwdLink paintDrip hex="#fcd34d" LinkTo="#main-content" className="absolute transform -translate-x-[150%] focus:translate-x-0 md:left-16 left-[4.5rem] w-[10rem] p-3 my-3 md:m-3 text-center rounded-md md:shadow-md font-medium text-gray-700 focus:shadow-none dark:text-white dark:text-opacity-70 md:dark:focus:bg-yellow-300" aria-label="skip navigataion" aria-hidden="false" role='button'>Skip Navigation</LwdLink>
+        <a href="#main-content" className="absolute transform -translate-y-[150%] focus:translate-y-0 md:left-16 left-[4.5rem] w-[10rem] p-3 my-3 md:m-3 text-center rounded-md md:shadow-md font-medium text-gray-700 focus:shadow-none dark:text-white dark:text-opacity-70 md:dark:focus:bg-yellow-300" aria-label="skip navigataion" aria-hidden="false" role='button' onClick={onClick}>Skip Navigation</a>
+    )
+}
+
+export const SkipContent = ({onClick}) => {
+    return (
+        <a href="#footer" className="absolute transform -translate-y-[150%] focus:translate-y-0 md:left-16 left-[4.5rem] w-[10rem] p-3 my-3 md:m-3 text-center rounded-md md:shadow-md font-medium text-gray-700 focus:shadow-none dark:text-white dark:text-opacity-70 md:dark:focus:bg-yellow-300" aria-label="go to footer" aria-hidden="false" role='button' onClick={onClick}>Go to Footer</a>
     )
 }
 
