@@ -84,7 +84,7 @@ const AboutPage = ({location, data}) => {
 
         <section className="p-5">
           <h2 className="text-center font-serif py-8">Get in touch</h2>
-          <div className="flex flex-wrap sm:justify-start justify-center align-middle">
+          <div className="flex flex-wrap justify-center align-middle">
             {
               ContactInfo.map((info) => {
                 return (
