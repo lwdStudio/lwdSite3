@@ -2,7 +2,9 @@ import React from 'react'
 import { LwdLink } from './link'
 import { StaticImage } from 'gatsby-plugin-image'
 import { StaticQuery,graphql } from 'gatsby'
-import { RenderDarkToggle } from './darkModeToggle'
+import { RenderToggles } from './toggles'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircleChevronUp } from '@fortawesome/free-solid-svg-icons'
 const footerTextColor = 'text-gray-900 dark:text-gray-200 font-medium'
 const footerLinkStyle = `text-gray-600 dark:text-gray-300 p-1.5 rounded-md hover:bg-opacity-50 font-medium`
 
@@ -16,7 +18,7 @@ const FooterText = ({children}) => {
 }
 const FooterLink = ({LinkTo, className, children}) => {
     return (
-        <FooterText><LwdLink LinkTo={LinkTo} className={`${footerTextColor} px-1.5 rounded-md ${className}`} >{children}</LwdLink></FooterText>
+        <FooterText><LwdLink id='footer' LinkTo={LinkTo} className={`${footerTextColor} px-1.5 rounded-md ${className}`} >{children}</LwdLink></FooterText>
     )
 }
 export const Footer = () => {
@@ -35,7 +37,7 @@ export const Footer = () => {
                 }
             `}
             render={data => 
-                <footer className="p-1 bg-white shadow-top rounded-xl z-50 dark:bg-gray-800 dark:text-gray-200 text-center md:text-left print:hidden" id='footer' tabIndex="-1">
+                <footer className="p-1 bg-white shadow-top rounded-xl z-50 dark:bg-gray-800 dark:text-gray-200 text-center md:text-left print:hidden">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 mx-8 place-items-stretch">
                         <section className="pt-2">
                             <FooterLink LinkTo="/" className="text-black dark:text-gray-200 dark:focus:text-black">
@@ -80,7 +82,13 @@ export const Footer = () => {
                         <span className={`${footerLinkStyle} font-light`}>Copyright © {new Date().getFullYear()} Liwen Duan</span>
                         <LwdLink className={`${footerLinkStyle} font-light`} LinkTo="http://beian.miit.gov.cn/">{data.site.siteMetadata.ICPlicense}</LwdLink>
                         <LwdLink className={`${footerLinkStyle} font-light`} LinkTo={data.site.siteMetadata.PSBeianURL}>{data.site.siteMetadata.PSBeian}</LwdLink>
-                        <RenderDarkToggle />
+                        <div className='flex gap-2' id='site-control'>
+                            <a href='#nav' className='text-gray-600 dark:text-gray-300 p-1.5 rounded-full hover:bg-opacity-50 font-light hidden-text-companion' role='button' aria-label='Scroll to the Top'>
+                                <FontAwesomeIcon icon={faCircleChevronUp} className='scale-150' />
+                                <span className='pl-2 hidden-text'>Scroll to the Top</span>
+                            </a>
+                            <RenderToggles />
+                        </div>
                     </div>
                 </footer>
             }

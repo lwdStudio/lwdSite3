@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { LwdLink } from './link'
-import { SkipContent, SkipNav } from '../button'
+import { SkipContent, SkipFooter, SkipNav } from '../button'
 import { StaticImage } from 'gatsby-plugin-image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
@@ -13,7 +13,7 @@ const NavButton = ({LinkTo, children}) => {
 
 export const LwdLogo = ({pageName}) => {
     return (
-        <LwdLink LinkTo="/" className={`flex h-auto p-2 focus:ring-2 focus:ring-yellow-300 rounded-lg focus:text-black focus:bg-yellow-300 text-gray-800 dark:text-white dark:text-opacity-70 dark:hover:text-white`} title="Back to Home Page">
+        <LwdLink id='nav' LinkTo="/" className={`flex h-auto p-2 focus:ring-2 focus:ring-yellow-300 rounded-lg focus:text-black focus:bg-yellow-300 text-gray-800 dark:text-white dark:text-opacity-70 dark:hover:text-white`} title="Back to Home Page">
             <StaticImage
                 src="../../images/lwd-stamp.png"
                 alt="Liwen Duan's Logo"
@@ -29,9 +29,10 @@ export const Header = ({pageName='lwdSite'}) => {
     const [isMenuOpen, setMenuOpen] = useState(false)
     const MenuIconStyle = "scale-150"
     return (
-        <header className="p-1 flex flex-wrap lg:flex rounded-b-lg shadow-lg bg-white dark:bg-gray-800 dark:text-white dark:text-opacity-50 print:hidden" tabIndex='-1' id='after-switch-theme'>
+        <header className="p-1 flex flex-wrap lg:flex rounded-b-lg shadow-lg bg-white dark:bg-gray-800 dark:text-white dark:text-opacity-50 print:hidden">
             <SkipNav />
             <SkipContent />
+            <SkipFooter />
             <LwdLogo pageName={pageName} />
             <div className="order-2 flex grow" />
             <div className="order-3 flex items-center lg:hidden p-2 ">

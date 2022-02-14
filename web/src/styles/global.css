@@ -41,7 +41,7 @@
     }
 
     .hidden-text {
-        @apply inline-block lg:hidden
+        @apply inline-block md:hidden
     }
 
     .hidden-text-companion:hover .hidden-text{

@@ -21,4 +21,10 @@ export const SkipContent = ({onClick}) => {
     )
 }
 
+export const SkipFooter = ({onClick}) => {
+    return (
+        <a href="#site-control" className="absolute transform -translate-y-[150%] focus:translate-y-0 md:left-16 left-[4.5rem] w-[10rem] p-3 my-3 md:m-3 text-center rounded-md md:shadow-md font-medium text-gray-700 focus:shadow-none dark:text-white dark:text-opacity-70 md:dark:focus:bg-yellow-300" aria-label="go to site control" aria-hidden="false" role='button' onClick={onClick}>Go to Site Control</a>
+    )
+}
+
 export default Button
