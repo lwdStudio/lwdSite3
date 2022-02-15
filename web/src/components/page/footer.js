@@ -37,7 +37,7 @@ export const Footer = () => {
                 }
             `}
             render={data => 
-                <footer className="p-1 bg-white shadow-top rounded-xl z-50 dark:bg-gray-800 dark:text-gray-200 text-center md:text-left print:hidden">
+                <footer className="p-1 bg-white shadow-top rounded-xl z-50 dark:bg-gray-800 dark:text-gray-200 text-center md:text-left print:hidden footer">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 mx-8 place-items-stretch">
                         <section className="pt-2">
                             <FooterLink LinkTo="/" className="text-black dark:text-gray-200 dark:focus:text-black">
@@ -63,12 +63,12 @@ export const Footer = () => {
                             </div>
 
                         </section>
-                        <section className="pt-2">
-                            <h1 className={`${footerTextColor} font-extrabold text-lg md:text-2xl`}>Get in touch?</h1>
+                        <section className="pt-4">
+                            <h1 className={`${footerTextColor} font-extrabold text-lg md:text-2xl pb-2`}>Get in touch?</h1>
                             <span className='inline-block my-6'>Send an email to: <br /><LwdLink className={`${footerLinkStyle}`} LinkTo="mailto:hi@liwenduan.com">hi@liwenduan.com</LwdLink></span>
                         </section>
-                        <section className="pt-2">
-                            <h1 className={`${footerTextColor} font-extrabold text-lg md:text-2xl`}>Explore</h1>
+                        <section className="pt-4">
+                            <h1 className={`${footerTextColor} font-extrabold text-lg md:text-2xl pb-2`}>Explore</h1>
                             <ul className="list-none pl-0">
                                 <li><LwdLink className={footerLinkStyle} LinkTo="/blog">Blog</LwdLink></li>
                                 <li><LwdLink className={footerLinkStyle} LinkTo="/showcase">Showcase</LwdLink></li>
@@ -82,7 +82,7 @@ export const Footer = () => {
                         <span className={`${footerLinkStyle} font-light`}>Copyright © {new Date().getFullYear()} Liwen Duan</span>
                         <LwdLink className={`${footerLinkStyle} font-light`} LinkTo="http://beian.miit.gov.cn/">{data.site.siteMetadata.ICPlicense}</LwdLink>
                         <LwdLink className={`${footerLinkStyle} font-light`} LinkTo={data.site.siteMetadata.PSBeianURL}>{data.site.siteMetadata.PSBeian}</LwdLink>
-                        <div className='flex gap-2' id='site-control'>
+                        <div className='flex gap-2 justify-center' id='site-control'>
                             <a href='#nav' className='text-gray-600 dark:text-gray-300 p-1.5 rounded-full hover:bg-opacity-50 font-light hidden-text-companion' role='button' aria-label='Scroll to the Top'>
                                 <FontAwesomeIcon icon={faCircleChevronUp} className='scale-150' />
                                 <span className='pl-2 hidden-text'>Scroll to the Top</span>
