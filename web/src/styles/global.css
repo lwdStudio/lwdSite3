@@ -23,6 +23,9 @@
         @apply aspect-w-16 aspect-h-9 justify-self-center self-center place-self-center
     }
 
+    .footer li {
+        @apply py-1.5 
+    }
 }
 
 @layer components {
